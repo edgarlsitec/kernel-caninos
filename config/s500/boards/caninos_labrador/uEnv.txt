@@ -1,0 +1,2 @@
+uenvcmd=setenv ramdisk_addr_r -; setenv os_type linux;
+bootargs=clk_ignore_unused selinux=0 scandelay root=/dev/mmcblk0p2 rw console=ttyS3 rootfstype=ext4 console=tty0 loglevel=6 rootwait

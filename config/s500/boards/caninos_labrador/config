@@ -1,0 +1,12 @@
+# Base Board Rev.A  ------   KERNEL_DTS=lemaker_guitar_bba
+# Base Board Rev.B  ------   KERNEL_DTS=lemaker_guitar_bbb
+# Base Board Rev.B+ ------   KERNEL_DTS=lemaker_guitar_bbb_plus
+# Base Board Rev.C  ------   KERNEL_DTS=lemaker_guitar_bbc
+# Base Board Rev.D  ------   KERNEL_DTS=lemaker_guitar_bbd
+
+ARCH=arm
+KERNEL_DTS=lemaker_guitar_bbb
+KERNEL_DEFCONFIG=atm705a_s500_defconfig
+UBOOT_DEFCONFIG=s500_defconfig
+
+MISC_IMAGE_SIZE=48
