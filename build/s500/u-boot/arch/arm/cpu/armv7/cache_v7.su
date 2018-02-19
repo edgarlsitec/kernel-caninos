@@ -1,4 +1,4 @@
-cache_v7.c:137:13:v7_maint_dcache_all	28	static
+cache_v7.c:137:13:v7_maint_dcache_all	40	static
 cache_v7.c:334:6:invalidate_icache_all	0	static
 cache_v7.c:358:13:v7_outer_cache_enable	0	static
 cache_v7.c:359:13:v7_outer_cache_disable	0	static

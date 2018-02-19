@@ -1,4 +1,4 @@
-lmb.c:109:13:lmb_add_region	40	static
+lmb.c:109:13:lmb_add_region	32	static
 lmb.c:15:6:lmb_dump_all	0	static
 lmb.c:91:6:lmb_init	0	static
 lmb.c:176:6:lmb_add	0	static

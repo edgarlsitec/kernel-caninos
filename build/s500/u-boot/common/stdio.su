@@ -11,5 +11,5 @@ stdio.c:138:19:stdio_clone	16	static
 stdio.c:155:5:stdio_register_dev	8	static
 stdio.c:169:5:stdio_register	0	static
 stdio.c:226:5:stdio_init_tables	0	static
-stdio.c:246:5:stdio_add_devices	88	static
+stdio.c:246:5:stdio_add_devices	96	static
 stdio.c:285:5:stdio_init	8	static

@@ -1,14 +1,14 @@
+net.c:283:13:net_clear_handlers	0	static
 net.c:585:1:startAgainTimeout	0	static
 net.c:640:13:dummy_handler	0	static
-net.c:283:13:net_clear_handlers	0	static
 net.c:235:6:net_auto_load	8	static
-net.c:590:6:NetStartAgain	16	static
+net.c:590:6:NetStartAgain	8	static
 net.c:646:11:net_get_udp_handler	0	static
 net.c:651:6:net_set_udp_handler	0	static
 net.c:660:11:net_get_arp_handler	0	static
 net.c:665:6:net_set_arp_handler	0	static
 net.c:682:1:NetSetTimeout	8	static
-net.c:953:1:NetReceive	32	static
+net.c:953:1:NetReceive	40	static
 net.c:1294:1:NetEthHdrSize	0	static
 net.c:1307:1:NetSetEther	24	static
 net.c:1332:5:net_update_ether	16	static

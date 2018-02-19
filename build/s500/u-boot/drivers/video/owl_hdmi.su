@@ -6,7 +6,7 @@ owl_hdmi.c:330:5:hdmi_gen_gbd_infoframe	8	static
 owl_hdmi.c:402:5:hdmi_gen_vs_infoframe	8	static
 owl_hdmi.c:470:7:hdmi_get_vid	4	static
 owl_hdmi.c:183:5:hdmi_gen_avi_infoframe	8	static
-owl_hdmi.c:489:7:hdmi_get_aid	8	static
+owl_hdmi.c:489:7:hdmi_get_aid	12	static
 owl_hdmi.c:264:5:hdmi_gen_audio_infoframe	8	static
 owl_hdmi.c:515:7:hdmi_get_mode	0	static
 owl_hdmi.c:543:5:hdmi_set_clk	0	static
@@ -26,4 +26,4 @@ owl_hdmi.c:1243:5:hdmi_video_cfg	16	static
 owl_hdmi.c:1271:6:hdmi_general_cfg	8	static
 owl_hdmi.c:1284:5:hdmi_get_plug_state	16	static
 owl_hdmi.c:1405:5:read_usr_cfg_file	56	static
-owl_hdmi.c:1496:5:hdmi_init	336	static
+owl_hdmi.c:1496:5:hdmi_init	344	static

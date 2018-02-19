@@ -17,7 +17,7 @@ fdt_ro.c:282:10:fdt_get_phandle	24	static
 fdt_ro.c:299:13:fdt_get_alias_namelen	24	static
 fdt_ro.c:116:5:fdt_path_offset	24	static
 fdt_ro.c:311:13:fdt_get_alias	16	static
-fdt_ro.c:316:5:fdt_get_path	40	static
+fdt_ro.c:316:5:fdt_get_path	48	static
 fdt_ro.c:368:5:fdt_supernode_atdepth_offset	40	static
 fdt_ro.c:404:5:fdt_node_depth	16	static
 fdt_ro.c:415:5:fdt_parent_offset	16	static

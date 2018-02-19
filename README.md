@@ -4,26 +4,24 @@ The Source Code for the S500 SOC is based on the Actions SDK and Lemaker Guitar 
 It includes the "linux kernel (linux)" "u-boot (uboot)" and "config" and so on, the "config" directory includes some tools, 
 scripts and configuration of the different boards.
 
-## Environment Setup (Debian)
-Source:https://wiki.debian.org/CrossToolchains
+## Environment Setup (Debian8)
+	1. sudo echo "deb http://emdebian.org/tools/debian/ jessie main" > /etc/apt/sources.list.d/crosstools.list
+	2. curl http://emdebian.org/tools/debian/emdebian-toolchain-archive.key | sudo apt-key add -
+	3. sudo dpkg --add-architecture armhf
+	4. sudo apt-get update
+	5. sudo apt-get install crossbuild-essential-armhf
+	6. sudo apt-get install u-boot-tools
+	7. sudo apt-get install makebootfat
+	8. sudo apt-get install device-tree-compiler
 
-1) Create file /etc/apt/sources.list.d/crosstools.list
-Text -> deb http://emdebian.org/tools/debian/ jessie main
-2) Run: 
-curl http://emdebian.org/tools/debian/emdebian-toolchain-archive.key | sudo apt-key add -
-3) Run:
-sudo dpkg --add-architecture armhf
-4) Run:
-sudo apt-get update
-5) Run:
-sudo apt-get install crossbuild-essential-armhf
-6) Install u-boot-tools
-7) Install makebootfat
-8) Install device-tree-compiler
-
+## Environment Setup (Debian9)
+	1. sudo apt-get update
+	2. sudo apt-get install gcc-arm-linux-gnueabihf
+	3. sudo apt-get install u-boot-tools
+	4. sudo apt-get install makebootfat
 
 ## Usage
-	1. /configure           # choose different boards type according to your needs  
+	1. ./configure           # choose different boards type according to your needs  
 	2. make hwpack          # make platform firmware package  
 
 ## Help informaiton

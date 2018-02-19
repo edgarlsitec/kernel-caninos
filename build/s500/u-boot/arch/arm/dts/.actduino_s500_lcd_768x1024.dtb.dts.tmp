@@ -1,12 +1,12 @@
-# 1 "/home/edgar/repo/kernel-caninos/uboot/arch/arm/dts/actduino_s500_lcd_768x1024.dts"
+# 1 "/home/edgar/kernel-caninos/uboot/arch/arm/dts/actduino_s500_lcd_768x1024.dts"
 # 1 "<built-in>"
 # 1 "<command-line>"
-# 1 "/home/edgar/repo/kernel-caninos/uboot/arch/arm/dts/actduino_s500_lcd_768x1024.dts"
+# 1 "/home/edgar/kernel-caninos/uboot/arch/arm/dts/actduino_s500_lcd_768x1024.dts"
 /dts-v1/;
 
 /include/ "actduino.dtsi"
-# 1 "/home/edgar/repo/kernel-caninos/uboot/arch/arm/dts/include/dt-bindings/input/input.h" 1
-# 5 "/home/edgar/repo/kernel-caninos/uboot/arch/arm/dts/actduino_s500_lcd_768x1024.dts" 2
+# 1 "/home/edgar/kernel-caninos/uboot/arch/arm/dts/include/dt-bindings/input/input.h" 1
+# 5 "/home/edgar/kernel-caninos/uboot/arch/arm/dts/actduino_s500_lcd_768x1024.dts" 2
 
 / {
  model = "Actions GS705A board";

@@ -2,7 +2,7 @@ vsprintf.c:192:14:put_dec_trunc	16	static
 vsprintf.c:402:14:string	24	static
 vsprintf.c:270:23:put_dec	48	static
 vsprintf.c:303:14:number	128	static
-vsprintf.c:571:12:vsnprintf_internal	120	static
+vsprintf.c:571:12:vsnprintf_internal	128	static
 vsprintf.c:28:15:simple_strtoul	12	static
 vsprintf.c:60:5:strict_strtoul	32	static
 vsprintf.c:84:6:simple_strtol	8	static
@@ -18,4 +18,4 @@ vsprintf.c:834:5:sprintf	12	static
 vsprintf.c:845:6:panic	16	static
 vsprintf.c:862:6:__assert_fail	16	static
 vsprintf.c:870:7:simple_itoa	24	static
-vsprintf.c:885:6:print_grouped_ull	56	static
+vsprintf.c:885:6:print_grouped_ull	48	static

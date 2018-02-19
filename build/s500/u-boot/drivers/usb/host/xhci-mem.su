@@ -8,7 +8,7 @@ xhci-mem.c:49:6:xhci_inval_cache	8	static
 xhci-mem.c:153:6:xhci_cleanup	40	static
 xhci-mem.c:282:19:xhci_ring_alloc	24	static
 xhci-mem.c:355:5:xhci_alloc_virt_device	24	static
-xhci-mem.c:417:5:xhci_mem_init	32	static
+xhci-mem.c:417:5:xhci_mem_init	24	static
 xhci-mem.c:524:4:xhci_get_input_control_ctx	8	static
 xhci-mem.c:537:23:xhci_get_slot_ctx	0	static
 xhci-mem.c:555:21:xhci_get_ep_ctx	0	static

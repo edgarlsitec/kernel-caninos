@@ -1,5 +1,5 @@
 sha1.c:76:13:sha1_process	120	static
-sha1.c:233:6:sha1_update.part.0	24	static
+sha1.c:233:6:sha1_update.part.0	32	static
 sha1.c:64:6:sha1_starts	0	static
 sha1.c:233:6:sha1_update	0	static
 sha1.c:280:6:sha1_finish	24	static

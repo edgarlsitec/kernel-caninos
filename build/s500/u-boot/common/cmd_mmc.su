@@ -1,7 +1,7 @@
 cmd_mmc.c:816:12:do_mmcops	32	static
 cmd_mmc.c:144:20:init_mmc_device	16	static
 cmd_mmc.c:418:12:do_mmc_rescan	8	static
-cmd_mmc.c:564:12:do_mmc_hwpartition	96	static
+cmd_mmc.c:564:12:do_mmc_hwpartition	112	static
 cmd_mmc.c:489:12:do_mmc_list	8	static
 cmd_mmc.c:448:12:do_mmc_dev	24	static
 cmd_mmc.c:429:12:do_mmc_part	8	static

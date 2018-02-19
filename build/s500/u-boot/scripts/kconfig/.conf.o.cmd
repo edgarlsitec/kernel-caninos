@@ -1,6 +1,6 @@
-cmd_scripts/kconfig/conf.o := cc -Wp,-MD,scripts/kconfig/.conf.o.d -Iscripts/kconfig -Wall -Wstrict-prototypes -O2 -fomit-frame-pointer -DCURSES_LOC="<ncurses.h>" -DLOCALE -c -o scripts/kconfig/conf.o /home/edgar/repo/kernel-caninos/uboot/scripts/kconfig/conf.c
+cmd_scripts/kconfig/conf.o := cc -Wp,-MD,scripts/kconfig/.conf.o.d -Iscripts/kconfig -Wall -Wstrict-prototypes -O2 -fomit-frame-pointer -DCURSES_LOC="<curses.h>" -DLOCALE -c -o scripts/kconfig/conf.o /home/edgar/kernel-caninos/uboot/scripts/kconfig/conf.c
 
-source_scripts/kconfig/conf.o := /home/edgar/repo/kernel-caninos/uboot/scripts/kconfig/conf.c
+source_scripts/kconfig/conf.o := /home/edgar/kernel-caninos/uboot/scripts/kconfig/conf.c
 
 deps_scripts/kconfig/conf.o := \
     $(wildcard include/config/.h) \
@@ -14,7 +14,7 @@ deps_scripts/kconfig/conf.o := \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
-  /usr/lib/gcc/x86_64-linux-gnu/4.9/include/stddef.h \
+  /usr/lib/gcc/x86_64-linux-gnu/6/include/stddef.h \
   /usr/include/x86_64-linux-gnu/bits/locale.h \
   /usr/include/xlocale.h \
   /usr/include/ctype.h \
@@ -28,7 +28,7 @@ deps_scripts/kconfig/conf.o := \
   /usr/include/libio.h \
   /usr/include/_G_config.h \
   /usr/include/wchar.h \
-  /usr/lib/gcc/x86_64-linux-gnu/4.9/include/stdarg.h \
+  /usr/lib/gcc/x86_64-linux-gnu/6/include/stdarg.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
   /usr/include/x86_64-linux-gnu/bits/stdio.h \
@@ -63,17 +63,17 @@ deps_scripts/kconfig/conf.o := \
   /usr/include/x86_64-linux-gnu/asm/errno.h \
   /usr/include/asm-generic/errno.h \
   /usr/include/asm-generic/errno-base.h \
-  /home/edgar/repo/kernel-caninos/uboot/scripts/kconfig/lkc.h \
+  /home/edgar/kernel-caninos/uboot/scripts/kconfig/lkc.h \
     $(wildcard include/config/prefix.h) \
     $(wildcard include/config/list.h) \
     $(wildcard include/config/y.h) \
-  /home/edgar/repo/kernel-caninos/uboot/scripts/kconfig/expr.h \
+  /home/edgar/kernel-caninos/uboot/scripts/kconfig/expr.h \
     $(wildcard include/config/config.h) \
   /usr/include/assert.h \
-  /home/edgar/repo/kernel-caninos/uboot/scripts/kconfig/list.h \
-  /usr/lib/gcc/x86_64-linux-gnu/4.9/include/stdbool.h \
+  /home/edgar/kernel-caninos/uboot/scripts/kconfig/list.h \
+  /usr/lib/gcc/x86_64-linux-gnu/6/include/stdbool.h \
   /usr/include/libintl.h \
-  /home/edgar/repo/kernel-caninos/uboot/scripts/kconfig/lkc_proto.h \
+  /home/edgar/kernel-caninos/uboot/scripts/kconfig/lkc_proto.h \
 
 scripts/kconfig/conf.o: $(deps_scripts/kconfig/conf.o)
 

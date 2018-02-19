@@ -17,9 +17,9 @@ usb.c:663:5:usb_get_report	32	static
 usb.c:675:5:usb_get_class_descriptor	32	static
 usb.c:762:5:usb_string	600	static
 usb.c:822:20:usb_get_dev_index	0	static
-usb.c:833:20:usb_alloc_new_device	24	static
+usb.c:833:20:usb_alloc_new_device	16	static
 usb.c:857:6:usb_free_device	16	static
 usb.c:871:12:usb_alloc_device	0	static
-usb.c:882:5:usb_new_device	648	static
+usb.c:882:5:usb_new_device	656	static
 usb.c:57:5:usb_init	24	static
 usb.c:1065:5:board_usb_init	0	static

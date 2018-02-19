@@ -1,7 +1,7 @@
-# 1 "/home/edgar/repo/kernel-caninos/uboot/arch/arm/dts/actduino_s500_upgrade.dts"
+# 1 "/home/edgar/kernel-caninos/uboot/arch/arm/dts/actduino_s500_upgrade.dts"
 # 1 "<built-in>"
 # 1 "<command-line>"
-# 1 "/home/edgar/repo/kernel-caninos/uboot/arch/arm/dts/actduino_s500_upgrade.dts"
+# 1 "/home/edgar/kernel-caninos/uboot/arch/arm/dts/actduino_s500_upgrade.dts"
 /dts-v1/;
 
 /include/ "actduino.dtsi"

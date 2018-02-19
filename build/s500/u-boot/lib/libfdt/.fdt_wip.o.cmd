@@ -1,27 +1,27 @@
-cmd_lib/libfdt/fdt_wip.o := arm-linux-gnueabihf-gcc -Wp,-MD,lib/libfdt/.fdt_wip.o.d  -nostdinc -isystem /usr/lib/gcc/arm-linux-gnueabihf/4.9/include -Iinclude  -I/home/edgar/repo/kernel-caninos/uboot/include -I/home/edgar/repo/kernel-caninos/uboot/arch/arm/include -include /home/edgar/repo/kernel-caninos/uboot/include/linux/kconfig.h  -I/home/edgar/repo/kernel-caninos/uboot/lib/libfdt -Ilib/libfdt -D__KERNEL__ -D__UBOOT__ -DCONFIG_SYS_TEXT_BASE=0x08000040 -Wall -Wstrict-prototypes -Wno-format-security -fno-builtin -ffreestanding -Os -fno-stack-protector -g -fstack-usage -Wno-format-nonliteral -D__ARM__ -marm -mno-thumb-interwork -mabi=aapcs-linux -mword-relocations -mno-unaligned-access -ffunction-sections -fdata-sections -fno-common -ffixed-r9 -msoft-float -pipe -march=armv7-a    -D"KBUILD_STR(s)=\#s" -D"KBUILD_BASENAME=KBUILD_STR(fdt_wip)"  -D"KBUILD_MODNAME=KBUILD_STR(fdt_wip)" -c -o lib/libfdt/fdt_wip.o /home/edgar/repo/kernel-caninos/uboot/lib/libfdt/fdt_wip.c
+cmd_lib/libfdt/fdt_wip.o := arm-linux-gnueabihf-gcc -Wp,-MD,lib/libfdt/.fdt_wip.o.d  -nostdinc -isystem /usr/lib/gcc-cross/arm-linux-gnueabihf/6/include -Iinclude  -I/home/edgar/kernel-caninos/uboot/include -I/home/edgar/kernel-caninos/uboot/arch/arm/include -include /home/edgar/kernel-caninos/uboot/include/linux/kconfig.h  -I/home/edgar/kernel-caninos/uboot/lib/libfdt -Ilib/libfdt -D__KERNEL__ -D__UBOOT__ -DCONFIG_SYS_TEXT_BASE=0x08000040 -Wall -Wstrict-prototypes -Wno-format-security -fno-builtin -ffreestanding -Os -fno-stack-protector -g -fstack-usage -Wno-format-nonliteral -D__ARM__ -marm -mno-thumb-interwork -mabi=aapcs-linux -mword-relocations -mno-unaligned-access -ffunction-sections -fdata-sections -fno-common -ffixed-r9 -msoft-float -pipe -march=armv7-a    -D"KBUILD_STR(s)=\#s" -D"KBUILD_BASENAME=KBUILD_STR(fdt_wip)"  -D"KBUILD_MODNAME=KBUILD_STR(fdt_wip)" -c -o lib/libfdt/fdt_wip.o /home/edgar/kernel-caninos/uboot/lib/libfdt/fdt_wip.c
 
-source_lib/libfdt/fdt_wip.o := /home/edgar/repo/kernel-caninos/uboot/lib/libfdt/fdt_wip.c
+source_lib/libfdt/fdt_wip.o := /home/edgar/kernel-caninos/uboot/lib/libfdt/fdt_wip.c
 
 deps_lib/libfdt/fdt_wip.o := \
-  /home/edgar/repo/kernel-caninos/uboot/include/libfdt_env.h \
-  /home/edgar/repo/kernel-caninos/uboot/include/compiler.h \
+  /home/edgar/kernel-caninos/uboot/include/libfdt_env.h \
+  /home/edgar/kernel-caninos/uboot/include/compiler.h \
     $(wildcard include/config/use/stdint.h) \
-  /usr/lib/gcc/arm-linux-gnueabihf/4.9/include/stddef.h \
-  /home/edgar/repo/kernel-caninos/uboot/include/linux/string.h \
-  /home/edgar/repo/kernel-caninos/uboot/include/linux/types.h \
+  /usr/lib/gcc-cross/arm-linux-gnueabihf/6/include/stddef.h \
+  /home/edgar/kernel-caninos/uboot/include/linux/string.h \
+  /home/edgar/kernel-caninos/uboot/include/linux/types.h \
     $(wildcard include/config/uid16.h) \
-  /home/edgar/repo/kernel-caninos/uboot/include/linux/posix_types.h \
-  /home/edgar/repo/kernel-caninos/uboot/include/linux/stddef.h \
-  /home/edgar/repo/kernel-caninos/uboot/arch/arm/include/asm/posix_types.h \
-  /home/edgar/repo/kernel-caninos/uboot/arch/arm/include/asm/types.h \
+  /home/edgar/kernel-caninos/uboot/include/linux/posix_types.h \
+  /home/edgar/kernel-caninos/uboot/include/linux/stddef.h \
+  /home/edgar/kernel-caninos/uboot/arch/arm/include/asm/posix_types.h \
+  /home/edgar/kernel-caninos/uboot/arch/arm/include/asm/types.h \
     $(wildcard include/config/arm64.h) \
-  /usr/lib/gcc/arm-linux-gnueabihf/4.9/include/stdbool.h \
-  /home/edgar/repo/kernel-caninos/uboot/arch/arm/include/asm/string.h \
+  /usr/lib/gcc-cross/arm-linux-gnueabihf/6/include/stdbool.h \
+  /home/edgar/kernel-caninos/uboot/arch/arm/include/asm/string.h \
     $(wildcard include/config/use/arch/memcpy.h) \
     $(wildcard include/config/use/arch/memset.h) \
   include/config.h \
     $(wildcard include/config/boarddir.h) \
-  /home/edgar/repo/kernel-caninos/uboot/include/config_defaults.h \
+  /home/edgar/kernel-caninos/uboot/include/config_defaults.h \
     $(wildcard include/config/defaults/h/.h) \
     $(wildcard include/config/bootm/linux.h) \
     $(wildcard include/config/bootm/netbsd.h) \
@@ -31,7 +31,7 @@ deps_lib/libfdt/fdt_wip.o := \
     $(wildcard include/config/gzip.h) \
     $(wildcard include/config/zlib.h) \
     $(wildcard include/config/partitions.h) \
-  /home/edgar/repo/kernel-caninos/uboot/include/config_uncmd_spl.h \
+  /home/edgar/kernel-caninos/uboot/include/config_uncmd_spl.h \
     $(wildcard include/config/uncmd/spl/h//.h) \
     $(wildcard include/config/spl/build.h) \
     $(wildcard include/config/cmd/cdp.h) \
@@ -53,7 +53,7 @@ deps_lib/libfdt/fdt_wip.o := \
     $(wildcard include/config/dm/warn.h) \
     $(wildcard include/config/dm/device/remove.h) \
     $(wildcard include/config/dm/stdio.h) \
-  /home/edgar/repo/kernel-caninos/uboot/include/configs/s500.h \
+  /home/edgar/kernel-caninos/uboot/include/configs/s500.h \
     $(wildcard include/config/s500/h.h) \
     $(wildcard include/config/bootcommand.h) \
     $(wildcard include/config/extra/env/settings.h) \
@@ -200,7 +200,7 @@ deps_lib/libfdt/fdt_wip.o := \
     $(wildcard include/config/boot/power.h) \
     $(wildcard include/config/gauge/bq27441.h) \
     $(wildcard include/config/check/key.h) \
-  /home/edgar/repo/kernel-caninos/uboot/arch/arm/include/asm/config.h \
+  /home/edgar/kernel-caninos/uboot/arch/arm/include/asm/config.h \
     $(wildcard include/config/h/.h) \
     $(wildcard include/config/lmb.h) \
     $(wildcard include/config/sys/boot/ramdisk/high.h) \
@@ -208,7 +208,7 @@ deps_lib/libfdt/fdt_wip.o := \
     $(wildcard include/config/static/rela.h) \
     $(wildcard include/config/fsl/lsch3.h) \
     $(wildcard include/config/ls102xa.h) \
-  /home/edgar/repo/kernel-caninos/uboot/include/config_fallbacks.h \
+  /home/edgar/kernel-caninos/uboot/include/config_fallbacks.h \
     $(wildcard include/config/fallbacks/h.h) \
     $(wildcard include/config/spl.h) \
     $(wildcard include/config/spl/pad/to.h) \
@@ -237,27 +237,27 @@ deps_lib/libfdt/fdt_wip.o := \
     $(wildcard include/config/image/format/legacy.h) \
     $(wildcard include/config/disable/image/legacy.h) \
     $(wildcard include/config/sys/i2c.h) \
-  /home/edgar/repo/kernel-caninos/uboot/include/linux/linux_string.h \
-  /home/edgar/repo/kernel-caninos/uboot/arch/arm/include/asm/byteorder.h \
-  /home/edgar/repo/kernel-caninos/uboot/include/linux/byteorder/little_endian.h \
-  /home/edgar/repo/kernel-caninos/uboot/include/linux/compiler.h \
+  /home/edgar/kernel-caninos/uboot/include/linux/linux_string.h \
+  /home/edgar/kernel-caninos/uboot/arch/arm/include/asm/byteorder.h \
+  /home/edgar/kernel-caninos/uboot/include/linux/byteorder/little_endian.h \
+  /home/edgar/kernel-caninos/uboot/include/linux/compiler.h \
     $(wildcard include/config/sparse/rcu/pointer.h) \
     $(wildcard include/config/trace/branch/profiling.h) \
     $(wildcard include/config/profile/all/branches.h) \
     $(wildcard include/config/enable/must/check.h) \
     $(wildcard include/config/enable/warn/deprecated.h) \
     $(wildcard include/config/kprobes.h) \
-  /home/edgar/repo/kernel-caninos/uboot/include/linux/compiler-gcc.h \
+  /home/edgar/kernel-caninos/uboot/include/linux/compiler-gcc.h \
     $(wildcard include/config/arch/supports/optimized/inlining.h) \
     $(wildcard include/config/optimize/inlining.h) \
-  /home/edgar/repo/kernel-caninos/uboot/include/linux/compiler-gcc4.h \
+  /home/edgar/kernel-caninos/uboot/include/linux/compiler-gcc5.h \
     $(wildcard include/config/arch/use/builtin/bswap.h) \
-  /home/edgar/repo/kernel-caninos/uboot/include/linux/byteorder/swab.h \
-  /home/edgar/repo/kernel-caninos/uboot/include/linux/byteorder/generic.h \
-  /home/edgar/repo/kernel-caninos/uboot/include/linux/types.h \
-  /home/edgar/repo/kernel-caninos/uboot/include/fdt.h \
-  /home/edgar/repo/kernel-caninos/uboot/include/libfdt.h \
-  /home/edgar/repo/kernel-caninos/uboot/lib/libfdt/libfdt_internal.h \
+  /home/edgar/kernel-caninos/uboot/include/linux/byteorder/swab.h \
+  /home/edgar/kernel-caninos/uboot/include/linux/byteorder/generic.h \
+  /home/edgar/kernel-caninos/uboot/include/linux/types.h \
+  /home/edgar/kernel-caninos/uboot/include/fdt.h \
+  /home/edgar/kernel-caninos/uboot/include/libfdt.h \
+  /home/edgar/kernel-caninos/uboot/lib/libfdt/libfdt_internal.h \
 
 lib/libfdt/fdt_wip.o: $(deps_lib/libfdt/fdt_wip.o)
 

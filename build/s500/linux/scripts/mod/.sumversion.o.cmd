@@ -1,6 +1,6 @@
-cmd_scripts/mod/sumversion.o := gcc -Wp,-MD,scripts/mod/.sumversion.o.d -Iscripts/mod -Wall -Wmissing-prototypes -Wstrict-prototypes -O2 -fomit-frame-pointer -std=gnu89 -c -o scripts/mod/sumversion.o /home/edgar/repo/kernel-caninos/linux/scripts/mod/sumversion.c
+cmd_scripts/mod/sumversion.o := gcc -Wp,-MD,scripts/mod/.sumversion.o.d -Iscripts/mod -Wall -Wmissing-prototypes -Wstrict-prototypes -O2 -fomit-frame-pointer -std=gnu89 -c -o scripts/mod/sumversion.o /home/edgar/kernel-caninos/linux/scripts/mod/sumversion.c
 
-source_scripts/mod/sumversion.o := /home/edgar/repo/kernel-caninos/linux/scripts/mod/sumversion.c
+source_scripts/mod/sumversion.o := /home/edgar/kernel-caninos/linux/scripts/mod/sumversion.c
 
 deps_scripts/mod/sumversion.o := \
   /usr/include/stdc-predef.h \
@@ -10,7 +10,7 @@ deps_scripts/mod/sumversion.o := \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
-  /usr/lib/gcc/x86_64-linux-gnu/4.9/include/stdint.h \
+  /usr/lib/gcc/x86_64-linux-gnu/6/include/stdint.h \
   /usr/include/stdint.h \
   /usr/include/x86_64-linux-gnu/bits/wchar.h \
   /usr/include/x86_64-linux-gnu/sys/socket.h \
@@ -19,7 +19,7 @@ deps_scripts/mod/sumversion.o := \
   /usr/include/x86_64-linux-gnu/bits/types.h \
   /usr/include/x86_64-linux-gnu/bits/typesizes.h \
   /usr/include/time.h \
-  /usr/lib/gcc/x86_64-linux-gnu/4.9/include/stddef.h \
+  /usr/lib/gcc/x86_64-linux-gnu/6/include/stddef.h \
   /usr/include/endian.h \
   /usr/include/x86_64-linux-gnu/bits/endian.h \
   /usr/include/x86_64-linux-gnu/bits/byteswap.h \
@@ -51,19 +51,19 @@ deps_scripts/mod/sumversion.o := \
   /usr/include/x86_64-linux-gnu/bits/string.h \
   /usr/include/x86_64-linux-gnu/bits/string2.h \
   /usr/include/stdlib.h \
-  /usr/lib/gcc/x86_64-linux-gnu/4.9/include-fixed/limits.h \
-  /usr/lib/gcc/x86_64-linux-gnu/4.9/include-fixed/syslimits.h \
+  /usr/lib/gcc/x86_64-linux-gnu/6/include-fixed/limits.h \
+  /usr/lib/gcc/x86_64-linux-gnu/6/include-fixed/syslimits.h \
   /usr/include/limits.h \
   /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
   /usr/include/x86_64-linux-gnu/bits/local_lim.h \
   /usr/include/linux/limits.h \
   /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
-  /home/edgar/repo/kernel-caninos/linux/scripts/mod/modpost.h \
+  /home/edgar/kernel-caninos/linux/scripts/mod/modpost.h \
   /usr/include/stdio.h \
   /usr/include/libio.h \
   /usr/include/_G_config.h \
   /usr/include/wchar.h \
-  /usr/lib/gcc/x86_64-linux-gnu/4.9/include/stdarg.h \
+  /usr/lib/gcc/x86_64-linux-gnu/6/include/stdarg.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
   /usr/include/x86_64-linux-gnu/bits/stdio.h \

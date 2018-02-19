@@ -3,4 +3,4 @@ owl_gpio.c:41:5:owl_gpio_direction_input	0	static
 owl_gpio.c:31:5:owl_gpio_set_value	0	static
 owl_gpio.c:55:5:owl_gpio_direction_output	8	static
 owl_gpio.c:47:5:owl_gpio_clr	0	static
-owl_gpio.c:117:5:owl_gpio_init	80	static
+owl_gpio.c:117:5:owl_gpio_init	96	static

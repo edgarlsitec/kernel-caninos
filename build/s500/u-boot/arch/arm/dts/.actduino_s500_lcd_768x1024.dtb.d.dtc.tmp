@@ -1,1 +1,1 @@
-arch/arm/dts/actduino_s500_lcd_768x1024.dtb: arch/arm/dts/.actduino_s500_lcd_768x1024.dtb.dts.tmp /home/edgar/repo/kernel-caninos/uboot/arch/arm/dts/actduino.dtsi /home/edgar/repo/kernel-caninos/uboot/arch/arm/dts/skeleton.dtsi
+arch/arm/dts/actduino_s500_lcd_768x1024.dtb: arch/arm/dts/.actduino_s500_lcd_768x1024.dtb.dts.tmp /home/edgar/kernel-caninos/uboot/arch/arm/dts/actduino.dtsi /home/edgar/kernel-caninos/uboot/arch/arm/dts/skeleton.dtsi

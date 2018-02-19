@@ -11,7 +11,7 @@ fdtdec.c:341:5:fdtdec_next_compatible_subnode	24	static
 fdtdec.c:356:5:fdtdec_next_alias	72	static
 fdtdec.c:387:5:fdtdec_add_aliases_for_id	64	dynamic
 fdtdec.c:378:5:fdtdec_find_aliases_for_id	24	static
-fdtdec.c:501:5:fdtdec_get_alias_seq	56	static
+fdtdec.c:501:5:fdtdec_get_alias_seq	64	static
 fdtdec.c:545:5:fdtdec_get_chosen_node	24	static
 fdtdec.c:577:5:fdtdec_prepare_fdt	8	static
 fdtdec.c:560:5:fdtdec_check_fdt	8	static
