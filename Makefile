@@ -80,7 +80,7 @@ misc:
 	$(Q)cp $(KERNEL_OUT_DIR)/arch/$(ARCH)/boot/dts/$(KERNEL_DTS).dtb $(MISC_DIR)/kernel.dtb
 	$(Q)cp $(BOARD_CONFIG_DIR)/uEnv.txt $(MISC_DIR)
 	$(Q)dd if=/dev/zero of=$(IMAGE_DIR)/misc.img bs=1M count=$(MISC_IMAGE_SIZE)
-	$(Q)$(TOOLS_DIR)/utils/makebootfat -o $(IMAGE_DIR)/misc.img -L misc -b $(SCRIPT_DIR)/bootsect.bin $(MISC_DIR)
+	$(Q)makebootfat -o $(IMAGE_DIR)/misc.img -L misc -b $(SCRIPT_DIR)/bootsect.bin $(MISC_DIR)
 
 rootfs:
 	$(Q)mkdir -vp $(ROOTFS_DIR)/lib $(ROOTFS_DIR)/usr
