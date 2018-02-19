@@ -72,6 +72,13 @@ config AMBA_PL08X
 	  provide DMA engine support. This includes the original ARM
 	  PL080 and PL081, Samsungs PL080 derivative and Faraday
 	  Technology's FTDMAC020 PL080 derivative.
+	  
+config OWL_DMAC
+	tristate "OWL AHB DMA support"
+	depends on ARCH_ACTIONS
+	select DMA_ENGINE
+	help
+	  Support the actions AHB DMA controller.
 
 config AMCC_PPC440SPE_ADMA
 	tristate "AMCC PPC440SPe ADMA support"
