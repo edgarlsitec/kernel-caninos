@@ -11,14 +11,14 @@
 /dts-v1/;
 
 # 1 "/home/edgar/repo/kernel-caninos/linux/arch/arm/boot/dts/owl-s500.dtsi" 1
-# 9 "/home/edgar/repo/kernel-caninos/linux/arch/arm/boot/dts/owl-s500.dtsi"
+# 10 "/home/edgar/repo/kernel-caninos/linux/arch/arm/boot/dts/owl-s500.dtsi"
 # 1 "/home/edgar/repo/kernel-caninos/linux/scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/arm-gic.h" 1
 # 9 "/home/edgar/repo/kernel-caninos/linux/scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/arm-gic.h"
 # 1 "/home/edgar/repo/kernel-caninos/linux/scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/irq.h" 1
 # 10 "/home/edgar/repo/kernel-caninos/linux/scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/arm-gic.h" 2
-# 10 "/home/edgar/repo/kernel-caninos/linux/arch/arm/boot/dts/owl-s500.dtsi" 2
-# 1 "/home/edgar/repo/kernel-caninos/linux/scripts/dtc/include-prefixes/dt-bindings/power/owl-s500-powergate.h" 1
 # 11 "/home/edgar/repo/kernel-caninos/linux/arch/arm/boot/dts/owl-s500.dtsi" 2
+# 1 "/home/edgar/repo/kernel-caninos/linux/scripts/dtc/include-prefixes/dt-bindings/power/owl-s500-powergate.h" 1
+# 12 "/home/edgar/repo/kernel-caninos/linux/arch/arm/boot/dts/owl-s500.dtsi" 2
 
 / {
  compatible = "actions,s500";
@@ -195,6 +195,16 @@
    compatible = "actions,s500-sps";
    reg = <0xb01b0100 0x100>;
    #power-domain-cells = <1>;
+  };
+
+  dma@b0260000 {
+   compatible = "actions,owl-dma";
+   reg = <0xb0260000 0xd00>;
+   interrupts = <0 57 4>,
+                <0 58 4>,
+                <0 59 4>,
+                <0 60 4>;
+   power-domains = <&sps 5>;
   };
  };
 };

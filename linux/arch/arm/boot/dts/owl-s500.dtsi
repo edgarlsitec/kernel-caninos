@@ -2,6 +2,7 @@
  * Actions Semi S500 SoC
  *
  * Copyright (c) 2016-2017 Andreas Färber
+ * Copyright (c) 2018-2018 Edgar Bernardi Righi
  *
  * SPDX-License-Identifier: (GPL-2.0+ OR MIT)
  */
@@ -184,6 +185,16 @@
 			compatible = "actions,s500-sps";
 			reg = <0xb01b0100 0x100>;
 			#power-domain-cells = <1>;
+		};
+
+		dma@b0260000 {
+			compatible = "actions,owl-dma";
+			reg = <0xb0260000 0xd00>;
+			interrupts = <GIC_SPI 57 IRQ_TYPE_LEVEL_HIGH>,
+			             <GIC_SPI 58 IRQ_TYPE_LEVEL_HIGH>,
+			             <GIC_SPI 59 IRQ_TYPE_LEVEL_HIGH>,
+			             <GIC_SPI 60 IRQ_TYPE_LEVEL_HIGH>;
+			power-domains = <&sps S500_PD_DMA>;
 		};
 	};
 };

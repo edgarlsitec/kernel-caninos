@@ -869,6 +869,7 @@ deps_drivers/dma/owl-dma.o := \
     $(wildcard include/config/of/overlay.h) \
   /home/edgar/repo/kernel-caninos/linux/include/linux/property.h \
   /home/edgar/repo/kernel-caninos/linux/include/linux/fwnode.h \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/pm_runtime.h \
 
 drivers/dma/owl-dma.o: $(deps_drivers/dma/owl-dma.o)
 
