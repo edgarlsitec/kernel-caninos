@@ -1,0 +1,6 @@
+ARCH=arm
+KERNEL_DTS=caninos-labrador
+KERNEL_DEFCONFIG=caninos_labrador_defconfig
+UBOOT_DEFCONFIG=s500_defconfig
+
+MISC_IMAGE_SIZE=48

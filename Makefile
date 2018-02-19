@@ -16,7 +16,7 @@ CPUS=$$(($(shell cat /sys/devices/system/cpu/present | awk -F- '{ print $$2 }')+
 Q=
 
 KERNEL_SRC=$(TOP_DIR)/linux
-UBOOT_SRC=$(TOP_DIR)/u-boot
+UBOOT_SRC=$(TOP_DIR)/uboot
 ROOTFS_SRC=$(TOP_DIR)/rootfs
 CONFIG_DIR=$(TOP_DIR)/config
 
