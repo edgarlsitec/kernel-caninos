@@ -1,0 +1,11 @@
+acts_owl_mac.c:56:12:owl_mac_set_macaddr	32	static
+acts_owl_mac.c:510:12:owl_mac_recv	32	static
+acts_owl_mac.c:224:12:owl_mac_deactivate_gpio	8	static
+acts_owl_mac.c:434:13:owl_mac_halt	8	static
+acts_owl_mac.c:128:17:owl_mdio_read.isra.3	0	static
+acts_owl_mac.c:147:13:owl_mdio_write.isra.4	4	static
+acts_owl_mac.c:315:13:owl_prepare_tx_bds.isra.5	0	static
+acts_owl_mac.c:452:12:owl_mac_send	32	static
+acts_owl_mac.c:394:12:owl_mac_init	24	static
+acts_owl_mac.c:164:6:owl_print_phy_register	8	static
+acts_owl_mac.c:582:5:owl_mac_initialize	16	static

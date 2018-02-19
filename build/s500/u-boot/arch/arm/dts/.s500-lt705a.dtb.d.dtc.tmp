@@ -1,0 +1,1 @@
+arch/arm/dts/s500-lt705a.dtb: arch/arm/dts/.s500-lt705a.dtb.dts.tmp /home/edgar/repo/kernel-caninos/uboot/arch/arm/dts/s500.dtsi /home/edgar/repo/kernel-caninos/uboot/arch/arm/dts/skeleton.dtsi

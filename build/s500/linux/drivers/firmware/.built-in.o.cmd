@@ -1,0 +1,1 @@
+cmd_drivers/firmware/built-in.o :=  rm -f drivers/firmware/built-in.o; arm-linux-gnueabihf-ar rcSTPD drivers/firmware/built-in.o drivers/firmware/broadcom/built-in.o drivers/firmware/meson/built-in.o drivers/firmware/tegra/built-in.o 

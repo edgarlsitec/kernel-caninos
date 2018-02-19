@@ -1,0 +1,241 @@
+# 1 "/home/edgar/repo/kernel-caninos/linux/arch/arm/boot/dts/owl-s500-guitar-bb-rev-b.dts"
+# 1 "<built-in>"
+# 1 "<command-line>"
+# 1 "/home/edgar/repo/kernel-caninos/linux/arch/arm/boot/dts/owl-s500-guitar-bb-rev-b.dts"
+
+
+
+
+
+
+/dts-v1/;
+
+# 1 "/home/edgar/repo/kernel-caninos/linux/arch/arm/boot/dts/owl-s500-guitar.dtsi" 1
+# 9 "/home/edgar/repo/kernel-caninos/linux/arch/arm/boot/dts/owl-s500-guitar.dtsi"
+# 1 "/home/edgar/repo/kernel-caninos/linux/arch/arm/boot/dts/owl-s500.dtsi" 1
+# 9 "/home/edgar/repo/kernel-caninos/linux/arch/arm/boot/dts/owl-s500.dtsi"
+# 1 "/home/edgar/repo/kernel-caninos/linux/scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/arm-gic.h" 1
+# 9 "/home/edgar/repo/kernel-caninos/linux/scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/arm-gic.h"
+# 1 "/home/edgar/repo/kernel-caninos/linux/scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/irq.h" 1
+# 10 "/home/edgar/repo/kernel-caninos/linux/scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/arm-gic.h" 2
+# 10 "/home/edgar/repo/kernel-caninos/linux/arch/arm/boot/dts/owl-s500.dtsi" 2
+# 1 "/home/edgar/repo/kernel-caninos/linux/scripts/dtc/include-prefixes/dt-bindings/power/owl-s500-powergate.h" 1
+# 11 "/home/edgar/repo/kernel-caninos/linux/arch/arm/boot/dts/owl-s500.dtsi" 2
+
+/ {
+ compatible = "actions,s500";
+ interrupt-parent = <&gic>;
+ #address-cells = <1>;
+ #size-cells = <1>;
+
+ aliases {
+ };
+
+ chosen {
+ };
+
+ cpus {
+  #address-cells = <1>;
+  #size-cells = <0>;
+
+  cpu0: cpu@0 {
+   device_type = "cpu";
+   compatible = "arm,cortex-a9";
+   reg = <0x0>;
+   enable-method = "actions,s500-smp";
+  };
+
+  cpu1: cpu@1 {
+   device_type = "cpu";
+   compatible = "arm,cortex-a9";
+   reg = <0x1>;
+   enable-method = "actions,s500-smp";
+  };
+
+  cpu2: cpu@2 {
+   device_type = "cpu";
+   compatible = "arm,cortex-a9";
+   reg = <0x2>;
+   enable-method = "actions,s500-smp";
+   power-domains = <&sps 3>;
+  };
+
+  cpu3: cpu@3 {
+   device_type = "cpu";
+   compatible = "arm,cortex-a9";
+   reg = <0x3>;
+   enable-method = "actions,s500-smp";
+   power-domains = <&sps 4>;
+  };
+ };
+
+ arm-pmu {
+  compatible = "arm,cortex-a9-pmu";
+  interrupts = <0 4 4>,
+               <0 5 4>,
+               <0 6 4>,
+               <0 7 4>;
+  interrupt-affinity = <&cpu0>, <&cpu1>, <&cpu2>, <&cpu3>;
+ };
+
+ hosc: hosc {
+  compatible = "fixed-clock";
+  clock-frequency = <24000000>;
+  #clock-cells = <0>;
+ };
+
+ soc {
+  compatible = "simple-bus";
+  #address-cells = <1>;
+  #size-cells = <1>;
+  ranges;
+
+  scu: scu@b0020000 {
+   compatible = "arm,cortex-a9-scu";
+   reg = <0xb0020000 0x100>;
+  };
+
+  global_timer: timer@b0020200 {
+   compatible = "arm,cortex-a9-global-timer";
+   reg = <0xb0020200 0x100>;
+   interrupts = <1 0 ((((1 << (4)) - 1) << 8) | 1)>;
+   status = "disabled";
+  };
+
+  twd_timer: timer@b0020600 {
+   compatible = "arm,cortex-a9-twd-timer";
+   reg = <0xb0020600 0x20>;
+   interrupts = <1 2 ((((1 << (4)) - 1) << 8) | 1)>;
+   status = "disabled";
+  };
+
+  twd_wdt: wdt@b0020620 {
+   compatible = "arm,cortex-a9-twd-wdt";
+   reg = <0xb0020620 0xe0>;
+   interrupts = <1 3 ((((1 << (4)) - 1) << 8) | 1)>;
+   status = "disabled";
+  };
+
+  gic: interrupt-controller@b0021000 {
+   compatible = "arm,cortex-a9-gic";
+   reg = <0xb0021000 0x1000>,
+         <0xb0020100 0x0100>;
+   interrupt-controller;
+   #interrupt-cells = <3>;
+  };
+
+  l2: cache-controller@b0022000 {
+   compatible = "arm,pl310-cache";
+   reg = <0xb0022000 0x1000>;
+   cache-unified;
+   cache-level = <2>;
+   interrupts = <0 55 4>;
+   arm,tag-latency = <3 3 2>;
+   arm,data-latency = <5 3 3>;
+  };
+
+  uart0: serial@b0120000 {
+   compatible = "actions,s500-uart", "actions,owl-uart";
+   reg = <0xb0120000 0x2000>;
+   interrupts = <0 29 4>;
+   status = "disabled";
+  };
+
+  uart1: serial@b0122000 {
+   compatible = "actions,s500-uart", "actions,owl-uart";
+   reg = <0xb0122000 0x2000>;
+   interrupts = <0 30 4>;
+   status = "disabled";
+  };
+
+  uart2: serial@b0124000 {
+   compatible = "actions,s500-uart", "actions,owl-uart";
+   reg = <0xb0124000 0x2000>;
+   interrupts = <0 31 4>;
+   status = "disabled";
+  };
+
+  uart3: serial@b0126000 {
+   compatible = "actions,s500-uart", "actions,owl-uart";
+   reg = <0xb0126000 0x2000>;
+   interrupts = <0 32 4>;
+   status = "disabled";
+  };
+
+  uart4: serial@b0128000 {
+   compatible = "actions,s500-uart", "actions,owl-uart";
+   reg = <0xb0128000 0x2000>;
+   interrupts = <0 33 4>;
+   status = "disabled";
+  };
+
+  uart5: serial@b012a000 {
+   compatible = "actions,s500-uart", "actions,owl-uart";
+   reg = <0xb012a000 0x2000>;
+   interrupts = <0 34 4>;
+   status = "disabled";
+  };
+
+  uart6: serial@b012c000 {
+   compatible = "actions,s500-uart", "actions,owl-uart";
+   reg = <0xb012c000 0x2000>;
+   interrupts = <0 35 4>;
+   status = "disabled";
+  };
+
+  timer: timer@b0168000 {
+   compatible = "actions,s500-timer";
+   reg = <0xb0168000 0x8000>;
+   interrupts = <0 8 4>,
+                <0 9 4>,
+                <0 10 4>,
+                <0 11 4>;
+   interrupt-names = "2hz0", "2hz1", "timer0", "timer1";
+  };
+
+  sps: power-controller@b01b0100 {
+   compatible = "actions,s500-sps";
+   reg = <0xb01b0100 0x100>;
+   #power-domain-cells = <1>;
+  };
+ };
+};
+# 10 "/home/edgar/repo/kernel-caninos/linux/arch/arm/boot/dts/owl-s500-guitar.dtsi" 2
+
+/ {
+ compatible = "lemaker,guitar", "actions,s500";
+
+ memory@0 {
+  device_type = "memory";
+  reg = <0x0 0x40000000>;
+ };
+};
+
+&timer {
+ clocks = <&hosc>;
+};
+# 10 "/home/edgar/repo/kernel-caninos/linux/arch/arm/boot/dts/owl-s500-guitar-bb-rev-b.dts" 2
+
+/ {
+ compatible = "lemaker,guitar-bb-rev-b", "lemaker,guitar", "actions,s500";
+ model = "LeMaker Guitar Base Board rev. B";
+
+ aliases {
+  serial3 = &uart3;
+ };
+
+ chosen {
+  stdout-path = "serial3:115200n8";
+ };
+
+ uart3_clk: uart3-clk {
+  compatible = "fixed-clock";
+  clock-frequency = <921600>;
+  #clock-cells = <0>;
+ };
+};
+
+&uart3 {
+ status = "okay";
+ clocks = <&uart3_clk>;
+};

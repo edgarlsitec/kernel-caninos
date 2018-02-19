@@ -1,0 +1,5 @@
+pwm.c:73:5:pwm_enable	0	static
+pwm.c:84:6:pwm_disable	0	static
+pwm.c:94:5:pwm_config	32	static
+pwm.c:194:5:fdtdec_pwm_get	48	static
+pwm.c:232:5:pwm_init	8	static

@@ -1,0 +1,2 @@
+uenvcmd=setenv ramdisk_addr_r -; setenv os_type linux;
+bootargs=earlycon clk_ignore_unused selinux=0

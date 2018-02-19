@@ -1,0 +1,14 @@
+pmu.c:290:12:_atc2603c_reg_read	32	static
+pmu.c:600:12:_atc2609a_reg_read	32	static
+pmu.c:306:12:_atc2603c_reg_write	24	static
+pmu.c:613:12:_atc2609a_reg_write	24	static
+pmu.c:68:12:_atc2603a_reg_read	24	static
+pmu.c:81:12:_atc2603a_reg_write	24	static
+pmu.c:808:5:atc260x_reg_read	0	static
+pmu.c:825:5:atc260x_reg_write	0	static
+pmu.c:842:5:atc260x_set_bits	16	static
+pmu.c:861:5:atc260x_get_version	8	static
+pmu.c:969:6:pmu_early_init	16	static
+pmu.c:1029:6:vdd_core_init	24	static
+pmu.c:1156:5:pmu_init	32	static
+pmu.c:1266:6:pmu_prepare_for_s2	8	static

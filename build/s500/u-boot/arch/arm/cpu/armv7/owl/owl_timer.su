@@ -1,0 +1,6 @@
+owl_timer.c:22:5:timer_init	8	static
+owl_timer.c:35:7:get_timer_masked	0	static
+owl_timer.c:48:6:__udelay	0	static
+owl_timer.c:63:7:get_timer	8	static
+owl_timer.c:68:20:get_ticks	8	static
+owl_timer.c:74:7:get_tbclk	0	static

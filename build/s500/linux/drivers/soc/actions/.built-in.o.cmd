@@ -1,0 +1,1 @@
+cmd_drivers/soc/actions/built-in.o :=  rm -f drivers/soc/actions/built-in.o; arm-linux-gnueabihf-ar rcSTPD drivers/soc/actions/built-in.o drivers/soc/actions/owl-sps-helper.o drivers/soc/actions/owl-sps.o 

@@ -1,0 +1,3 @@
+owl_boot_fdt.c:54:13:boot_append_remove_args.constprop	520	static
+owl_boot_fdt.c:102:5:boot_append_bootargs_add	536	static
+owl_boot_fdt.c:143:6:owl_boot_fdt_setup	600	static

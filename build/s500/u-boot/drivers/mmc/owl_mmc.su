@@ -1,0 +1,10 @@
+owl_mmc.c:671:13:owl_mmc_finish_request	0	static
+owl_mmc.c:238:13:owl_dump_dmac.isra.0	8	static
+owl_mmc.c:195:13:owl_dump_mfp.isra.1	8	static
+owl_mmc.c:220:13:owl_dump_sdc.isra.2	8	static
+owl_mmc.c:681:12:owl_mmc_send_cmd	40	static
+owl_mmc.c:99:13:module_clk_set.constprop	0	static
+owl_mmc.c:483:12:owl_mmc_init_setup	8	static
+owl_mmc.c:494:13:owl_mmc_set_ios	32	static
+owl_mmc.c:967:5:owl_sd_init	16	static
+owl_mmc.c:996:5:owl_mmc_init	24	static

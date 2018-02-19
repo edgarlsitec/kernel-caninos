@@ -1,0 +1,1 @@
+cmd_arch/arm/include/generated/asm/mach-types.h := mkdir -p arch/arm/include/generated/asm/ && awk -f /home/edgar/repo/kernel-caninos/linux/arch/arm/tools/gen-mach-types /home/edgar/repo/kernel-caninos/linux/arch/arm/tools/mach-types > arch/arm/include/generated/asm/mach-types.h || { rm -f arch/arm/include/generated/asm/mach-types.h; /bin/false; }
