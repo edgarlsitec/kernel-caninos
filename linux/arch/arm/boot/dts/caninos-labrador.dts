@@ -30,6 +30,11 @@
 		device_type = "memory";
 		reg = <0x0 0x40000000>;
 	};
+
+	mmc@b0238000 {
+		card_type = "emmc";
+		status = "okay";
+	};
 };
 
 &uart3 {

@@ -208,6 +208,29 @@
                 <0 60 4>;
    power-domains = <&sps 5>;
   };
+
+  mmc0: mmc@b0230000 {
+   #address-cells = <1>;
+   #size-cells = <0>;
+   compatible = "actions,owl-mmc";
+   reg = <0xb0230000 0x38>;
+  };
+
+  mmc1: mmc@b0234000 {
+   #address-cells = <1>;
+   #size-cells = <0>;
+   compatible = "actions,owl-mmc";
+   reg = <0xb0234000 0x38>;
+   interrupts = <0 43 4>;
+  };
+
+  mmc2: mmc@b0238000 {
+   #address-cells = <1>;
+   #size-cells = <0>;
+   compatible = "actions,owl-mmc";
+   reg = <0xb0238000 0x38>;
+   interrupts = <0 44 4>;
+  };
  };
 };
 # 10 "/home/edgar/repo/kernel-caninos/linux/arch/arm/boot/dts/owl-s500-guitar.dtsi" 2
