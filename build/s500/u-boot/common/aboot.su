@@ -1,1 +1,1 @@
-aboot.c:44:6:write_sparse_image	72	static
+aboot.c:44:6:write_sparse_image	64	static

@@ -1,6 +1,6 @@
-cmd_scripts/sortextable := gcc -Wp,-MD,scripts/.sortextable.d -Iscripts -Wall -Wmissing-prototypes -Wstrict-prototypes -O2 -fomit-frame-pointer -std=gnu89  -I/home/edgar/kernel-caninos/linux/tools/include  -I/home/edgar/kernel-caninos/linux/tools/include -o scripts/sortextable /home/edgar/kernel-caninos/linux/scripts/sortextable.c  
+cmd_scripts/sortextable := gcc -Wp,-MD,scripts/.sortextable.d -Iscripts -Wall -Wmissing-prototypes -Wstrict-prototypes -O2 -fomit-frame-pointer -std=gnu89  -I/home/edgar/repo/kernel-caninos/linux/tools/include  -I/home/edgar/repo/kernel-caninos/linux/tools/include -o scripts/sortextable /home/edgar/repo/kernel-caninos/linux/scripts/sortextable.c  
 
-source_scripts/sortextable := /home/edgar/kernel-caninos/linux/scripts/sortextable.c
+source_scripts/sortextable := /home/edgar/repo/kernel-caninos/linux/scripts/sortextable.c
 
 deps_scripts/sortextable := \
   /usr/include/stdc-predef.h \
@@ -13,7 +13,7 @@ deps_scripts/sortextable := \
   /usr/include/x86_64-linux-gnu/bits/types.h \
   /usr/include/x86_64-linux-gnu/bits/typesizes.h \
   /usr/include/time.h \
-  /usr/lib/gcc/x86_64-linux-gnu/6/include/stddef.h \
+  /usr/lib/gcc/x86_64-linux-gnu/4.9/include/stddef.h \
   /usr/include/endian.h \
   /usr/include/x86_64-linux-gnu/bits/endian.h \
   /usr/include/x86_64-linux-gnu/bits/byteswap.h \
@@ -31,7 +31,7 @@ deps_scripts/sortextable := \
   /usr/include/x86_64-linux-gnu/bits/stat.h \
   /usr/include/getopt.h \
   /usr/include/elf.h \
-  /usr/lib/gcc/x86_64-linux-gnu/6/include/stdint.h \
+  /usr/lib/gcc/x86_64-linux-gnu/4.9/include/stdint.h \
   /usr/include/stdint.h \
   /usr/include/x86_64-linux-gnu/bits/wchar.h \
   /usr/include/x86_64-linux-gnu/bits/auxv.h \
@@ -44,7 +44,7 @@ deps_scripts/sortextable := \
   /usr/include/libio.h \
   /usr/include/_G_config.h \
   /usr/include/wchar.h \
-  /usr/lib/gcc/x86_64-linux-gnu/6/include/stdarg.h \
+  /usr/lib/gcc/x86_64-linux-gnu/4.9/include/stdarg.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
   /usr/include/x86_64-linux-gnu/bits/stdio.h \
@@ -62,9 +62,9 @@ deps_scripts/sortextable := \
   /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
   /usr/include/x86_64-linux-gnu/bits/environments.h \
   /usr/include/x86_64-linux-gnu/bits/confname.h \
-  /home/edgar/kernel-caninos/linux/tools/include/tools/be_byteshift.h \
-  /home/edgar/kernel-caninos/linux/tools/include/tools/le_byteshift.h \
-  /home/edgar/kernel-caninos/linux/scripts/sortextable.h \
+  /home/edgar/repo/kernel-caninos/linux/tools/include/tools/be_byteshift.h \
+  /home/edgar/repo/kernel-caninos/linux/tools/include/tools/le_byteshift.h \
+  /home/edgar/repo/kernel-caninos/linux/scripts/sortextable.h \
 
 scripts/sortextable: $(deps_scripts/sortextable)
 

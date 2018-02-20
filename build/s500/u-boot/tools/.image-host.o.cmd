@@ -1,15 +1,15 @@
-cmd_tools/image-host.o := cc -Wp,-MD,tools/.image-host.o.d -Itools -Wall -Wstrict-prototypes -O2 -fomit-frame-pointer -include /home/edgar/kernel-caninos/uboot/include/libfdt_env.h -idirafterinclude -idirafter/home/edgar/kernel-caninos/uboot/include -idirafter/home/edgar/kernel-caninos/uboot/arch/arm/include   -I/home/edgar/kernel-caninos/uboot/lib/libfdt   -I/home/edgar/kernel-caninos/uboot/tools -DCONFIG_SYS_TEXT_BASE=0x08000040 -DUSE_HOSTCC -D__KERNEL_STRICT_NAMES -D_GNU_SOURCE -c -o tools/image-host.o /home/edgar/kernel-caninos/uboot/tools/image-host.c
+cmd_tools/image-host.o := cc -Wp,-MD,tools/.image-host.o.d -Itools -Wall -Wstrict-prototypes -O2 -fomit-frame-pointer -include /home/edgar/repo/kernel-caninos/uboot/include/libfdt_env.h -idirafterinclude -idirafter/home/edgar/repo/kernel-caninos/uboot/include -idirafter/home/edgar/repo/kernel-caninos/uboot/arch/arm/include   -I/home/edgar/repo/kernel-caninos/uboot/lib/libfdt   -I/home/edgar/repo/kernel-caninos/uboot/tools -DCONFIG_SYS_TEXT_BASE=0x08000040 -DUSE_HOSTCC -D__KERNEL_STRICT_NAMES -D_GNU_SOURCE -c -o tools/image-host.o /home/edgar/repo/kernel-caninos/uboot/tools/image-host.c
 
-source_tools/image-host.o := /home/edgar/kernel-caninos/uboot/tools/image-host.c
+source_tools/image-host.o := /home/edgar/repo/kernel-caninos/uboot/tools/image-host.c
 
 deps_tools/image-host.o := \
     $(wildcard include/config/fit/signature.h) \
   /usr/include/stdc-predef.h \
-  /home/edgar/kernel-caninos/uboot/include/libfdt_env.h \
-  /home/edgar/kernel-caninos/uboot/include/compiler.h \
+  /home/edgar/repo/kernel-caninos/uboot/include/libfdt_env.h \
+  /home/edgar/repo/kernel-caninos/uboot/include/compiler.h \
     $(wildcard include/config/use/stdint.h) \
-  /usr/lib/gcc/x86_64-linux-gnu/6/include/stddef.h \
-  /usr/lib/gcc/x86_64-linux-gnu/6/include/stdint.h \
+  /usr/lib/gcc/x86_64-linux-gnu/4.9/include/stddef.h \
+  /usr/lib/gcc/x86_64-linux-gnu/4.9/include/stdint.h \
   /usr/include/stdint.h \
   /usr/include/features.h \
   /usr/include/x86_64-linux-gnu/sys/cdefs.h \
@@ -26,15 +26,15 @@ deps_tools/image-host.o := \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
-  /usr/include/xlocale.h \
-  /usr/include/x86_64-linux-gnu/sys/types.h \
-  /usr/include/x86_64-linux-gnu/bits/types.h \
-  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
-  /usr/include/time.h \
   /usr/include/endian.h \
   /usr/include/x86_64-linux-gnu/bits/endian.h \
   /usr/include/x86_64-linux-gnu/bits/byteswap.h \
+  /usr/include/x86_64-linux-gnu/bits/types.h \
+  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
   /usr/include/x86_64-linux-gnu/bits/byteswap-16.h \
+  /usr/include/xlocale.h \
+  /usr/include/x86_64-linux-gnu/sys/types.h \
+  /usr/include/time.h \
   /usr/include/x86_64-linux-gnu/sys/select.h \
   /usr/include/x86_64-linux-gnu/bits/select.h \
   /usr/include/x86_64-linux-gnu/bits/sigset.h \
@@ -48,7 +48,7 @@ deps_tools/image-host.o := \
   /usr/include/libio.h \
   /usr/include/_G_config.h \
   /usr/include/wchar.h \
-  /usr/lib/gcc/x86_64-linux-gnu/6/include/stdarg.h \
+  /usr/lib/gcc/x86_64-linux-gnu/4.9/include/stdarg.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
   /usr/include/x86_64-linux-gnu/bits/stdio.h \
@@ -65,7 +65,7 @@ deps_tools/image-host.o := \
   /usr/include/x86_64-linux-gnu/bits/stat.h \
   /usr/include/byteswap.h \
   /usr/include/x86_64-linux-gnu/bits/timex.h \
-  /home/edgar/kernel-caninos/uboot/include/linux/types.h \
+  /home/edgar/repo/kernel-caninos/uboot/include/linux/types.h \
     $(wildcard include/config/uid16.h) \
   /usr/include/linux/posix_types.h \
   /usr/include/linux/stddef.h \
@@ -78,22 +78,22 @@ deps_tools/image-host.o := \
   /usr/include/x86_64-linux-gnu/asm/types.h \
   /usr/include/asm-generic/types.h \
   /usr/include/asm-generic/int-ll64.h \
-  /usr/lib/gcc/x86_64-linux-gnu/6/include/stdbool.h \
-  /home/edgar/kernel-caninos/uboot/tools/mkimage.h \
-  /home/edgar/kernel-caninos/uboot/tools/os_support.h \
-  /home/edgar/kernel-caninos/uboot/include/compiler.h \
+  /usr/lib/gcc/x86_64-linux-gnu/4.9/include/stdbool.h \
+  /home/edgar/repo/kernel-caninos/uboot/tools/mkimage.h \
+  /home/edgar/repo/kernel-caninos/uboot/tools/os_support.h \
+  /home/edgar/repo/kernel-caninos/uboot/include/compiler.h \
   /usr/include/x86_64-linux-gnu/sys/stat.h \
   /usr/include/unistd.h \
   /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
   /usr/include/x86_64-linux-gnu/bits/environments.h \
   /usr/include/x86_64-linux-gnu/bits/confname.h \
   /usr/include/getopt.h \
-  /home/edgar/kernel-caninos/uboot/include/u-boot/sha1.h \
-  /home/edgar/kernel-caninos/uboot/tools/fdt_host.h \
-  /home/edgar/kernel-caninos/uboot/tools/../include/libfdt.h \
-  /home/edgar/kernel-caninos/uboot/include/libfdt_env.h \
-  /home/edgar/kernel-caninos/uboot/include/fdt.h \
-  /home/edgar/kernel-caninos/uboot/tools/../include/fdt_support.h \
+  /home/edgar/repo/kernel-caninos/uboot/include/u-boot/sha1.h \
+  /home/edgar/repo/kernel-caninos/uboot/tools/fdt_host.h \
+  /home/edgar/repo/kernel-caninos/uboot/tools/../include/libfdt.h \
+  /home/edgar/repo/kernel-caninos/uboot/include/libfdt_env.h \
+  /home/edgar/repo/kernel-caninos/uboot/include/fdt.h \
+  /home/edgar/repo/kernel-caninos/uboot/tools/../include/fdt_support.h \
     $(wildcard include/config/of/libfdt.h) \
     $(wildcard include/config/has/fsl/dr/usb.h) \
     $(wildcard include/config/has/fsl/mph/usb.h) \
@@ -102,9 +102,9 @@ deps_tools/image-host.o := \
     $(wildcard include/config/sys/fdt/pad.h) \
     $(wildcard include/config/of/board/setup.h) \
     $(wildcard include/config/of/system/setup.h) \
-  /home/edgar/kernel-caninos/uboot/tools/imagetool.h \
-  /home/edgar/kernel-caninos/uboot/include/bootm.h \
-  /home/edgar/kernel-caninos/uboot/include/command.h \
+  /home/edgar/repo/kernel-caninos/uboot/tools/imagetool.h \
+  /home/edgar/repo/kernel-caninos/uboot/include/bootm.h \
+  /home/edgar/repo/kernel-caninos/uboot/include/command.h \
     $(wildcard include/config/sys/help/cmd/width.h) \
     $(wildcard include/config/sys/longhelp.h) \
     $(wildcard include/config/auto/complete.h) \
@@ -117,15 +117,15 @@ deps_tools/image-host.o := \
     $(wildcard include/config/cmd/bootd.h) \
     $(wildcard include/config/cmd/bootm.h) \
     $(wildcard include/config/needs/manual/reloc.h) \
-  /home/edgar/kernel-caninos/uboot/include/linker_lists.h \
-  /home/edgar/kernel-caninos/uboot/include/linux/compiler.h \
+  /home/edgar/repo/kernel-caninos/uboot/include/linker_lists.h \
+  /home/edgar/repo/kernel-caninos/uboot/include/linux/compiler.h \
     $(wildcard include/config/sparse/rcu/pointer.h) \
     $(wildcard include/config/trace/branch/profiling.h) \
     $(wildcard include/config/profile/all/branches.h) \
     $(wildcard include/config/enable/must/check.h) \
     $(wildcard include/config/enable/warn/deprecated.h) \
     $(wildcard include/config/kprobes.h) \
-  /home/edgar/kernel-caninos/uboot/include/image.h \
+  /home/edgar/repo/kernel-caninos/uboot/include/image.h \
     $(wildcard include/config/fit.h) \
     $(wildcard include/config/fit/verbose.h) \
     $(wildcard include/config/spl/build.h) \
@@ -152,15 +152,15 @@ deps_tools/image-host.o := \
   /usr/include/linux/types.h \
   /usr/include/linux/swab.h \
   /usr/include/x86_64-linux-gnu/asm/swab.h \
-  /home/edgar/kernel-caninos/uboot/include/hash.h \
+  /home/edgar/repo/kernel-caninos/uboot/include/hash.h \
     $(wildcard include/config/sha1sum/verify.h) \
     $(wildcard include/config/crc32/verify.h) \
     $(wildcard include/config/hash/verify.h) \
-  /home/edgar/kernel-caninos/uboot/include/libfdt.h \
-  /home/edgar/kernel-caninos/uboot/include/fdt_support.h \
-  /home/edgar/kernel-caninos/uboot/include/version.h \
+  /home/edgar/repo/kernel-caninos/uboot/include/libfdt.h \
+  /home/edgar/repo/kernel-caninos/uboot/include/fdt_support.h \
+  /home/edgar/repo/kernel-caninos/uboot/include/version.h \
     $(wildcard include/config/ident/string.h) \
-  /home/edgar/kernel-caninos/uboot/include/timestamp.h \
+  /home/edgar/repo/kernel-caninos/uboot/include/timestamp.h \
   include/generated/timestamp_autogenerated.h \
   include/generated/version_autogenerated.h \
 

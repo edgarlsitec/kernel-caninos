@@ -1,8 +1,8 @@
 image.c:420:12:on_loadaddr	8	static
-image.c:172:5:image_check_hcrc	80	static
+image.c:172:5:image_check_hcrc	72	static
 image.c:187:5:image_check_dcrc	8	static
 image.c:209:7:image_multi_count	0	static
-image.c:242:6:image_multi_getimg	16	static
+image.c:242:6:image_multi_getimg	24	static
 image.c:436:7:getenv_bootm_low	8	static
 image.c:453:13:getenv_bootm_size	8	static
 image.c:475:13:getenv_bootm_mapsize	8	static
@@ -19,7 +19,7 @@ image.c:646:5:genimg_get_os_id	0	static
 image.c:651:5:genimg_get_arch_id	0	static
 image.c:656:5:genimg_get_type_id	0	static
 image.c:661:5:genimg_get_comp_id	0	static
-image.c:682:7:genimg_get_kernel_addr_fit	32	static
+image.c:682:7:genimg_get_kernel_addr_fit	24	static
 image.c:716:7:genimg_get_kernel_addr	16	static
 image.c:739:5:genimg_get_format	8	static
 image.c:770:7:genimg_get_image	0	static

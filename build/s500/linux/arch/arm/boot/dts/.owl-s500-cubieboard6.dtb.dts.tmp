@@ -1,19 +1,19 @@
-# 1 "/home/edgar/kernel-caninos/linux/arch/arm/boot/dts/owl-s500-cubieboard6.dts"
+# 1 "/home/edgar/repo/kernel-caninos/linux/arch/arm/boot/dts/owl-s500-cubieboard6.dts"
 # 1 "<built-in>"
 # 1 "<command-line>"
-# 1 "/home/edgar/kernel-caninos/linux/arch/arm/boot/dts/owl-s500-cubieboard6.dts"
-# 9 "/home/edgar/kernel-caninos/linux/arch/arm/boot/dts/owl-s500-cubieboard6.dts"
+# 1 "/home/edgar/repo/kernel-caninos/linux/arch/arm/boot/dts/owl-s500-cubieboard6.dts"
+# 9 "/home/edgar/repo/kernel-caninos/linux/arch/arm/boot/dts/owl-s500-cubieboard6.dts"
 /dts-v1/;
 
-# 1 "/home/edgar/kernel-caninos/linux/arch/arm/boot/dts/owl-s500.dtsi" 1
-# 10 "/home/edgar/kernel-caninos/linux/arch/arm/boot/dts/owl-s500.dtsi"
-# 1 "/home/edgar/kernel-caninos/linux/scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/arm-gic.h" 1
-# 9 "/home/edgar/kernel-caninos/linux/scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/arm-gic.h"
-# 1 "/home/edgar/kernel-caninos/linux/scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/irq.h" 1
-# 10 "/home/edgar/kernel-caninos/linux/scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/arm-gic.h" 2
-# 11 "/home/edgar/kernel-caninos/linux/arch/arm/boot/dts/owl-s500.dtsi" 2
-# 1 "/home/edgar/kernel-caninos/linux/scripts/dtc/include-prefixes/dt-bindings/power/owl-s500-powergate.h" 1
-# 12 "/home/edgar/kernel-caninos/linux/arch/arm/boot/dts/owl-s500.dtsi" 2
+# 1 "/home/edgar/repo/kernel-caninos/linux/arch/arm/boot/dts/owl-s500.dtsi" 1
+# 10 "/home/edgar/repo/kernel-caninos/linux/arch/arm/boot/dts/owl-s500.dtsi"
+# 1 "/home/edgar/repo/kernel-caninos/linux/scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/arm-gic.h" 1
+# 9 "/home/edgar/repo/kernel-caninos/linux/scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/arm-gic.h"
+# 1 "/home/edgar/repo/kernel-caninos/linux/scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/irq.h" 1
+# 10 "/home/edgar/repo/kernel-caninos/linux/scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/arm-gic.h" 2
+# 11 "/home/edgar/repo/kernel-caninos/linux/arch/arm/boot/dts/owl-s500.dtsi" 2
+# 1 "/home/edgar/repo/kernel-caninos/linux/scripts/dtc/include-prefixes/dt-bindings/power/owl-s500-powergate.h" 1
+# 12 "/home/edgar/repo/kernel-caninos/linux/arch/arm/boot/dts/owl-s500.dtsi" 2
 
 / {
  compatible = "actions,s500";
@@ -203,7 +203,7 @@
   };
  };
 };
-# 12 "/home/edgar/kernel-caninos/linux/arch/arm/boot/dts/owl-s500-cubieboard6.dts" 2
+# 12 "/home/edgar/repo/kernel-caninos/linux/arch/arm/boot/dts/owl-s500-cubieboard6.dts" 2
 
 / {
  compatible = "cubietech,cubieboard6", "actions,s500";

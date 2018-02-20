@@ -1,5 +1,5 @@
 /*
- * This was automagically generated from /home/edgar/kernel-caninos/linux/arch/arm/tools/mach-types!
+ * This was automagically generated from /home/edgar/repo/kernel-caninos/linux/arch/arm/tools/mach-types!
  * Do NOT edit
  */
 

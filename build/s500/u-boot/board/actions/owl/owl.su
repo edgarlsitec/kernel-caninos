@@ -2,4 +2,4 @@ owl.c:24:5:get_boot_dev_num	8	static
 owl.c:38:5:dram_init	8	static
 owl.c:50:5:board_init	8	static
 owl.c:77:5:board_eth_init	8	static
-owl.c:95:5:board_mmc_init	16	static
+owl.c:95:5:board_mmc_init	8	static

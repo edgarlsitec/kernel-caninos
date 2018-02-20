@@ -1,5 +1,5 @@
 sha256.c:53:13:sha256_process	136	static
-sha256.c:184:6:sha256_update.part.0	32	static
+sha256.c:184:6:sha256_update.part.0	24	static
 sha256.c:38:6:sha256_starts	0	static
 sha256.c:184:6:sha256_update	0	static
 sha256.c:225:6:sha256_finish	24	static
