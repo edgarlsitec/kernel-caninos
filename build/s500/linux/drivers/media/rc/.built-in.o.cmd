@@ -1,1 +1,1 @@
-cmd_drivers/media/rc/built-in.o :=  rm -f drivers/media/rc/built-in.o; arm-linux-gnueabihf-ar rcSTPD drivers/media/rc/built-in.o drivers/media/rc/keymaps/built-in.o 
+cmd_drivers/media/rc/built-in.o :=  rm -f drivers/media/rc/built-in.o; arm-linux-gnueabihf-ar rcSTPD drivers/media/rc/built-in.o drivers/media/rc/keymaps/built-in.o ; scripts/mod/modpost drivers/media/rc/built-in.o

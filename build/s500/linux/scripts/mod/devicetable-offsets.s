@@ -40,8 +40,9 @@
 @ -Werror=date-time -std=gnu90 -fno-strict-aliasing -fno-common
 @ -fshort-wchar -fno-PIE -fno-dwarf2-cfi-asm -fno-ipa-sra -funwind-tables
 @ -fno-delete-null-pointer-checks -fno-stack-protector -fomit-frame-pointer
-@ -fno-var-tracking-assignments -fno-strict-overflow -fstack-check=no
-@ -fconserve-stack -fverbose-asm --param allow-store-data-races=0
+@ -fno-var-tracking-assignments -fno-inline-functions-called-once
+@ -fno-strict-overflow -fstack-check=no -fconserve-stack -fverbose-asm
+@ --param allow-store-data-races=0
 @ options enabled:  -faggressive-loop-optimizations -fauto-inc-dec
 @ -fbranch-count-reg -fcaller-saves -fcombine-stack-adjustments
 @ -fcompare-elim -fcprop-registers -fcrossjumping -fcse-follow-jumps
@@ -50,9 +51,9 @@
 @ -fforward-propagate -ffunction-cse -fgcse -fgcse-lm -fgnu-runtime
 @ -fgnu-unique -fguess-branch-probability -fhoist-adjacent-loads -fident
 @ -fif-conversion -fif-conversion2 -findirect-inlining -finline
-@ -finline-atomics -finline-functions-called-once -finline-small-functions
-@ -fipa-cp -fipa-profile -fipa-pure-const -fipa-reference
-@ -fira-hoist-pressure -fira-share-save-slots -fira-share-spill-slots
+@ -finline-atomics -finline-small-functions -fipa-cp -fipa-profile
+@ -fipa-pure-const -fipa-reference -fira-hoist-pressure
+@ -fira-share-save-slots -fira-share-spill-slots
 @ -fisolate-erroneous-paths-dereference -fivopts -fkeep-static-consts
 @ -fleading-underscore -fmath-errno -fmerge-constants -fmerge-debug-strings
 @ -fmove-loop-invariants -fomit-frame-pointer -foptimize-sibling-calls

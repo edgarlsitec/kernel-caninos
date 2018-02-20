@@ -1,1 +1,1 @@
-cmd_drivers/dma/built-in.o :=  rm -f drivers/dma/built-in.o; arm-linux-gnueabihf-ar rcSTPD drivers/dma/built-in.o drivers/dma/dmaengine.o drivers/dma/of-dma.o drivers/dma/owl-dma.o drivers/dma/qcom/built-in.o drivers/dma/xilinx/built-in.o 
+cmd_drivers/dma/built-in.o :=  rm -f drivers/dma/built-in.o; arm-linux-gnueabihf-ar rcSTPD drivers/dma/built-in.o drivers/dma/dmaengine.o drivers/dma/of-dma.o drivers/dma/owl-dma.o drivers/dma/qcom/built-in.o drivers/dma/xilinx/built-in.o ; scripts/mod/modpost drivers/dma/built-in.o

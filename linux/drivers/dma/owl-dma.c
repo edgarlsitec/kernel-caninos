@@ -1927,7 +1927,7 @@ static int set_runtime_config(struct dma_chan *chan, struct dma_slave_config *sc
 	return 0;
 }
 
-static int __init owl_dma_probe(struct platform_device *pdev)
+static int owl_dma_probe(struct platform_device *pdev)
 {
 	const struct owl_dma_platform_data *pdata;
 
