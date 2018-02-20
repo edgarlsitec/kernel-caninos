@@ -13,6 +13,8 @@
 
 #define	ACTS_DMA_MAX_NR_CHANNELS 12
 
+#define STOP_TIMEOUT 200000
+
 #define	ACTS_DMA_IRQPD_0 0x00
 #define	ACTS_DMA_IRQPD_1 0x04
 #define	ACTS_DMA_IRQPD_2 0x08
@@ -69,11 +71,85 @@
 #define ACTS_INT_CTL_SUPERBLOCK_INT 0x00000002
 #define ACTS_INT_CTL_END_BLOCK_INT 0x00000001
 
+#define ACTS_CHAINED_CTRLB 0x80000000
+#define ACTS_LINKLIST_CTRLB	0x40000000
+#define ACTS_CONSTFILL_CTRLB 0x20000000
+#define ACTS_SRC_ADDR_MODE_INCR 0x00100000
+#define ACTS_SRC_ADDR_MODE_STRIDE 0x00200000
+#define ACTS_DST_ADDR_MODE_INCR	0x00400000
+#define ACTS_DST_ADDR_MODE_STRIDE 0x00800000
+#define ACTS_FC_MEM2MEM	0x00050000
+
+#define ACTS_LINKLIST_SRC_CONST	0x00000080
+#define ACTS_LINKLIST_SRC_VLD 0x00000040
+#define ACTS_LINKLIST_DST_VLD 0x00000100
+#define ACTS_LINKLIST_DST_CONST 0x00000200
+#define ACTS_LINKLIST_DIS_TYPE1 0x00000001
+#define ACTS_LINKLIST_DIS_TYPE2 0x00000002
+
+#define ACTS_INT_STATUS_SECURE_ERROR 0x00000040
+#define ACTS_INT_STATUS_ALAINED_ERROR 0x00000020
+#define ACTS_INT_STATUS_LAST_FRAME 0x00000010
+#define ACTS_INT_STATUS_HALF_FRAME 0x00000008
+#define ACTS_INT_STATUS_END_FRAME 0x00000004
+#define ACTS_INT_STATUS_SUPERBLOCK 0x00000002
+#define ACTS_INT_STATUS_END_BLOCK_INT 0x00000001
+
+#define ACTS_DMAINTCTL(x) (((x) << 18) & 0x1fc0000)
+#define ACTS_ACPCTL_1(x) (((x) << 13)  & 0x3e000)
+#define ACTS_ACPCTL_2(x) ((x) & 0x1f00)
+#define ACTS_ACPCTL_3(x) (((x) >> 12) & 0xf0)
+#define ACTS_ACPCTL_4(x) (((x) >> 24) & 0xf)
+
+#define ACTS_DMAMODE_1(x) ((x) & 0xF0000000)
+#define ACTS_DMAMODE_2(x) (((x) << 4) & 0xf000000)
+#define ACTS_DMAMODE_3(x) (((x) << 4) & 0x0f00000)
+#define ACTS_DMAMODE_4(x) (((x) << 8) & 0xf0000)
+#define ACTS_DMAMODE_5(x) (((x) << 10) & 0xfc00)
+
+#define PAUSE_CHANNEL 0x80000000
+#define ACTS_SRC_DST_STRIDE	0xa0000
+
+#define ACTS_FRAMECNT(x) (((x) << 20) & 0xfff00000)
+
 #define	channel_readl(atchan, name) \
 	readl_relaxed((atchan)->ch_regs + ACTS_##name##_OFFSET)
 
 #define	channel_writel(atchan, name, val) \
 	writel_relaxed((val), (atchan)->ch_regs + ACTS_##name##_OFFSET)
+	
+enum acts_status {
+	ACTS_IS_ERROR = 0,
+	ACTS_IS_PAUSED = (1 << 1),
+	ACTS_IS_CYCLIC = (1 << 2),
+	ACTS_IS_INTERRUPT = (1 << 4),
+};
+
+enum src_srcmode {
+	SRC_CONSTANT = 0x0,
+	SRC_INCR = (0x1 << 16),
+	SRC_STRIDE = (0x2 << 16),
+};
+
+enum dst_dstmode {
+	DST_CONSTANT = 0x0,
+	DST_INCR = (0x1 << 18),
+	DST_STRIDE = (0x2 << 18),
+};
+
+enum dst_type {
+	DST_DEV = 0x0,
+	DST_ACP = (0x1 << 10),
+	DST_DCU = (0x2 << 10),
+	DST_SRAM = (0x3 << 10),
+};
+
+enum src_type {
+	SRC_DEV = 0x0,
+	SRC_ACP = (0x1 << 8),
+	SRC_DCU = (0x2 << 8),
+	SRC_SRAM = (0x3 << 8),
+};
 
 static unsigned long max_timeout;
 
@@ -119,7 +195,7 @@ struct owl_dma {
 	struct owl_dma_chan	chan[0];
 };
 
-struct  acts_lli {
+struct acts_lli {
 	dma_addr_t dscr;
 	dma_addr_t	saddr;
 	dma_addr_t	daddr;
@@ -140,10 +216,134 @@ struct acts_desc {
 	u32	mode;
 };
 
+enum owl_trans_type {
+	MEMCPY = 0,
+	SLAVE  = 1,
+	MEMSET = 2,
+	ACP    = 4,
+	CHAINED = 8,
+};
+
+struct owl_dma_slave {
+	struct device *dma_dev;
+	enum owl_trans_type trans_type;
+	u32	mode;
+	u32	frame_len;
+	u32	frame_cnt;
+	u32	src_stride;
+	u32	dst_stride;
+	u32	acp_attr;
+	u32	chained_ctl;
+	u32	intctl;
+	u32	secure_ctl;
+	u32	nic_qos;
+};
+
 struct owl_dma_platform_data {
 	unsigned int nr_channels;
 	dma_cap_mask_t cap_mask;
 };
+
+static inline struct owl_dma_chan *to_owl_dma_chan(struct dma_chan *dchan)
+{
+	return container_of(dchan, struct owl_dma_chan, chan_common);
+}
+
+static inline struct owl_dma *to_owl_dma(struct dma_device *ddev)
+{
+	return container_of(ddev, struct owl_dma, dma_common);
+}
+
+static inline int acts_chan_is_cyclic(struct owl_dma_chan *atchan)
+{
+	return test_bit(ACTS_IS_CYCLIC, &atchan->status);
+}
+
+static struct device *chan2dev(struct dma_chan *chan)
+{
+	return &chan->dev->device;
+}
+static struct device *chan2parent(struct dma_chan *chan)
+{
+	return chan->dev->device.parent;
+}
+
+static void set_desc_eol(struct acts_desc *desc)
+{
+	desc->lli.dscr = 0;
+	
+	desc->lli.ctrlb &= ~ACTS_LINKLIST_CTRLB;
+}
+
+static int vdbg_dump_regs(struct owl_dma_chan *atchan)
+{
+	struct owl_dma *atdma = to_owl_dma(atchan->chan_common.device);
+
+	dev_err(chan2dev(&atchan->chan_common),
+		"  channel %d : irqpd = 0x%x, irqen = 0x%x, dbg_sel:0x%x"
+		"  idle stat:0x%x\n",
+		atchan->chan_common.chan_id,
+		dma_readl(atdma, IRQPD_0),
+		dma_readl(atdma, IRQEN_0),
+		dma_readl(atdma, DBG_SEL),
+		dma_readl(atdma, IDLE_STAT));
+
+	dev_err(chan2dev(&atchan->chan_common),
+		"  channel: s0x%x d0x%x mode0x%x:0x%x next_des0x%x framelen0x%x intctl0x%x intstat0x%x\n",
+		channel_readl(atchan, SRC),
+		channel_readl(atchan, DST),
+		channel_readl(atchan, MODE),
+		channel_readl(atchan, LINKLIST),
+		channel_readl(atchan, NEXT_DESC),
+		channel_readl(atchan, FRAMELEN),
+		channel_readl(atchan, INT_CTL),
+		channel_readl(atchan, INT_STAT));
+	dev_err(chan2dev(&atchan->chan_common),
+		"  channel: framecnt0x%x desc num0x%x cur sptr0x%x cur dptr0x%x remaincnt0x%x remainframe0x%x\n"
+		" start:0x%x\n",
+		channel_readl(atchan, FRAMECNT),
+		channel_readl(atchan, CUR_DESC_NUM),
+		channel_readl(atchan, CUR_SRC_PTR),
+		channel_readl(atchan, CUR_DST_PTR),
+		channel_readl(atchan, REMAIN_CNT),
+		channel_readl(atchan, REMAIN_FRAME),
+		channel_readl(atchan, START));
+	
+	return 0;
+}
+
+static inline int acts_chan_is_enabled(struct owl_dma_chan *atchan)
+{
+	struct owl_dma *asoc_dma = to_owl_dma(atchan->chan_common.device);
+	
+	struct dma_chan *chan = &atchan->chan_common;
+	
+	unsigned long id = chan->chan_id;
+	
+	unsigned int idle, pause;
+
+	idle = dma_readl(asoc_dma, IDLE_STAT);
+	
+	idle = idle & (0x1 << id);
+	
+	pause = dma_readl(asoc_dma, DBG_SEL);
+	
+	pause = pause & (0x1 << (id + 16));
+
+	if(idle && !pause)
+	{
+		return 0;
+	}	
+	else
+	{
+		return 1;
+	}
+}
+
+static inline int acts_chan_is_paused(struct owl_dma_chan *atchan)
+{
+	return test_bit(ACTS_IS_PAUSED, &atchan->status);
+}
 
 static void acts_setup_irq(struct owl_dma_chan *atchan, bool on)
 {
@@ -216,8 +416,504 @@ static void owl_dma_on(struct owl_dma *owl_dma, bool on)
 	dma_writel(owl_dma, IRQPD_3, 0xfff);
 }
 
+static void acts_tasklet(unsigned long data)
+{
+	//
+}
+
 static irqreturn_t owl_dma_interrupt(int irq, void *dev_id)
 {
+	return 0;
+}
+
+static inline int owl_dma_dump_all(struct dma_chan *chan)
+{
+	//return chan->device->device_control(chan, FSLDMA_EXTERNAL_START, 0);
+	
+	return 0;
+}
+
+static inline int read_remain_cnt(struct dma_chan *chan)
+{
+	//return chan->device->device_control(chan, FSLDMA_EXTERNAL_START, 1);
+	
+	return 0;
+}
+
+static inline int read_remain_frame_cnt(struct dma_chan *chan)
+{
+	//return chan->device->device_control(chan, FSLDMA_EXTERNAL_START, 2);
+	
+	return 0;
+}
+
+static void acts_chain_complete(struct owl_dma_chan *atchan, struct acts_desc *desc)
+{
+	//
+}
+
+static int acts_alloc_chan_resources(struct dma_chan *chan)
+{
+	return 0;
+}
+
+static void acts_free_chan_resources(struct dma_chan *chan)
+{
+	//
+}
+
+static enum dma_status acts_tx_status(struct dma_chan *chan,
+	dma_cookie_t cookie, struct dma_tx_state *txstate)
+{
+	return 0;
+}
+
+static void acts_issue_pending(struct dma_chan *chan)
+{
+	//
+}
+
+static struct acts_desc *acts_desc_get(struct owl_dma_chan *atchan)
+{
+	struct acts_desc *desc, *_desc;
+	
+	struct acts_desc *ret = NULL;
+	
+	unsigned int i = 0;
+	
+	LIST_HEAD(tmp_list);
+	
+	unsigned long flags;
+
+	spin_lock_irqsave(&atchan->lock, flags);
+	
+	list_for_each_entry_safe(desc, _desc, &atchan->free_list, desc_node)
+	{
+		i++;
+		
+		if(async_tx_test_ack(&desc->txd))
+		{
+			list_del(&desc->desc_node);
+			ret = desc;
+			break;
+		}
+		dev_dbg(chan2dev(&atchan->chan_common), "desc %p not ACKed\n", desc);
+	}
+	
+	spin_unlock_irqrestore(&atchan->lock, flags);
+	
+	dev_vdbg(chan2dev(&atchan->chan_common), "scanned %u descriptors on freelist\n", i);
+
+	// no more descriptor available in initial pool: create one more
+	
+	if (!ret)
+	{
+		//ret = acts_alloc_descriptor(&atchan->chan_common, GFP_ATOMIC);
+		
+		if(ret)
+		{
+			spin_lock_irqsave(&atchan->lock, flags);
+			
+			atchan->descs_allocated++;
+			
+			spin_unlock_irqrestore(&atchan->lock, flags);
+		}
+		else
+		{
+			dev_err(chan2dev(&atchan->chan_common), "not enough descriptors available\n");
+		}
+	}
+	return ret;
+}
+
+static void acts_desc_put(struct owl_dma_chan *atchan, struct acts_desc *desc)
+{
+	unsigned long flags;
+	
+	if(desc)
+	{
+		spin_lock_irqsave(&atchan->lock, flags);
+		
+		list_splice_init(&desc->tx_list, &atchan->free_list);
+		
+		list_add(&desc->desc_node, &atchan->free_list);
+		
+		spin_unlock_irqrestore(&atchan->lock, flags);
+	}
+}
+
+static void acts_set_ctrl(struct dma_chan *chan, struct acts_desc *desc,
+		struct owl_dma_slave *atslave, u32 mode, u32 ctrlb)
+{
+	unsigned long acp;
+	
+	u32	int_ctl;
+	
+	struct owl_dma_chan	*atchan = to_owl_dma_chan(chan);
+
+	acp  = atslave->trans_type >> 2;
+	
+	if((mode & ACTS_SRC_DST_STRIDE) == 0)
+	{
+		// frame cnt
+		desc->lli.ctrla |=  ACTS_FRAMECNT(0x1);
+		desc->lli.src_stride = 0;
+		desc->lli.dst_stride = 0;
+	}
+	else if ((mode & ACTS_SRC_DST_STRIDE) == ACTS_DST_ADDR_MODE_STRIDE) {
+		// frame cnt
+		desc->lli.ctrla |=  ACTS_FRAMECNT(atslave->frame_cnt);
+		desc->lli.src_stride = 0;
+		desc->lli.dst_stride = atslave->dst_stride;
+	}
+	else if ((mode & ACTS_SRC_DST_STRIDE) == ACTS_SRC_ADDR_MODE_STRIDE) {
+		// frame cnt
+		desc->lli.ctrla |=  ACTS_FRAMECNT(atslave->frame_cnt);
+		desc->lli.src_stride = atslave->src_stride;
+		desc->lli.dst_stride = 0;
+	}
+
+	desc->lli.ctrlb = 0;
+	desc->lli.ctrlb |= ctrlb;
+	desc->lli.ctrlb |= (ACTS_LINKLIST_SRC_VLD | ACTS_LINKLIST_DST_VLD);
+
+	int_ctl = ACTS_INT_CTL_SECURE_INT | ACTS_INT_CTL_SUPERBLOCK_INT | ACTS_INT_CTL_ALAINED_INT;
+	
+	if(acts_chan_is_cyclic(atchan))
+	{
+		int_ctl |= ACTS_INT_STATUS_END_BLOCK_INT;
+	}
+
+	desc->lli.ctrlc = ACTS_DMAINTCTL(int_ctl);
+	
+	if(acp)
+	{
+		desc->lli.ctrlc |=  ACTS_DMAINTCTL(atslave->intctl)
+			| ACTS_ACPCTL_1(atslave->acp_attr)
+			| ACTS_ACPCTL_2(atslave->acp_attr)
+			| ACTS_ACPCTL_3(atslave->acp_attr)
+			| ACTS_ACPCTL_4(atslave->acp_attr);
+	 }
+	 else
+	 {
+		desc->lli.ctrlb |= ACTS_LINKLIST_DIS_TYPE1;
+	}
+
+	dev_vdbg(chan2dev(chan),
+		"desrricptor: d0x%x s0x%x ctrla0x%x ctrlb0x%x ctrlc0x%x\n",
+		desc->lli.daddr, desc->lli.saddr, desc->lli.ctrla,
+		desc->lli.ctrlb, desc->lli.ctrlc);
+
+	dev_vdbg(chan2dev(chan),
+		"desrricptor: dtr0x%x str0x%x num0x%x next0x%x\n",
+		desc->lli.dst_stride, desc->lli.src_stride, desc->lli.const_num,
+		desc->lli.dscr);
+}
+
+static struct dma_async_tx_descriptor *
+	acts_prep_dma_memcpy(struct dma_chan *chan, dma_addr_t dest, dma_addr_t src,
+	size_t len, unsigned long flags)
+{
+	return NULL;
+}
+
+static struct dma_async_tx_descriptor *
+acts_prep_slave_sg(struct dma_chan *chan, struct scatterlist *sgl,
+	unsigned int sg_len, enum dma_transfer_direction direction,
+	unsigned long flags, void *context)
+{
+	return NULL;
+}
+
+static struct dma_async_tx_descriptor *
+acts_prep_dma_cyclic(struct dma_chan *chan, dma_addr_t buf_addr, size_t buf_len,
+	size_t period_len, enum dma_transfer_direction direction,
+	unsigned long flags)
+{
+	return NULL;
+}
+
+static struct dma_async_tx_descriptor *acts_prep_dma_memset(struct dma_chan *chan,
+	dma_addr_t dest, int value, size_t len, unsigned long flags)
+{
+	struct owl_dma_chan	*atchan = to_owl_dma_chan(chan);
+	
+	struct owl_dma_slave *atslave = chan->private;
+	
+	struct acts_desc *desc = NULL;
+	
+	struct acts_desc *first = NULL;
+	
+	struct acts_desc *prev = NULL;
+	
+	size_t xfer_count;
+	
+	size_t offset;
+	
+	unsigned int src_width;
+	
+	unsigned int dst_width;
+	
+	u32	ctrlb;
+	
+	u32	mode;
+
+	dev_vdbg(chan2dev(chan), "prep_dma_memset: d0x%x val0x%x l0x%zx flg0x%lx\n",
+		dest, value, len, flags);
+			
+	if (unlikely(!len))
+	{
+		dev_dbg(chan2dev(chan), "prep_dma_memset: length is zero!\n");
+		return NULL;
+	}
+
+	flags |= DMA_CTRL_ACK;
+	
+	mode = atslave->mode;
+	
+	ctrlb =  ACTS_LINKLIST_CTRLB
+		| ACTS_CONSTFILL_CTRLB
+		| ACTS_SRC_ADDR_MODE_INCR
+		| ACTS_DST_ADDR_MODE_INCR
+		| ACTS_DMAMODE_1(mode)
+		| ACTS_DMAMODE_2(mode)
+		| ACTS_DMAMODE_4(mode)
+		| ACTS_DMAMODE_5(mode);
+
+	if (!((dest  | len) & 3))
+	{
+		src_width = dst_width = 2;
+	}
+	else if (!((dest | len) & 1))
+	{
+		src_width = dst_width = 1;
+	}
+	else
+	{
+		src_width = dst_width = 0;
+	}
+
+	for(offset = 0; offset < len; offset += xfer_count << src_width)
+	{
+		xfer_count = min_t(size_t, (len - offset) >> src_width, ACTS_BTSIZE_MAX);
+
+		desc = acts_desc_get(atchan);
+		
+		if(!desc)
+		{
+			goto err_desc_get;
+		}
+
+		desc->lli.saddr = 0;
+		desc->lli.daddr = dest + offset;
+		desc->lli.ctrla = 0;
+		desc->lli.ctrla |= xfer_count << src_width;  // frame_len
+		atslave->trans_type |= ACP;
+		desc->lli.const_num = value;
+
+		acts_set_ctrl(chan, desc, atslave, mode, ctrlb);
+
+		desc->txd.cookie = 0;
+		async_tx_ack(&desc->txd);
+
+		//acts_desc_chain(chan, &first, &prev, desc);
+	}
+
+	// First descriptor of the chain embedds additional information
+	
+	first->txd.cookie = -EBUSY;
+	
+	first->len = len;
+
+	// set end-of-link to the last link descriptor of list
+	
+	set_desc_eol(desc);
+
+	first->mode = mode
+		| ACTS_LINKLIST_CTRLB
+		| ACTS_CONSTFILL_CTRLB
+		| SRC_INCR
+		| DST_INCR;
+
+	first->txd.flags = flags;
+
+	return &first->txd;
+
+err_desc_get:
+
+	acts_desc_put(atchan, first);
+	
+	return NULL;
+}
+
+static int acts_pause(struct dma_chan *chan)
+{
+	struct owl_dma_chan	*atchan = to_owl_dma_chan(chan);
+	
+	unsigned long flags, tmp;
+	
+	unsigned long id = chan->chan_id;
+	
+	struct owl_dma *owl_dma = to_owl_dma(atchan->chan_common.device);
+
+	if(acts_chan_is_paused(atchan))
+	{
+		return 0;
+	}
+
+	spin_lock_irqsave(&atchan->lock, flags);
+	
+	tmp = dma_readl(owl_dma, DBG_SEL);
+	
+	tmp = tmp | (0x1 << (id + 16));
+	
+	dma_writel(owl_dma, DBG_SEL, tmp);
+	
+	set_bit(ACTS_IS_PAUSED, &atchan->status);
+	
+	spin_unlock_irqrestore(&atchan->lock, flags);
+
+	return 0;
+}
+
+static int acts_resume(struct dma_chan *chan)
+{
+	struct owl_dma_chan	*atchan = to_owl_dma_chan(chan);
+	
+	unsigned long flags, tmp;
+	
+	unsigned long id = chan->chan_id;
+	
+	struct owl_dma *owl_dma = to_owl_dma(atchan->chan_common.device);
+
+	if(!acts_chan_is_paused(atchan))
+	{
+		return 0;
+	}
+
+	spin_lock_irqsave(&atchan->lock, flags);
+	
+	tmp = dma_readl(owl_dma, DBG_SEL);
+	
+	tmp = tmp & ~(0x1 << (id + 16));
+	
+	dma_writel(owl_dma, DBG_SEL, tmp);
+	
+	clear_bit(ACTS_IS_PAUSED, &atchan->status);
+	
+	spin_unlock_irqrestore(&atchan->lock, flags);
+	
+	return 0;
+}
+
+static int acts_stop(struct dma_chan *chan)
+{
+	struct owl_dma_chan	*atchan = to_owl_dma_chan(chan);
+	
+	struct acts_desc *desc, *_desc;
+	
+	unsigned long flags, tmp, timeout = STOP_TIMEOUT;
+	
+	unsigned long id = chan->chan_id;
+	
+	struct owl_dma *owl_dma = to_owl_dma(atchan->chan_common.device);
+
+	LIST_HEAD(list);
+
+	spin_lock_irqsave(&atchan->lock, flags);
+	
+	channel_writel(atchan, START, 0);
+	
+	spin_unlock_irqrestore(&atchan->lock, flags);
+	
+	while(!(dma_readl(owl_dma, IDLE_STAT) & (0x1 << id)))
+	{
+		udelay(5);
+		
+		timeout--;
+		
+		if(timeout == 0)
+		{
+			goto err;
+		}
+	}
+	
+	if(STOP_TIMEOUT - timeout > max_timeout)
+	{
+		max_timeout = STOP_TIMEOUT - timeout;
+		
+		pr_err("dma%d stop wating time is %ld, max timeout %ld\n",
+			chan->chan_id, STOP_TIMEOUT - timeout, max_timeout);
+	}
+
+	dma_readl(owl_dma, IDLE_STAT);
+	
+	dma_readl(owl_dma, IDLE_STAT);
+	
+	dma_readl(owl_dma, IDLE_STAT);
+
+	spin_lock_irqsave(&atchan->lock, flags);
+	
+	channel_writel(atchan, INT_STAT, 0x7f);
+	
+	dma_writel(owl_dma, IRQPD_0, (1 << id));
+	
+	dma_writel(owl_dma, IRQPD_1, (1 << id));
+	
+	dma_writel(owl_dma, IRQPD_2, (1 << id));
+	
+	dma_writel(owl_dma, IRQPD_3, (1 << id));
+
+	// stop the transfer
+	// active_list entries will :end up before queued entries
+	
+	list_splice_init(&atchan->queue, &list);
+	
+	list_splice_init(&atchan->active_list, &list);
+
+	// Flush all pending and queued descriptors
+	list_for_each_entry_safe(desc, _desc, &list, desc_node)
+	{
+		acts_chain_complete(atchan, desc);
+	}
+
+	tmp = dma_readl(owl_dma, DBG_SEL);
+	
+	tmp = tmp & ~(0x1 << (id + 16));
+	
+	dma_writel(owl_dma, DBG_SEL, tmp);
+	
+	clear_bit(ACTS_IS_PAUSED, &atchan->status);
+	
+	clear_bit(ACTS_IS_CYCLIC, &atchan->status);
+	
+	clear_bit(ACTS_IS_INTERRUPT, &atchan->status);
+	
+	spin_unlock_irqrestore(&atchan->lock, flags);
+
+	return 0;
+
+err:
+	pr_err("dma id %d: channel not stop\n", chan->chan_id);
+	pr_err("%s, calling stack is:\n", __func__);
+	pr_err("\t%pF\n", __builtin_return_address(0));
+
+	owl_dma_dump_all(chan);
+	
+	return -EINVAL;
+}
+
+static int set_runtime_config(struct dma_chan *chan, struct dma_slave_config *sconfig)
+{
+	struct owl_dma_chan	*atchan = to_owl_dma_chan(chan);
+	
+	if(!chan->private)
+	{
+		return -EINVAL;
+	}
+
+	memcpy(&atchan->dma_sconfig, sconfig, sizeof(*sconfig));
+	
 	return 0;
 }
 
@@ -368,8 +1064,7 @@ static int __init owl_dma_probe(struct platform_device *pdev)
 
 	INIT_LIST_HEAD(&owl_dma->dma_common.channels);
 
-	for(i = 0; i < pdata->nr_channels;
-		i++, owl_dma->dma_common.chancnt++)
+	for(i = 0; i < pdata->nr_channels; i++, owl_dma->dma_common.chancnt++)
 	{
 		atchan = &owl_dma->chan[i];
 
@@ -379,8 +1074,7 @@ static int __init owl_dma_probe(struct platform_device *pdev)
 
 		atchan->chan_common.chan_id = i;
 
-		list_add_tail(&atchan->chan_common.device_node,
-			&owl_dma->dma_common.channels);
+		list_add_tail(&atchan->chan_common.device_node, &owl_dma->dma_common.channels);
 
 		atchan->ch_regs = owl_dma->regs + ch_regs(i);
 
@@ -389,40 +1083,54 @@ static int __init owl_dma_probe(struct platform_device *pdev)
 		atchan->mask = 1 << i;
 
 		INIT_LIST_HEAD(&atchan->active_list);
+		
 		INIT_LIST_HEAD(&atchan->queue);
+		
 		INIT_LIST_HEAD(&atchan->free_list);
 
 		acts_enable_irq(atchan);
 	}
 
-	//tasklet_init(&owl_dma->tasklet, acts_tasklet, (unsigned long)owl_dma);
+	tasklet_init(&owl_dma->tasklet, acts_tasklet, (unsigned long)owl_dma);
 
 	// set base routines
-	//owl_dma->dma_common.device_alloc_chan_resources = acts_alloc_chan_resources;
-	//owl_dma->dma_common.device_free_chan_resources = acts_free_chan_resources;
-	//owl_dma->dma_common.device_tx_status = acts_tx_status;
-	//owl_dma->dma_common.device_issue_pending = acts_issue_pending;
+	
+	owl_dma->dma_common.device_alloc_chan_resources = acts_alloc_chan_resources;
+	
+	owl_dma->dma_common.device_free_chan_resources = acts_free_chan_resources;
+	
+	owl_dma->dma_common.device_tx_status = acts_tx_status;
+	
+	owl_dma->dma_common.device_issue_pending = acts_issue_pending;
+	
 	owl_dma->dma_common.dev = &pdev->dev;
 
 	// set prep routines based on capability
+	
 	if(dma_has_cap(DMA_MEMCPY, owl_dma->dma_common.cap_mask))
 	{
-		//owl_dma->dma_common.device_prep_dma_memcpy = acts_prep_dma_memcpy;
+		owl_dma->dma_common.device_prep_dma_memcpy = acts_prep_dma_memcpy;
 	}
 
 	if(dma_has_cap(DMA_SLAVE, owl_dma->dma_common.cap_mask))
 	{
-		//owl_dma->dma_common.device_prep_slave_sg = acts_prep_slave_sg;
+		owl_dma->dma_common.device_prep_slave_sg = acts_prep_slave_sg;
 
 		dma_cap_set(DMA_CYCLIC, owl_dma->dma_common.cap_mask);
 
-		//owl_dma->dma_common.device_prep_dma_cyclic = acts_prep_dma_cyclic;
-
-		//owl_dma->dma_common.device_control = acts_control;
+		owl_dma->dma_common.device_prep_dma_cyclic = acts_prep_dma_cyclic;
+		
+		owl_dma->dma_common.device_pause = acts_pause;
+		
+		owl_dma->dma_common.device_resume = acts_resume;
+		
+		owl_dma->dma_common.device_terminate_all = acts_stop;
+		
+		owl_dma->dma_common.device_config = set_runtime_config;
 	}
 	if(dma_has_cap(DMA_MEMSET, owl_dma->dma_common.cap_mask))
 	{
-		//owl_dma->dma_common.device_prep_dma_memset = acts_prep_dma_memset;
+		owl_dma->dma_common.device_prep_dma_memset = acts_prep_dma_memset;
 	}
 
 	owl_dma_on(owl_dma, true); // enable dma
@@ -454,20 +1162,173 @@ err_irq:
 
 static int __exit owl_dma_remove(struct platform_device *pdev)
 {
+	struct owl_dma *owl_dma = platform_get_drvdata(pdev);
+	
+	struct dma_chan *chan, *_chan;
+	
+    struct owl_dma_chan	*atchan;
+    
+	owl_dma_on(owl_dma, false);
+	
+	dma_async_device_unregister(&owl_dma->dma_common);
+
+	dma_pool_destroy(owl_dma->dma_desc_pool);
+
+	platform_set_drvdata(pdev, NULL);
+	
+	free_irq(platform_get_irq(pdev, 0), owl_dma);
+
+	list_for_each_entry_safe(chan, _chan, &owl_dma->dma_common.channels, device_node)
+	{
+		atchan = to_owl_dma_chan(chan);
+
+		// Disable interrupts
+		
+		acts_disable_irq(atchan);
+		
+		list_del(&chan->device_node);
+	}
+
+	tasklet_disable(&owl_dma->tasklet);
+	
+	tasklet_kill(&owl_dma->tasklet);
+
+	pm_runtime_put_sync(&pdev->dev);
+	
+	pm_runtime_disable(&pdev->dev);
+
+	kfree(owl_dma);
+	
 	return 0;
+}
+
+static void acts_suspend_cyclic(struct owl_dma_chan *atchan)
+{
+	struct dma_chan	*chan = &atchan->chan_common;
+
+	// Channel should be paused by user do it anyway even if it is not done already
+	
+	if(!acts_chan_is_paused(atchan))
+	{
+		dev_warn(chan2dev(chan), "cyclic channel not paused, should be done by channel user\n");
+		
+		acts_pause(chan);
+	}
+
+	// now preserve additional data for cyclic operations
+	// next descriptor address in the cyclic list
+	
+	atchan->save_dscr = channel_readl(atchan, NEXT_DESC);
+}
+
+static void acts_resume_cyclic(struct owl_dma_chan *atchan)
+{
+	int int_ctl;
+
+	// restore channel status for cyclic descriptors list:
+	// next descriptor in the cyclic list at the time of suspend
+	
+	channel_writel(atchan, SRC, 0);
+	
+	channel_writel(atchan, DST, 0);
+	
+	channel_writel(atchan, NEXT_DESC, atchan->save_dscr);
+	
+	int_ctl = channel_readl(atchan, INT_CTL);
+	
+	channel_writel(atchan, INT_CTL, int_ctl | ACTS_INT_CTL_END_BLOCK_INT);
+
+	// channel pause status should be removed by channel user
+	// We cannot take the initiative to do it here
 }
 
 static int owl_dma_suspend_noirq(struct device *dev)
 {
-	//pm_runtime_put_sync(dev);
-	//pm_runtime_disable(dev);
+	struct platform_device *pdev = to_platform_device(dev);
+	
+	struct owl_dma *owl_dma = platform_get_drvdata(pdev);
+	
+	struct owl_dma_chan *atchan;
+	
+	struct dma_chan *chan, *_chan;
+
+	// preserve data
+	
+	list_for_each_entry_safe(chan, _chan, &owl_dma->dma_common.channels, device_node)
+	{
+		atchan = to_owl_dma_chan(chan);
+
+		// here, all channels should be idled already (cyclic channel is paused)
+		
+		if(acts_chan_is_enabled(atchan) && !acts_chan_is_cyclic(atchan))
+		{
+			vdbg_dump_regs(atchan);
+			
+			pr_alert("%s:DMA channel%d is not idled yet!!!\n", __func__, atchan->chan_common.chan_id);
+		}
+
+		if (acts_chan_is_cyclic(atchan))
+		{
+			acts_suspend_cyclic(atchan);
+		}
+		
+		atchan->save_mode = channel_readl(atchan, MODE);
+		
+		atchan->save_ll = channel_readl(atchan,	LINKLIST);
+		
+		acts_disable_irq(atchan);
+	}
+	
+	owl_dma->save_nicqos = dma_readl(owl_dma, NIC_QOS);
+
+	// disable DMA controller
+	
+	owl_dma_on(owl_dma, false);
+	
+	pm_runtime_put_sync(&pdev->dev);
+	
+	pm_runtime_disable(&pdev->dev);
+	
 	return 0;
 }
 
 static int owl_dma_resume_noirq(struct device *dev)
 {
-	//pm_runtime_enable(dev);
-	//pm_runtime_get_sync(dev);
+	struct platform_device *pdev = to_platform_device(dev);
+	
+	struct owl_dma *owl_dma = platform_get_drvdata(pdev);
+	
+	struct dma_chan *chan, *_chan;
+	
+	struct owl_dma_chan *atchan;
+
+	// bring back DMA controller
+	
+	pm_runtime_enable(&pdev->dev);
+	
+	pm_runtime_get_sync(&pdev->dev);
+	
+	owl_dma_on(owl_dma, true);
+	
+	// restore saved data
+	
+	dma_writel(owl_dma, NIC_QOS, owl_dma->save_nicqos);
+	
+	list_for_each_entry_safe(chan, _chan, &owl_dma->dma_common.channels, device_node)
+	{
+		atchan = to_owl_dma_chan(chan);
+
+		acts_enable_irq(atchan);
+		
+		channel_writel(atchan, MODE, atchan->save_mode);
+		
+		channel_writel(atchan, LINKLIST, atchan->save_ll);
+		
+		if(acts_chan_is_cyclic(atchan))
+		{
+			acts_resume_cyclic(atchan);
+		}
+	}
 	return 0;
 }
 
@@ -501,6 +1362,7 @@ static int __init owl_dma_init(void)
 
 	return err;
 }
+
 subsys_initcall(owl_dma_init);
 
 static void __exit owl_dma_exit(void)
