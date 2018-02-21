@@ -605,18 +605,7 @@ deps_kernel/time/posix-cpu-timers.o := \
   /home/edgar/repo/kernel-caninos/linux/include/linux/klist.h \
   /home/edgar/repo/kernel-caninos/linux/include/linux/pinctrl/devinfo.h \
     $(wildcard include/config/pm.h) \
-  /home/edgar/repo/kernel-caninos/linux/include/linux/pm.h \
-    $(wildcard include/config/vt/console/sleep.h) \
-    $(wildcard include/config/pm/clk.h) \
-    $(wildcard include/config/pm/generic/domains.h) \
-  /home/edgar/repo/kernel-caninos/linux/include/linux/ratelimit.h \
-  /home/edgar/repo/kernel-caninos/linux/arch/arm/include/asm/device.h \
-    $(wildcard include/config/dmabounce.h) \
-    $(wildcard include/config/iommu/api.h) \
-    $(wildcard include/config/arm/dma/use/iommu.h) \
-    $(wildcard include/config/xen.h) \
-    $(wildcard include/config/arch/omap.h) \
-  /home/edgar/repo/kernel-caninos/linux/include/linux/pm_wakeup.h \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/pinctrl/consumer.h \
   /home/edgar/repo/kernel-caninos/linux/include/linux/seq_file.h \
   /home/edgar/repo/kernel-caninos/linux/include/linux/fs.h \
     $(wildcard include/config/fs/posix/acl.h) \
@@ -692,6 +681,19 @@ deps_kernel/time/posix-cpu-timers.o := \
   /home/edgar/repo/kernel-caninos/linux/include/linux/projid.h \
   /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/quota.h \
   /home/edgar/repo/kernel-caninos/linux/include/linux/nfs_fs_i.h \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/pinctrl/pinctrl-state.h \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/pm.h \
+    $(wildcard include/config/vt/console/sleep.h) \
+    $(wildcard include/config/pm/clk.h) \
+    $(wildcard include/config/pm/generic/domains.h) \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/ratelimit.h \
+  /home/edgar/repo/kernel-caninos/linux/arch/arm/include/asm/device.h \
+    $(wildcard include/config/dmabounce.h) \
+    $(wildcard include/config/iommu/api.h) \
+    $(wildcard include/config/arm/dma/use/iommu.h) \
+    $(wildcard include/config/xen.h) \
+    $(wildcard include/config/arch/omap.h) \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/pm_wakeup.h \
   /home/edgar/repo/kernel-caninos/linux/include/linux/cdev.h \
   /home/edgar/repo/kernel-caninos/linux/include/linux/poll.h \
   /home/edgar/repo/kernel-caninos/linux/include/linux/uaccess.h \

@@ -338,6 +338,16 @@ slab_common.o: /home/edgar/repo/kernel-caninos/linux/mm/slab_common.c \
  /home/edgar/repo/kernel-caninos/linux/include/linux/kobject_ns.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/klist.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/pinctrl/devinfo.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/pinctrl/consumer.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/seq_file.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/cred.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/key.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/sysctl.h \
+ /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/sysctl.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/assoc_array.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/selinux.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/sched/user.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/pinctrl/pinctrl-state.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/pm.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/ratelimit.h \
  /home/edgar/repo/kernel-caninos/linux/arch/arm/include/asm/device.h \
@@ -345,8 +355,6 @@ slab_common.o: /home/edgar/repo/kernel-caninos/linux/mm/slab_common.c \
  /home/edgar/repo/kernel-caninos/linux/include/linux/module.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/kmod.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/umh.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/sysctl.h \
- /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/sysctl.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/elf.h \
  /home/edgar/repo/kernel-caninos/linux/arch/arm/include/asm/elf.h \
  /home/edgar/repo/kernel-caninos/linux/arch/arm/include/asm/vdso_datapage.h \
@@ -365,12 +373,6 @@ slab_common.o: /home/edgar/repo/kernel-caninos/linux/mm/slab_common.c \
  /home/edgar/repo/kernel-caninos/linux/arch/arm/include/asm/domain.h \
  arch/arm/include/generated/asm/extable.h \
  /home/edgar/repo/kernel-caninos/linux/include/asm-generic/extable.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/seq_file.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/cred.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/key.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/assoc_array.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/selinux.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/sched/user.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/proc_fs.h \
  /home/edgar/repo/kernel-caninos/linux/arch/arm/include/asm/cacheflush.h \
  /home/edgar/repo/kernel-caninos/linux/arch/arm/include/asm/glue-cache.h \

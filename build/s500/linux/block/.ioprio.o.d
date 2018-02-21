@@ -265,10 +265,8 @@ ioprio.o: /home/edgar/repo/kernel-caninos/linux/block/ioprio.c \
  /home/edgar/repo/kernel-caninos/linux/include/linux/kref.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/klist.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/pinctrl/devinfo.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/pm.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/ratelimit.h \
- /home/edgar/repo/kernel-caninos/linux/arch/arm/include/asm/device.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/pm_wakeup.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/pinctrl/consumer.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/seq_file.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/fs.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/wait_bit.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/dcache.h \
@@ -315,6 +313,11 @@ ioprio.o: /home/edgar/repo/kernel-caninos/linux/block/ioprio.c \
  /home/edgar/repo/kernel-caninos/linux/include/linux/projid.h \
  /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/quota.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/nfs_fs_i.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/pinctrl/pinctrl-state.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/pm.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/ratelimit.h \
+ /home/edgar/repo/kernel-caninos/linux/arch/arm/include/asm/device.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/pm_wakeup.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/pagemap.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/mm.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/range.h \
@@ -393,7 +396,6 @@ ioprio.o: /home/edgar/repo/kernel-caninos/linux/block/ioprio.c \
  /home/edgar/repo/kernel-caninos/linux/include/linux/tracepoint.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/trace_events.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/ring_buffer.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/seq_file.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/poll.h \
  /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/poll.h \
  arch/arm/include/generated/uapi/asm/poll.h \

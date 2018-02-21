@@ -63,6 +63,12 @@ config PINCTRL_AS3722
 	  open drain configuration for the GPIO pins of AS3722 devices. It also
 	  supports the GPIO functionality through gpiolib.
 
+config PINCTRL_OWL
+	tristate "Pinctrl driver for Actions s500"
+	depends on ARCH_ACTIONS && GPIOLIB
+	select PINMUX
+	select GENERIC_PINCONF
+
 config PINCTRL_BF54x
 	def_bool y if BF54x
 	select PINCTRL_ADI2

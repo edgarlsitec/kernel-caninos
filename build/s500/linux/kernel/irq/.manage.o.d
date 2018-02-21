@@ -366,6 +366,8 @@ manage.o: /home/edgar/repo/kernel-caninos/linux/kernel/irq/manage.c \
  /home/edgar/repo/kernel-caninos/linux/include/linux/ioport.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/klist.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/pinctrl/devinfo.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/pinctrl/consumer.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/pinctrl/pinctrl-state.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/pm.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/ratelimit.h \
  /home/edgar/repo/kernel-caninos/linux/arch/arm/include/asm/device.h \

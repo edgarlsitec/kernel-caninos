@@ -693,6 +693,21 @@ deps_lib/kobject_uevent.o := \
   /home/edgar/repo/kernel-caninos/linux/include/linux/klist.h \
   /home/edgar/repo/kernel-caninos/linux/include/linux/pinctrl/devinfo.h \
     $(wildcard include/config/pm.h) \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/pinctrl/consumer.h \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/seq_file.h \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/cred.h \
+    $(wildcard include/config/debug/credentials.h) \
+    $(wildcard include/config/keys.h) \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/key.h \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/assoc_array.h \
+    $(wildcard include/config/associative/array.h) \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/selinux.h \
+    $(wildcard include/config/security/selinux.h) \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/sched/user.h \
+    $(wildcard include/config/fanotify.h) \
+    $(wildcard include/config/posix/mqueue.h) \
+    $(wildcard include/config/bpf/syscall.h) \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/pinctrl/pinctrl-state.h \
   /home/edgar/repo/kernel-caninos/linux/include/linux/pm.h \
     $(wildcard include/config/vt/console/sleep.h) \
     $(wildcard include/config/pm/clk.h) \
@@ -844,18 +859,6 @@ deps_lib/kobject_uevent.o := \
   /home/edgar/repo/kernel-caninos/linux/include/linux/netlink.h \
   /home/edgar/repo/kernel-caninos/linux/include/net/scm.h \
     $(wildcard include/config/security/network.h) \
-  /home/edgar/repo/kernel-caninos/linux/include/linux/cred.h \
-    $(wildcard include/config/debug/credentials.h) \
-    $(wildcard include/config/keys.h) \
-  /home/edgar/repo/kernel-caninos/linux/include/linux/key.h \
-  /home/edgar/repo/kernel-caninos/linux/include/linux/assoc_array.h \
-    $(wildcard include/config/associative/array.h) \
-  /home/edgar/repo/kernel-caninos/linux/include/linux/selinux.h \
-    $(wildcard include/config/security/selinux.h) \
-  /home/edgar/repo/kernel-caninos/linux/include/linux/sched/user.h \
-    $(wildcard include/config/fanotify.h) \
-    $(wildcard include/config/posix/mqueue.h) \
-    $(wildcard include/config/bpf/syscall.h) \
   /home/edgar/repo/kernel-caninos/linux/include/linux/security.h \
     $(wildcard include/config/security/infiniband.h) \
     $(wildcard include/config/security/network/xfrm.h) \
@@ -970,7 +973,6 @@ deps_lib/kobject_uevent.o := \
   /home/edgar/repo/kernel-caninos/linux/include/net/netns/can.h \
   /home/edgar/repo/kernel-caninos/linux/include/linux/ns_common.h \
   /home/edgar/repo/kernel-caninos/linux/include/linux/seq_file_net.h \
-  /home/edgar/repo/kernel-caninos/linux/include/linux/seq_file.h \
   /home/edgar/repo/kernel-caninos/linux/include/net/netprio_cgroup.h \
   /home/edgar/repo/kernel-caninos/linux/include/linux/cgroup.h \
     $(wildcard include/config/cgroup/cpuacct.h) \

@@ -819,6 +819,9 @@ deps_lib/vsprintf.o := \
   /home/edgar/repo/kernel-caninos/linux/include/linux/klist.h \
   /home/edgar/repo/kernel-caninos/linux/include/linux/pinctrl/devinfo.h \
     $(wildcard include/config/pm.h) \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/pinctrl/consumer.h \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/seq_file.h \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/pinctrl/pinctrl-state.h \
   /home/edgar/repo/kernel-caninos/linux/include/linux/pm.h \
     $(wildcard include/config/vt/console/sleep.h) \
     $(wildcard include/config/pm/clk.h) \
@@ -995,7 +998,6 @@ deps_lib/vsprintf.o := \
   /home/edgar/repo/kernel-caninos/linux/include/net/netns/can.h \
   /home/edgar/repo/kernel-caninos/linux/include/linux/ns_common.h \
   /home/edgar/repo/kernel-caninos/linux/include/linux/seq_file_net.h \
-  /home/edgar/repo/kernel-caninos/linux/include/linux/seq_file.h \
   /home/edgar/repo/kernel-caninos/linux/include/linux/nsproxy.h \
   /home/edgar/repo/kernel-caninos/linux/include/net/netprio_cgroup.h \
   /home/edgar/repo/kernel-caninos/linux/include/linux/cgroup.h \

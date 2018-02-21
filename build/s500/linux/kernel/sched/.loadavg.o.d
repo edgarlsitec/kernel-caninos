@@ -311,37 +311,8 @@ loadavg.o: /home/edgar/repo/kernel-caninos/linux/kernel/sched/loadavg.c \
  /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/stat.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/klist.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/pinctrl/devinfo.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/pm.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/ratelimit.h \
- /home/edgar/repo/kernel-caninos/linux/arch/arm/include/asm/device.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/pm_wakeup.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/cpuhotplug.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/irq_work.h \
- /home/edgar/repo/kernel-caninos/linux/arch/arm/include/asm/irq_work.h \
- /home/edgar/repo/kernel-caninos/linux/arch/arm/include/asm/smp_plat.h \
- /home/edgar/repo/kernel-caninos/linux/arch/arm/include/asm/cpu.h \
- /home/edgar/repo/kernel-caninos/linux/arch/arm/include/asm/cputype.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/tick.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/clockchips.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/clocksource.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/of.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/mod_devicetable.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/uuid.h \
- /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/uuid.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/property.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/fwnode.h \
- /home/edgar/repo/kernel-caninos/linux/arch/arm/include/asm/io.h \
- /home/edgar/repo/kernel-caninos/linux/include/asm-generic/pci_iomap.h \
- /home/edgar/repo/kernel-caninos/linux/include/xen/xen.h \
- /home/edgar/repo/kernel-caninos/linux/include/asm-generic/io.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/vmalloc.h \
- /home/edgar/repo/kernel-caninos/linux/arch/arm/include/asm/clocksource.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/slab.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/kmemleak.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/kasan.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/cgroup.h \
- /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/cgroupstats.h \
- /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/taskstats.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/pinctrl/consumer.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/seq_file.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/fs.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/wait_bit.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/kdev_t.h \
@@ -367,6 +338,8 @@ loadavg.o: /home/edgar/repo/kernel-caninos/linux/kernel/sched/loadavg.c \
  /home/edgar/repo/kernel-caninos/linux/include/linux/rcuwait.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/rcu_sync.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/delayed_call.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/uuid.h \
+ /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/uuid.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/errseq.h \
  /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/fs.h \
  /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/limits.h \
@@ -383,7 +356,36 @@ loadavg.o: /home/edgar/repo/kernel-caninos/linux/kernel/sched/loadavg.c \
  /home/edgar/repo/kernel-caninos/linux/include/linux/projid.h \
  /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/quota.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/nfs_fs_i.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/seq_file.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/pinctrl/pinctrl-state.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/pm.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/ratelimit.h \
+ /home/edgar/repo/kernel-caninos/linux/arch/arm/include/asm/device.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/pm_wakeup.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/cpuhotplug.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/irq_work.h \
+ /home/edgar/repo/kernel-caninos/linux/arch/arm/include/asm/irq_work.h \
+ /home/edgar/repo/kernel-caninos/linux/arch/arm/include/asm/smp_plat.h \
+ /home/edgar/repo/kernel-caninos/linux/arch/arm/include/asm/cpu.h \
+ /home/edgar/repo/kernel-caninos/linux/arch/arm/include/asm/cputype.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/tick.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/clockchips.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/clocksource.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/of.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/mod_devicetable.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/property.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/fwnode.h \
+ /home/edgar/repo/kernel-caninos/linux/arch/arm/include/asm/io.h \
+ /home/edgar/repo/kernel-caninos/linux/include/asm-generic/pci_iomap.h \
+ /home/edgar/repo/kernel-caninos/linux/include/xen/xen.h \
+ /home/edgar/repo/kernel-caninos/linux/include/asm-generic/io.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/vmalloc.h \
+ /home/edgar/repo/kernel-caninos/linux/arch/arm/include/asm/clocksource.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/slab.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/kmemleak.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/kasan.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/cgroup.h \
+ /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/cgroupstats.h \
+ /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/taskstats.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/ns_common.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/nsproxy.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/user_namespace.h \

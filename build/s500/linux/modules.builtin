@@ -68,6 +68,7 @@ kernel/drivers/mmc/core/pwrseq_simple.ko
 kernel/drivers/mmc/core/pwrseq_emmc.ko
 kernel/drivers/mmc/core/mmc_block.ko
 kernel/drivers/mmc/host/owl-mmc.ko
+kernel/drivers/pinctrl/pinctrl-owl.ko
 kernel/drivers/tty/serial/serial_core.ko
 kernel/drivers/tty/serial/owl-uart.ko
 kernel/lib/bitrev.ko

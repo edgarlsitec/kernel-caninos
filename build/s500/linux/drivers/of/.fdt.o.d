@@ -330,6 +330,16 @@ fdt.o: /home/edgar/repo/kernel-caninos/linux/drivers/of/fdt.c \
  /home/edgar/repo/kernel-caninos/linux/include/linux/device.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/klist.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/pinctrl/devinfo.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/pinctrl/consumer.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/seq_file.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/cred.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/key.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/sysctl.h \
+ /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/sysctl.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/assoc_array.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/selinux.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/sched/user.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/pinctrl/pinctrl-state.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/pm.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/ratelimit.h \
  /home/edgar/repo/kernel-caninos/linux/arch/arm/include/asm/device.h \
@@ -345,14 +355,6 @@ fdt.o: /home/edgar/repo/kernel-caninos/linux/drivers/of/fdt.c \
  /home/edgar/repo/kernel-caninos/linux/include/linux/../../scripts/dtc/libfdt/libfdt_env.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/../../scripts/dtc/libfdt/fdt.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/debugfs.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/seq_file.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/cred.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/key.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/sysctl.h \
- /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/sysctl.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/assoc_array.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/selinux.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/sched/user.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/serial_core.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/interrupt.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/irqreturn.h \

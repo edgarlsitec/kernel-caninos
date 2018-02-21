@@ -271,8 +271,14 @@ setup.o: /home/edgar/repo/kernel-caninos/linux/arch/arm/kernel/setup.c \
  /home/edgar/repo/kernel-caninos/linux/include/linux/kobject_ns.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/klist.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/pinctrl/devinfo.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/pm.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/ratelimit.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/pinctrl/consumer.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/seq_file.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/cred.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/key.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/sysctl.h \
+ /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/sysctl.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/assoc_array.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/selinux.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/sched.h \
  /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/sched.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/sem.h \
@@ -314,16 +320,12 @@ setup.o: /home/edgar/repo/kernel-caninos/linux/arch/arm/kernel/setup.c \
  arch/arm/include/generated/uapi/asm/siginfo.h \
  /home/edgar/repo/kernel-caninos/linux/include/uapi/asm-generic/siginfo.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/task_io_accounting.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/sched/user.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/pinctrl/pinctrl-state.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/pm.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/ratelimit.h \
  /home/edgar/repo/kernel-caninos/linux/arch/arm/include/asm/device.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/pm_wakeup.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/seq_file.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/cred.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/key.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/sysctl.h \
- /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/sysctl.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/assoc_array.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/selinux.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/sched/user.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/cdev.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/poll.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/uaccess.h \

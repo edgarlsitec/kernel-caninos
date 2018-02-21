@@ -318,7 +318,7 @@ static int owl_gpio_request(struct gpio_chip *chip, unsigned offset)
 	int ret;
 	int gpio = chip->base + offset;
 
-	ret = pinctrl_request_gpio(gpio);
+	ret = pinctrl_gpio_request(gpio);
 	return ret;
 #else
 	return 0;
@@ -330,7 +330,7 @@ static void owl_gpio_free(struct gpio_chip *chip, unsigned offset)
 #ifdef CONFIG_PINCTRL_OWL
 	int gpio = chip->base + offset;
 
-	pinctrl_free_gpio(gpio);
+	pinctrl_gpio_free(gpio);
 #endif
 }
 

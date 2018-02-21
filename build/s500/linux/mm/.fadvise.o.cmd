@@ -787,6 +787,24 @@ deps_mm/fadvise.o := \
   /home/edgar/repo/kernel-caninos/linux/include/linux/kref.h \
   /home/edgar/repo/kernel-caninos/linux/include/linux/klist.h \
   /home/edgar/repo/kernel-caninos/linux/include/linux/pinctrl/devinfo.h \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/pinctrl/consumer.h \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/seq_file.h \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/cred.h \
+    $(wildcard include/config/debug/credentials.h) \
+    $(wildcard include/config/keys.h) \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/key.h \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/sysctl.h \
+  /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/sysctl.h \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/assoc_array.h \
+    $(wildcard include/config/associative/array.h) \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/selinux.h \
+    $(wildcard include/config/security/selinux.h) \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/sched/user.h \
+    $(wildcard include/config/fanotify.h) \
+    $(wildcard include/config/posix/mqueue.h) \
+    $(wildcard include/config/bpf/syscall.h) \
+    $(wildcard include/config/net.h) \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/pinctrl/pinctrl-state.h \
   /home/edgar/repo/kernel-caninos/linux/include/linux/pm.h \
     $(wildcard include/config/vt/console/sleep.h) \
     $(wildcard include/config/pm/clk.h) \
@@ -846,22 +864,6 @@ deps_mm/fadvise.o := \
     $(wildcard include/config/cgroup/data.h) \
   /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/cgroupstats.h \
   /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/taskstats.h \
-  /home/edgar/repo/kernel-caninos/linux/include/linux/seq_file.h \
-  /home/edgar/repo/kernel-caninos/linux/include/linux/cred.h \
-    $(wildcard include/config/debug/credentials.h) \
-    $(wildcard include/config/keys.h) \
-  /home/edgar/repo/kernel-caninos/linux/include/linux/key.h \
-  /home/edgar/repo/kernel-caninos/linux/include/linux/sysctl.h \
-  /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/sysctl.h \
-  /home/edgar/repo/kernel-caninos/linux/include/linux/assoc_array.h \
-    $(wildcard include/config/associative/array.h) \
-  /home/edgar/repo/kernel-caninos/linux/include/linux/selinux.h \
-    $(wildcard include/config/security/selinux.h) \
-  /home/edgar/repo/kernel-caninos/linux/include/linux/sched/user.h \
-    $(wildcard include/config/fanotify.h) \
-    $(wildcard include/config/posix/mqueue.h) \
-    $(wildcard include/config/bpf/syscall.h) \
-    $(wildcard include/config/net.h) \
   /home/edgar/repo/kernel-caninos/linux/include/linux/ns_common.h \
   /home/edgar/repo/kernel-caninos/linux/include/linux/nsproxy.h \
   /home/edgar/repo/kernel-caninos/linux/include/linux/user_namespace.h \

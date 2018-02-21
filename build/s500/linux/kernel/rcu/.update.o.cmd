@@ -605,35 +605,8 @@ deps_kernel/rcu/update.o := \
   /home/edgar/repo/kernel-caninos/linux/include/linux/klist.h \
   /home/edgar/repo/kernel-caninos/linux/include/linux/pinctrl/devinfo.h \
     $(wildcard include/config/pm.h) \
-  /home/edgar/repo/kernel-caninos/linux/include/linux/pm.h \
-    $(wildcard include/config/vt/console/sleep.h) \
-    $(wildcard include/config/pm/clk.h) \
-    $(wildcard include/config/pm/generic/domains.h) \
-  /home/edgar/repo/kernel-caninos/linux/include/linux/ratelimit.h \
-  /home/edgar/repo/kernel-caninos/linux/arch/arm/include/asm/device.h \
-    $(wildcard include/config/dmabounce.h) \
-    $(wildcard include/config/iommu/api.h) \
-    $(wildcard include/config/arm/dma/use/iommu.h) \
-    $(wildcard include/config/xen.h) \
-    $(wildcard include/config/arch/omap.h) \
-  /home/edgar/repo/kernel-caninos/linux/include/linux/pm_wakeup.h \
-  /home/edgar/repo/kernel-caninos/linux/include/linux/cpuhotplug.h \
-  /home/edgar/repo/kernel-caninos/linux/include/linux/delay.h \
-  /home/edgar/repo/kernel-caninos/linux/arch/arm/include/asm/delay.h \
-  /home/edgar/repo/kernel-caninos/linux/include/linux/moduleparam.h \
-    $(wildcard include/config/alpha.h) \
-    $(wildcard include/config/ia64.h) \
-    $(wildcard include/config/ppc64.h) \
-  /home/edgar/repo/kernel-caninos/linux/include/linux/kthread.h \
-    $(wildcard include/config/blk/cgroup.h) \
-  /home/edgar/repo/kernel-caninos/linux/include/linux/cgroup.h \
-    $(wildcard include/config/cgroup/cpuacct.h) \
-    $(wildcard include/config/sock/cgroup/data.h) \
-    $(wildcard include/config/cgroup/net/prio.h) \
-    $(wildcard include/config/cgroup/net/classid.h) \
-    $(wildcard include/config/cgroup/data.h) \
-  /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/cgroupstats.h \
-  /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/taskstats.h \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/pinctrl/consumer.h \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/seq_file.h \
   /home/edgar/repo/kernel-caninos/linux/include/linux/fs.h \
     $(wildcard include/config/fs/posix/acl.h) \
     $(wildcard include/config/cgroup/writeback.h) \
@@ -708,7 +681,36 @@ deps_kernel/rcu/update.o := \
   /home/edgar/repo/kernel-caninos/linux/include/linux/projid.h \
   /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/quota.h \
   /home/edgar/repo/kernel-caninos/linux/include/linux/nfs_fs_i.h \
-  /home/edgar/repo/kernel-caninos/linux/include/linux/seq_file.h \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/pinctrl/pinctrl-state.h \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/pm.h \
+    $(wildcard include/config/vt/console/sleep.h) \
+    $(wildcard include/config/pm/clk.h) \
+    $(wildcard include/config/pm/generic/domains.h) \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/ratelimit.h \
+  /home/edgar/repo/kernel-caninos/linux/arch/arm/include/asm/device.h \
+    $(wildcard include/config/dmabounce.h) \
+    $(wildcard include/config/iommu/api.h) \
+    $(wildcard include/config/arm/dma/use/iommu.h) \
+    $(wildcard include/config/xen.h) \
+    $(wildcard include/config/arch/omap.h) \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/pm_wakeup.h \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/cpuhotplug.h \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/delay.h \
+  /home/edgar/repo/kernel-caninos/linux/arch/arm/include/asm/delay.h \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/moduleparam.h \
+    $(wildcard include/config/alpha.h) \
+    $(wildcard include/config/ia64.h) \
+    $(wildcard include/config/ppc64.h) \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/kthread.h \
+    $(wildcard include/config/blk/cgroup.h) \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/cgroup.h \
+    $(wildcard include/config/cgroup/cpuacct.h) \
+    $(wildcard include/config/sock/cgroup/data.h) \
+    $(wildcard include/config/cgroup/net/prio.h) \
+    $(wildcard include/config/cgroup/net/classid.h) \
+    $(wildcard include/config/cgroup/data.h) \
+  /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/cgroupstats.h \
+  /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/taskstats.h \
   /home/edgar/repo/kernel-caninos/linux/include/linux/ns_common.h \
   /home/edgar/repo/kernel-caninos/linux/include/linux/nsproxy.h \
   /home/edgar/repo/kernel-caninos/linux/include/linux/user_namespace.h \

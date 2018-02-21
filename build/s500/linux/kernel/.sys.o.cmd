@@ -795,6 +795,9 @@ deps_kernel/sys.o := \
   /home/edgar/repo/kernel-caninos/linux/include/linux/klist.h \
   /home/edgar/repo/kernel-caninos/linux/include/linux/pinctrl/devinfo.h \
     $(wildcard include/config/pm.h) \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/pinctrl/consumer.h \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/seq_file.h \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/pinctrl/pinctrl-state.h \
   /home/edgar/repo/kernel-caninos/linux/include/linux/pm.h \
     $(wildcard include/config/vt/console/sleep.h) \
     $(wildcard include/config/pm/clk.h) \
@@ -830,7 +833,6 @@ deps_kernel/sys.o := \
     $(wildcard include/config/cgroup/data.h) \
   /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/cgroupstats.h \
   /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/taskstats.h \
-  /home/edgar/repo/kernel-caninos/linux/include/linux/seq_file.h \
   /home/edgar/repo/kernel-caninos/linux/include/linux/user_namespace.h \
     $(wildcard include/config/inotify/user.h) \
     $(wildcard include/config/persistent/keyrings.h) \

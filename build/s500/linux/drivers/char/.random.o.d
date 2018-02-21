@@ -334,6 +334,14 @@ random.o: /home/edgar/repo/kernel-caninos/linux/drivers/char/random.c \
  /home/edgar/repo/kernel-caninos/linux/include/linux/ioport.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/klist.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/pinctrl/devinfo.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/pinctrl/consumer.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/seq_file.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/cred.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/key.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/assoc_array.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/selinux.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/sched/user.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/pinctrl/pinctrl-state.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/pm.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/ratelimit.h \
  /home/edgar/repo/kernel-caninos/linux/arch/arm/include/asm/device.h \
@@ -378,12 +386,6 @@ random.o: /home/edgar/repo/kernel-caninos/linux/drivers/char/random.c \
  /home/edgar/repo/kernel-caninos/linux/include/linux/cgroup.h \
  /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/cgroupstats.h \
  /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/taskstats.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/seq_file.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/cred.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/key.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/assoc_array.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/selinux.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/sched/user.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/user_namespace.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/kernel_stat.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/cgroup-defs.h \

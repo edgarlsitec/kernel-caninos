@@ -556,18 +556,8 @@ deps_drivers/input/input-compat.o := \
   /home/edgar/repo/kernel-caninos/linux/include/linux/klist.h \
   /home/edgar/repo/kernel-caninos/linux/include/linux/pinctrl/devinfo.h \
     $(wildcard include/config/pm.h) \
-  /home/edgar/repo/kernel-caninos/linux/include/linux/pm.h \
-    $(wildcard include/config/vt/console/sleep.h) \
-    $(wildcard include/config/pm/clk.h) \
-    $(wildcard include/config/pm/generic/domains.h) \
-  /home/edgar/repo/kernel-caninos/linux/include/linux/ratelimit.h \
-  /home/edgar/repo/kernel-caninos/linux/arch/arm/include/asm/device.h \
-    $(wildcard include/config/dmabounce.h) \
-    $(wildcard include/config/iommu/api.h) \
-    $(wildcard include/config/arm/dma/use/iommu.h) \
-    $(wildcard include/config/xen.h) \
-    $(wildcard include/config/arch/omap.h) \
-  /home/edgar/repo/kernel-caninos/linux/include/linux/pm_wakeup.h \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/pinctrl/consumer.h \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/seq_file.h \
   /home/edgar/repo/kernel-caninos/linux/include/linux/fs.h \
     $(wildcard include/config/fs/posix/acl.h) \
     $(wildcard include/config/cgroup/writeback.h) \
@@ -645,6 +635,35 @@ deps_drivers/input/input-compat.o := \
   /home/edgar/repo/kernel-caninos/linux/include/linux/projid.h \
   /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/quota.h \
   /home/edgar/repo/kernel-caninos/linux/include/linux/nfs_fs_i.h \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/cred.h \
+    $(wildcard include/config/debug/credentials.h) \
+    $(wildcard include/config/keys.h) \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/key.h \
+    $(wildcard include/config/sysctl.h) \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/sysctl.h \
+  /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/sysctl.h \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/assoc_array.h \
+    $(wildcard include/config/associative/array.h) \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/selinux.h \
+    $(wildcard include/config/security/selinux.h) \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/sched/user.h \
+    $(wildcard include/config/fanotify.h) \
+    $(wildcard include/config/posix/mqueue.h) \
+    $(wildcard include/config/bpf/syscall.h) \
+    $(wildcard include/config/net.h) \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/pinctrl/pinctrl-state.h \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/pm.h \
+    $(wildcard include/config/vt/console/sleep.h) \
+    $(wildcard include/config/pm/clk.h) \
+    $(wildcard include/config/pm/generic/domains.h) \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/ratelimit.h \
+  /home/edgar/repo/kernel-caninos/linux/arch/arm/include/asm/device.h \
+    $(wildcard include/config/dmabounce.h) \
+    $(wildcard include/config/iommu/api.h) \
+    $(wildcard include/config/arm/dma/use/iommu.h) \
+    $(wildcard include/config/xen.h) \
+    $(wildcard include/config/arch/omap.h) \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/pm_wakeup.h \
   /home/edgar/repo/kernel-caninos/linux/include/linux/mod_devicetable.h \
 
 drivers/input/input-compat.o: $(deps_drivers/input/input-compat.o)

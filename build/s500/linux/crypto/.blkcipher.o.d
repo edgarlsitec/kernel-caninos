@@ -331,6 +331,16 @@ blkcipher.o: /home/edgar/repo/kernel-caninos/linux/crypto/blkcipher.c \
  /home/edgar/repo/kernel-caninos/linux/include/linux/kref.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/klist.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/pinctrl/devinfo.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/pinctrl/consumer.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/seq_file.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/cred.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/key.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/sysctl.h \
+ /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/sysctl.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/assoc_array.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/selinux.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/sched/user.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/pinctrl/pinctrl-state.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/pm.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/ratelimit.h \
  /home/edgar/repo/kernel-caninos/linux/arch/arm/include/asm/device.h \
@@ -399,8 +409,6 @@ blkcipher.o: /home/edgar/repo/kernel-caninos/linux/crypto/blkcipher.c \
  /home/edgar/repo/kernel-caninos/linux/include/linux/module.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/kmod.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/umh.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/sysctl.h \
- /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/sysctl.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/elf.h \
  /home/edgar/repo/kernel-caninos/linux/arch/arm/include/asm/elf.h \
  /home/edgar/repo/kernel-caninos/linux/arch/arm/include/asm/vdso_datapage.h \
@@ -411,12 +419,6 @@ blkcipher.o: /home/edgar/repo/kernel-caninos/linux/crypto/blkcipher.c \
  /home/edgar/repo/kernel-caninos/linux/include/linux/rbtree_latch.h \
  /home/edgar/repo/kernel-caninos/linux/arch/arm/include/asm/module.h \
  /home/edgar/repo/kernel-caninos/linux/include/asm-generic/module.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/seq_file.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/cred.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/key.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/assoc_array.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/selinux.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/sched/user.h \
  /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/cryptouser.h \
  /home/edgar/repo/kernel-caninos/linux/include/net/netlink.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/netlink.h \

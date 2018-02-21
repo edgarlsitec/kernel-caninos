@@ -821,6 +821,9 @@ deps_fs/open.o := \
   /home/edgar/repo/kernel-caninos/linux/include/linux/klist.h \
   /home/edgar/repo/kernel-caninos/linux/include/linux/pinctrl/devinfo.h \
     $(wildcard include/config/pm.h) \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/pinctrl/consumer.h \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/seq_file.h \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/pinctrl/pinctrl-state.h \
   /home/edgar/repo/kernel-caninos/linux/include/linux/pm.h \
     $(wildcard include/config/vt/console/sleep.h) \
     $(wildcard include/config/pm/clk.h) \
@@ -833,7 +836,6 @@ deps_fs/open.o := \
     $(wildcard include/config/xen.h) \
     $(wildcard include/config/arch/omap.h) \
   /home/edgar/repo/kernel-caninos/linux/include/linux/pm_wakeup.h \
-  /home/edgar/repo/kernel-caninos/linux/include/linux/seq_file.h \
   /home/edgar/repo/kernel-caninos/linux/include/linux/tty_ldisc.h \
   /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/tty_flags.h \
   /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/tty.h \

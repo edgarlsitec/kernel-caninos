@@ -20,6 +20,33 @@
 		stdout-path = "serial3:115200n8";
 	};
 
+	pinctrl@b01b0040 {
+		pinctrl-names = "default";
+		pinctrl-0 = <&state_default>;
+
+		state_default: pinctrl_default {
+		};
+
+		serial3_state_default: serial3_default{
+			serial_3{
+				actions,groups = "mfp2_21","mfp2_20","uart3_dummy";
+				actions,function = "uart3";
+			};
+		};
+
+		mmc2_state_default: mmc2_default {
+			sd2_mfp_d0_d3_cmd_clk {
+				actions,groups = "mfp3_3";
+				actions,function = "sd2";
+			};
+
+			sd2_pull_d0_d3_cmd {
+				actions,pins = "P_DNAND_D0","P_DNAND_D1","P_DNAND_D2","P_DNAND_D3","P_DNAND_D4","P_DNAND_D5","P_DNAND_D6","P_DNAND_D7","P_DNAND_RDBN";
+				actions,pull = <2>;
+			};
+		};
+	};
+
 	uart3_clk: uart3-clk {
 		compatible = "fixed-clock";
 		clock-frequency = <921600>;
@@ -32,6 +59,8 @@
 	};
 
 	mmc@b0238000 {
+		pinctrl-names = "default";
+		pinctrl-0 = <&mmc2_state_default>;
 		card_type = "emmc";
 		status = "okay";
 	};
@@ -44,6 +73,8 @@
 &uart3 {
 	status = "okay";
 	clocks = <&uart3_clk>;
+	pinctrl-names = "default";
+	pinctrl-0 = <&serial3_state_default>;
 };
 
 &timer {

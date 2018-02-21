@@ -340,18 +340,20 @@ vmstat.o: /home/edgar/repo/kernel-caninos/linux/mm/vmstat.c \
  /home/edgar/repo/kernel-caninos/linux/include/linux/device.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/klist.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/pinctrl/devinfo.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/pm.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/ratelimit.h \
- /home/edgar/repo/kernel-caninos/linux/arch/arm/include/asm/device.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/pm_wakeup.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/cpuhotplug.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/proc_fs.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/pinctrl/consumer.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/seq_file.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/cred.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/key.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/assoc_array.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/selinux.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/sched/user.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/pinctrl/pinctrl-state.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/pm.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/ratelimit.h \
+ /home/edgar/repo/kernel-caninos/linux/arch/arm/include/asm/device.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/pm_wakeup.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/cpuhotplug.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/proc_fs.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/debugfs.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/writeback.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/flex_proportions.h \

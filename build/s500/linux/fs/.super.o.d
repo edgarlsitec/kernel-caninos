@@ -253,10 +253,8 @@ super.o: /home/edgar/repo/kernel-caninos/linux/fs/super.c \
  /home/edgar/repo/kernel-caninos/linux/include/linux/kref.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/klist.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/pinctrl/devinfo.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/pm.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/ratelimit.h \
- /home/edgar/repo/kernel-caninos/linux/arch/arm/include/asm/device.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/pm_wakeup.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/pinctrl/consumer.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/seq_file.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/fs.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/wait_bit.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/dcache.h \
@@ -305,6 +303,18 @@ super.o: /home/edgar/repo/kernel-caninos/linux/fs/super.c \
  /home/edgar/repo/kernel-caninos/linux/include/linux/projid.h \
  /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/quota.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/nfs_fs_i.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/cred.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/key.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/sysctl.h \
+ /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/sysctl.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/assoc_array.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/selinux.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/sched/user.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/pinctrl/pinctrl-state.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/pm.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/ratelimit.h \
+ /home/edgar/repo/kernel-caninos/linux/arch/arm/include/asm/device.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/pm_wakeup.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/pagemap.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/mm.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/range.h \
@@ -374,20 +384,12 @@ super.o: /home/edgar/repo/kernel-caninos/linux/fs/super.c \
  /home/edgar/repo/kernel-caninos/linux/include/linux/hashtable.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/mount.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/security.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/key.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/sysctl.h \
- /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/sysctl.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/assoc_array.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/writeback.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/backing-dev.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/blk-cgroup.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/cgroup.h \
  /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/cgroupstats.h \
  /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/taskstats.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/seq_file.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/cred.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/selinux.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/sched/user.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/ns_common.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/nsproxy.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/user_namespace.h \

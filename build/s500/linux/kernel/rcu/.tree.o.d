@@ -261,16 +261,8 @@ tree.o: /home/edgar/repo/kernel-caninos/linux/kernel/rcu/tree.c \
  /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/stat.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/klist.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/pinctrl/devinfo.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/pm.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/ratelimit.h \
- /home/edgar/repo/kernel-caninos/linux/arch/arm/include/asm/device.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/pm_wakeup.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/cpuhotplug.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/kernel_stat.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/kthread.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/cgroup.h \
- /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/cgroupstats.h \
- /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/taskstats.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/pinctrl/consumer.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/seq_file.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/fs.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/wait_bit.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/kdev_t.h \
@@ -323,7 +315,6 @@ tree.o: /home/edgar/repo/kernel-caninos/linux/kernel/rcu/tree.c \
  /home/edgar/repo/kernel-caninos/linux/include/linux/projid.h \
  /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/quota.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/nfs_fs_i.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/seq_file.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/cred.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/key.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/sysctl.h \
@@ -331,6 +322,17 @@ tree.o: /home/edgar/repo/kernel-caninos/linux/kernel/rcu/tree.c \
  /home/edgar/repo/kernel-caninos/linux/include/linux/assoc_array.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/selinux.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/sched/user.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/pinctrl/pinctrl-state.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/pm.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/ratelimit.h \
+ /home/edgar/repo/kernel-caninos/linux/arch/arm/include/asm/device.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/pm_wakeup.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/cpuhotplug.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/kernel_stat.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/kthread.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/cgroup.h \
+ /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/cgroupstats.h \
+ /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/taskstats.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/ns_common.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/nsproxy.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/user_namespace.h \

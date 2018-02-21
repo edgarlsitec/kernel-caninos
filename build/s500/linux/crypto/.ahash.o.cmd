@@ -690,6 +690,24 @@ deps_crypto/ahash.o := \
   /home/edgar/repo/kernel-caninos/linux/include/linux/klist.h \
   /home/edgar/repo/kernel-caninos/linux/include/linux/pinctrl/devinfo.h \
     $(wildcard include/config/pm.h) \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/pinctrl/consumer.h \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/seq_file.h \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/cred.h \
+    $(wildcard include/config/debug/credentials.h) \
+    $(wildcard include/config/keys.h) \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/key.h \
+    $(wildcard include/config/sysctl.h) \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/sysctl.h \
+  /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/sysctl.h \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/assoc_array.h \
+    $(wildcard include/config/associative/array.h) \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/selinux.h \
+    $(wildcard include/config/security/selinux.h) \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/sched/user.h \
+    $(wildcard include/config/fanotify.h) \
+    $(wildcard include/config/posix/mqueue.h) \
+    $(wildcard include/config/bpf/syscall.h) \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/pinctrl/pinctrl-state.h \
   /home/edgar/repo/kernel-caninos/linux/include/linux/pm.h \
     $(wildcard include/config/vt/console/sleep.h) \
     $(wildcard include/config/pm/clk.h) \
@@ -710,7 +728,6 @@ deps_crypto/ahash.o := \
     $(wildcard include/config/arch/has/sg/chain.h) \
     $(wildcard include/config/sg/pool.h) \
   /home/edgar/repo/kernel-caninos/linux/include/linux/mm.h \
-    $(wildcard include/config/sysctl.h) \
     $(wildcard include/config/have/arch/mmap/rnd/bits.h) \
     $(wildcard include/config/have/arch/mmap/rnd/compat/bits.h) \
     $(wildcard include/config/mem/soft/dirty.h) \
@@ -881,8 +898,6 @@ deps_crypto/ahash.o := \
     $(wildcard include/config/constructors.h) \
   /home/edgar/repo/kernel-caninos/linux/include/linux/kmod.h \
   /home/edgar/repo/kernel-caninos/linux/include/linux/umh.h \
-  /home/edgar/repo/kernel-caninos/linux/include/linux/sysctl.h \
-  /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/sysctl.h \
   /home/edgar/repo/kernel-caninos/linux/include/linux/elf.h \
   /home/edgar/repo/kernel-caninos/linux/arch/arm/include/asm/elf.h \
   /home/edgar/repo/kernel-caninos/linux/arch/arm/include/asm/vdso_datapage.h \
@@ -900,19 +915,6 @@ deps_crypto/ahash.o := \
     $(wildcard include/config/have/mod/arch/specific.h) \
     $(wildcard include/config/modules/use/elf/rel.h) \
     $(wildcard include/config/modules/use/elf/rela.h) \
-  /home/edgar/repo/kernel-caninos/linux/include/linux/seq_file.h \
-  /home/edgar/repo/kernel-caninos/linux/include/linux/cred.h \
-    $(wildcard include/config/debug/credentials.h) \
-    $(wildcard include/config/keys.h) \
-  /home/edgar/repo/kernel-caninos/linux/include/linux/key.h \
-  /home/edgar/repo/kernel-caninos/linux/include/linux/assoc_array.h \
-    $(wildcard include/config/associative/array.h) \
-  /home/edgar/repo/kernel-caninos/linux/include/linux/selinux.h \
-    $(wildcard include/config/security/selinux.h) \
-  /home/edgar/repo/kernel-caninos/linux/include/linux/sched/user.h \
-    $(wildcard include/config/fanotify.h) \
-    $(wildcard include/config/posix/mqueue.h) \
-    $(wildcard include/config/bpf/syscall.h) \
   /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/cryptouser.h \
   /home/edgar/repo/kernel-caninos/linux/include/net/netlink.h \
   /home/edgar/repo/kernel-caninos/linux/include/linux/netlink.h \

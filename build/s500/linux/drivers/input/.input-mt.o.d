@@ -199,12 +199,71 @@ input-mt.o: \
  /home/edgar/repo/kernel-caninos/linux/include/linux/refcount.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/klist.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/pinctrl/devinfo.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/pm.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/ratelimit.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/pinctrl/consumer.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/seq_file.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/fs.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/wait_bit.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/kdev_t.h \
+ /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/kdev_t.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/dcache.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/rculist.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/rculist_bl.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/list_bl.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/bit_spinlock.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/lockref.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/stringhash.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/hash.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/path.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/list_lru.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/shrinker.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/pid.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/mm_types.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/mm_types_task.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/auxvec.h \
+ /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/auxvec.h \
+ /home/edgar/repo/kernel-caninos/linux/arch/arm/include/asm/auxvec.h \
+ /home/edgar/repo/kernel-caninos/linux/arch/arm/include/uapi/asm/auxvec.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/uprobes.h \
+ /home/edgar/repo/kernel-caninos/linux/arch/arm/include/asm/mmu.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/capability.h \
+ /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/capability.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/semaphore.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/fcntl.h \
+ /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/fcntl.h \
+ /home/edgar/repo/kernel-caninos/linux/arch/arm/include/uapi/asm/fcntl.h \
+ /home/edgar/repo/kernel-caninos/linux/include/uapi/asm-generic/fcntl.h \
+ /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/fiemap.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/migrate_mode.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/percpu-rwsem.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/rcuwait.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/rcu_sync.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/delayed_call.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/uuid.h \
+ /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/uuid.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/errseq.h \
+ /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/fs.h \
+ /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/limits.h \
+ /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/ioctl.h \
+ arch/arm/include/generated/uapi/asm/ioctl.h \
+ /home/edgar/repo/kernel-caninos/linux/include/asm-generic/ioctl.h \
+ /home/edgar/repo/kernel-caninos/linux/include/uapi/asm-generic/ioctl.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/quota.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/percpu_counter.h \
+ /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/dqblk_xfs.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/dqblk_v1.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/dqblk_v2.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/dqblk_qtree.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/projid.h \
+ /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/quota.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/nfs_fs_i.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/cred.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/key.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/sysctl.h \
+ /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/sysctl.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/assoc_array.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/selinux.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/sched.h \
  /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/sched.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/pid.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/rculist.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/sem.h \
  /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/sem.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/ipc.h \
@@ -245,62 +304,13 @@ input-mt.o: \
  /home/edgar/repo/kernel-caninos/linux/arch/arm/include/uapi/asm/sigcontext.h \
  arch/arm/include/generated/uapi/asm/siginfo.h \
  /home/edgar/repo/kernel-caninos/linux/include/uapi/asm-generic/siginfo.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/mm_types_task.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/task_io_accounting.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/sched/user.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/pinctrl/pinctrl-state.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/pm.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/ratelimit.h \
  /home/edgar/repo/kernel-caninos/linux/arch/arm/include/asm/device.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/pm_wakeup.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/fs.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/wait_bit.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/kdev_t.h \
- /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/kdev_t.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/dcache.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/rculist_bl.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/list_bl.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/bit_spinlock.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/lockref.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/stringhash.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/hash.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/path.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/list_lru.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/shrinker.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/mm_types.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/auxvec.h \
- /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/auxvec.h \
- /home/edgar/repo/kernel-caninos/linux/arch/arm/include/asm/auxvec.h \
- /home/edgar/repo/kernel-caninos/linux/arch/arm/include/uapi/asm/auxvec.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/uprobes.h \
- /home/edgar/repo/kernel-caninos/linux/arch/arm/include/asm/mmu.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/capability.h \
- /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/capability.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/semaphore.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/fcntl.h \
- /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/fcntl.h \
- /home/edgar/repo/kernel-caninos/linux/arch/arm/include/uapi/asm/fcntl.h \
- /home/edgar/repo/kernel-caninos/linux/include/uapi/asm-generic/fcntl.h \
- /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/fiemap.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/migrate_mode.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/percpu-rwsem.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/rcuwait.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/rcu_sync.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/delayed_call.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/uuid.h \
- /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/uuid.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/errseq.h \
- /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/fs.h \
- /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/limits.h \
- /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/ioctl.h \
- arch/arm/include/generated/uapi/asm/ioctl.h \
- /home/edgar/repo/kernel-caninos/linux/include/asm-generic/ioctl.h \
- /home/edgar/repo/kernel-caninos/linux/include/uapi/asm-generic/ioctl.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/quota.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/percpu_counter.h \
- /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/dqblk_xfs.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/dqblk_v1.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/dqblk_v2.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/dqblk_qtree.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/projid.h \
- /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/quota.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/nfs_fs_i.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/mod_devicetable.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/slab.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/kmemleak.h \

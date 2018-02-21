@@ -568,11 +568,16 @@ deps_drivers/char/misc.o := \
   /home/edgar/repo/kernel-caninos/linux/include/linux/klist.h \
   /home/edgar/repo/kernel-caninos/linux/include/linux/pinctrl/devinfo.h \
     $(wildcard include/config/pm.h) \
-  /home/edgar/repo/kernel-caninos/linux/include/linux/pm.h \
-    $(wildcard include/config/vt/console/sleep.h) \
-    $(wildcard include/config/pm/clk.h) \
-    $(wildcard include/config/pm/generic/domains.h) \
-  /home/edgar/repo/kernel-caninos/linux/include/linux/ratelimit.h \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/pinctrl/consumer.h \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/seq_file.h \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/cred.h \
+    $(wildcard include/config/debug/credentials.h) \
+    $(wildcard include/config/keys.h) \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/key.h \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/assoc_array.h \
+    $(wildcard include/config/associative/array.h) \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/selinux.h \
+    $(wildcard include/config/security/selinux.h) \
   /home/edgar/repo/kernel-caninos/linux/include/linux/sched.h \
     $(wildcard include/config/virt/cpu/accounting/native.h) \
     $(wildcard include/config/sched/info.h) \
@@ -656,6 +661,17 @@ deps_drivers/char/misc.o := \
   /home/edgar/repo/kernel-caninos/linux/include/uapi/asm-generic/siginfo.h \
   /home/edgar/repo/kernel-caninos/linux/include/linux/task_io_accounting.h \
     $(wildcard include/config/task/io/accounting.h) \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/sched/user.h \
+    $(wildcard include/config/fanotify.h) \
+    $(wildcard include/config/posix/mqueue.h) \
+    $(wildcard include/config/bpf/syscall.h) \
+    $(wildcard include/config/net.h) \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/pinctrl/pinctrl-state.h \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/pm.h \
+    $(wildcard include/config/vt/console/sleep.h) \
+    $(wildcard include/config/pm/clk.h) \
+    $(wildcard include/config/pm/generic/domains.h) \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/ratelimit.h \
   /home/edgar/repo/kernel-caninos/linux/arch/arm/include/asm/device.h \
     $(wildcard include/config/dmabounce.h) \
     $(wildcard include/config/iommu/api.h) \
@@ -664,20 +680,6 @@ deps_drivers/char/misc.o := \
     $(wildcard include/config/arch/omap.h) \
   /home/edgar/repo/kernel-caninos/linux/include/linux/pm_wakeup.h \
   /home/edgar/repo/kernel-caninos/linux/include/linux/proc_fs.h \
-  /home/edgar/repo/kernel-caninos/linux/include/linux/seq_file.h \
-  /home/edgar/repo/kernel-caninos/linux/include/linux/cred.h \
-    $(wildcard include/config/debug/credentials.h) \
-    $(wildcard include/config/keys.h) \
-  /home/edgar/repo/kernel-caninos/linux/include/linux/key.h \
-  /home/edgar/repo/kernel-caninos/linux/include/linux/assoc_array.h \
-    $(wildcard include/config/associative/array.h) \
-  /home/edgar/repo/kernel-caninos/linux/include/linux/selinux.h \
-    $(wildcard include/config/security/selinux.h) \
-  /home/edgar/repo/kernel-caninos/linux/include/linux/sched/user.h \
-    $(wildcard include/config/fanotify.h) \
-    $(wildcard include/config/posix/mqueue.h) \
-    $(wildcard include/config/bpf/syscall.h) \
-    $(wildcard include/config/net.h) \
   /home/edgar/repo/kernel-caninos/linux/include/linux/tty.h \
     $(wildcard include/config/tty.h) \
     $(wildcard include/config/audit.h) \

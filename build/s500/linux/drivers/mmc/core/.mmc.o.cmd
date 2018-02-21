@@ -479,11 +479,103 @@ deps_drivers/mmc/core/mmc.o := \
   /home/edgar/repo/kernel-caninos/linux/include/linux/ioport.h \
   /home/edgar/repo/kernel-caninos/linux/include/linux/klist.h \
   /home/edgar/repo/kernel-caninos/linux/include/linux/pinctrl/devinfo.h \
-  /home/edgar/repo/kernel-caninos/linux/include/linux/pm.h \
-    $(wildcard include/config/vt/console/sleep.h) \
-    $(wildcard include/config/pm/clk.h) \
-    $(wildcard include/config/pm/generic/domains.h) \
-  /home/edgar/repo/kernel-caninos/linux/include/linux/ratelimit.h \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/pinctrl/consumer.h \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/seq_file.h \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/fs.h \
+    $(wildcard include/config/fs/posix/acl.h) \
+    $(wildcard include/config/security.h) \
+    $(wildcard include/config/cgroup/writeback.h) \
+    $(wildcard include/config/ima.h) \
+    $(wildcard include/config/fsnotify.h) \
+    $(wildcard include/config/fs/encryption.h) \
+    $(wildcard include/config/epoll.h) \
+    $(wildcard include/config/file/locking.h) \
+    $(wildcard include/config/quota.h) \
+    $(wildcard include/config/fs/dax.h) \
+    $(wildcard include/config/block.h) \
+    $(wildcard include/config/mandatory/file/locking.h) \
+    $(wildcard include/config/migration.h) \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/wait_bit.h \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/kdev_t.h \
+  /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/kdev_t.h \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/dcache.h \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/rculist.h \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/rculist_bl.h \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/list_bl.h \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/bit_spinlock.h \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/lockref.h \
+    $(wildcard include/config/arch/use/cmpxchg/lockref.h) \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/stringhash.h \
+    $(wildcard include/config/dcache/word/access.h) \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/hash.h \
+    $(wildcard include/config/have/arch/hash.h) \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/path.h \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/list_lru.h \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/shrinker.h \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/pid.h \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/mm_types.h \
+    $(wildcard include/config/have/cmpxchg/double.h) \
+    $(wildcard include/config/have/aligned/struct/page.h) \
+    $(wildcard include/config/userfaultfd.h) \
+    $(wildcard include/config/have/arch/compat/mmap/bases.h) \
+    $(wildcard include/config/membarrier.h) \
+    $(wildcard include/config/aio.h) \
+    $(wildcard include/config/mmu/notifier.h) \
+    $(wildcard include/config/arch/want/batched/unmap/tlb/flush.h) \
+    $(wildcard include/config/hmm.h) \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/mm_types_task.h \
+    $(wildcard include/config/split/ptlock/cpus.h) \
+    $(wildcard include/config/arch/enable/split/pmd/ptlock.h) \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/auxvec.h \
+  /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/auxvec.h \
+  /home/edgar/repo/kernel-caninos/linux/arch/arm/include/asm/auxvec.h \
+  /home/edgar/repo/kernel-caninos/linux/arch/arm/include/uapi/asm/auxvec.h \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/uprobes.h \
+    $(wildcard include/config/uprobes.h) \
+  /home/edgar/repo/kernel-caninos/linux/arch/arm/include/asm/mmu.h \
+    $(wildcard include/config/cpu/has/asid.h) \
+    $(wildcard include/config/vdso.h) \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/capability.h \
+  /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/capability.h \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/semaphore.h \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/fcntl.h \
+  /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/fcntl.h \
+  /home/edgar/repo/kernel-caninos/linux/arch/arm/include/uapi/asm/fcntl.h \
+  /home/edgar/repo/kernel-caninos/linux/include/uapi/asm-generic/fcntl.h \
+  /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/fiemap.h \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/migrate_mode.h \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/percpu-rwsem.h \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/rcuwait.h \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/rcu_sync.h \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/delayed_call.h \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/errseq.h \
+  /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/fs.h \
+  /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/limits.h \
+  /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/ioctl.h \
+  arch/arm/include/generated/uapi/asm/ioctl.h \
+  /home/edgar/repo/kernel-caninos/linux/include/asm-generic/ioctl.h \
+  /home/edgar/repo/kernel-caninos/linux/include/uapi/asm-generic/ioctl.h \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/quota.h \
+    $(wildcard include/config/quota/netlink/interface.h) \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/percpu_counter.h \
+  /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/dqblk_xfs.h \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/dqblk_v1.h \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/dqblk_v2.h \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/dqblk_qtree.h \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/projid.h \
+  /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/quota.h \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/nfs_fs_i.h \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/cred.h \
+    $(wildcard include/config/debug/credentials.h) \
+    $(wildcard include/config/keys.h) \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/key.h \
+    $(wildcard include/config/sysctl.h) \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/sysctl.h \
+  /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/sysctl.h \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/assoc_array.h \
+    $(wildcard include/config/associative/array.h) \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/selinux.h \
+    $(wildcard include/config/security/selinux.h) \
   /home/edgar/repo/kernel-caninos/linux/include/linux/sched.h \
     $(wildcard include/config/virt/cpu/accounting/native.h) \
     $(wildcard include/config/sched/info.h) \
@@ -503,7 +595,6 @@ deps_drivers/mmc/core/mmc.o := \
     $(wildcard include/config/auditsyscall.h) \
     $(wildcard include/config/rt/mutexes.h) \
     $(wildcard include/config/ubsan.h) \
-    $(wildcard include/config/block.h) \
     $(wildcard include/config/task/xacct.h) \
     $(wildcard include/config/cpusets.h) \
     $(wildcard include/config/intel/rdt.h) \
@@ -514,14 +605,10 @@ deps_drivers/mmc/core/mmc.o := \
     $(wildcard include/config/latencytop.h) \
     $(wildcard include/config/function/graph/tracer.h) \
     $(wildcard include/config/kcov.h) \
-    $(wildcard include/config/uprobes.h) \
     $(wildcard include/config/bcache.h) \
     $(wildcard include/config/vmap/stack.h) \
     $(wildcard include/config/livepatch.h) \
-    $(wildcard include/config/security.h) \
   /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/sched.h \
-  /home/edgar/repo/kernel-caninos/linux/include/linux/pid.h \
-  /home/edgar/repo/kernel-caninos/linux/include/linux/rculist.h \
   /home/edgar/repo/kernel-caninos/linux/include/linux/sem.h \
   /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/sem.h \
   /home/edgar/repo/kernel-caninos/linux/include/linux/ipc.h \
@@ -571,12 +658,19 @@ deps_drivers/mmc/core/mmc.o := \
   /home/edgar/repo/kernel-caninos/linux/arch/arm/include/uapi/asm/sigcontext.h \
   arch/arm/include/generated/uapi/asm/siginfo.h \
   /home/edgar/repo/kernel-caninos/linux/include/uapi/asm-generic/siginfo.h \
-  /home/edgar/repo/kernel-caninos/linux/include/linux/mm_types_task.h \
-    $(wildcard include/config/arch/want/batched/unmap/tlb/flush.h) \
-    $(wildcard include/config/split/ptlock/cpus.h) \
-    $(wildcard include/config/arch/enable/split/pmd/ptlock.h) \
   /home/edgar/repo/kernel-caninos/linux/include/linux/task_io_accounting.h \
     $(wildcard include/config/task/io/accounting.h) \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/sched/user.h \
+    $(wildcard include/config/fanotify.h) \
+    $(wildcard include/config/posix/mqueue.h) \
+    $(wildcard include/config/bpf/syscall.h) \
+    $(wildcard include/config/net.h) \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/pinctrl/pinctrl-state.h \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/pm.h \
+    $(wildcard include/config/vt/console/sleep.h) \
+    $(wildcard include/config/pm/clk.h) \
+    $(wildcard include/config/pm/generic/domains.h) \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/ratelimit.h \
   /home/edgar/repo/kernel-caninos/linux/arch/arm/include/asm/device.h \
     $(wildcard include/config/dmabounce.h) \
     $(wildcard include/config/iommu/api.h) \

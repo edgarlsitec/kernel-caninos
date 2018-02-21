@@ -620,29 +620,8 @@ deps_drivers/input/serio/serport.o := \
   /home/edgar/repo/kernel-caninos/linux/include/linux/klist.h \
   /home/edgar/repo/kernel-caninos/linux/include/linux/pinctrl/devinfo.h \
     $(wildcard include/config/pm.h) \
-  /home/edgar/repo/kernel-caninos/linux/include/linux/pm.h \
-    $(wildcard include/config/vt/console/sleep.h) \
-    $(wildcard include/config/pm/clk.h) \
-    $(wildcard include/config/pm/generic/domains.h) \
-  /home/edgar/repo/kernel-caninos/linux/include/linux/ratelimit.h \
-  /home/edgar/repo/kernel-caninos/linux/arch/arm/include/asm/device.h \
-    $(wildcard include/config/dmabounce.h) \
-    $(wildcard include/config/iommu/api.h) \
-    $(wildcard include/config/arm/dma/use/iommu.h) \
-    $(wildcard include/config/xen.h) \
-    $(wildcard include/config/arch/omap.h) \
-  /home/edgar/repo/kernel-caninos/linux/include/linux/pm_wakeup.h \
-  /home/edgar/repo/kernel-caninos/linux/include/linux/mod_devicetable.h \
-  /home/edgar/repo/kernel-caninos/linux/include/linux/uuid.h \
-  /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/uuid.h \
-  /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/serio.h \
-  /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/ioctl.h \
-  arch/arm/include/generated/uapi/asm/ioctl.h \
-  /home/edgar/repo/kernel-caninos/linux/include/asm-generic/ioctl.h \
-  /home/edgar/repo/kernel-caninos/linux/include/uapi/asm-generic/ioctl.h \
-  /home/edgar/repo/kernel-caninos/linux/include/linux/tty.h \
-    $(wildcard include/config/tty.h) \
-    $(wildcard include/config/audit.h) \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/pinctrl/consumer.h \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/seq_file.h \
   /home/edgar/repo/kernel-caninos/linux/include/linux/fs.h \
     $(wildcard include/config/fs/posix/acl.h) \
     $(wildcard include/config/cgroup/writeback.h) \
@@ -698,9 +677,15 @@ deps_drivers/input/serio/serport.o := \
   /home/edgar/repo/kernel-caninos/linux/include/linux/rcuwait.h \
   /home/edgar/repo/kernel-caninos/linux/include/linux/rcu_sync.h \
   /home/edgar/repo/kernel-caninos/linux/include/linux/delayed_call.h \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/uuid.h \
+  /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/uuid.h \
   /home/edgar/repo/kernel-caninos/linux/include/linux/errseq.h \
   /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/fs.h \
   /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/limits.h \
+  /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/ioctl.h \
+  arch/arm/include/generated/uapi/asm/ioctl.h \
+  /home/edgar/repo/kernel-caninos/linux/include/asm-generic/ioctl.h \
+  /home/edgar/repo/kernel-caninos/linux/include/uapi/asm-generic/ioctl.h \
   /home/edgar/repo/kernel-caninos/linux/include/linux/quota.h \
     $(wildcard include/config/quota/netlink/interface.h) \
   /home/edgar/repo/kernel-caninos/linux/include/linux/percpu_counter.h \
@@ -711,19 +696,6 @@ deps_drivers/input/serio/serport.o := \
   /home/edgar/repo/kernel-caninos/linux/include/linux/projid.h \
   /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/quota.h \
   /home/edgar/repo/kernel-caninos/linux/include/linux/nfs_fs_i.h \
-  /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/major.h \
-  /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/termios.h \
-  arch/arm/include/generated/uapi/asm/termios.h \
-  /home/edgar/repo/kernel-caninos/linux/include/asm-generic/termios.h \
-  /home/edgar/repo/kernel-caninos/linux/include/uapi/asm-generic/termios.h \
-  arch/arm/include/generated/uapi/asm/termbits.h \
-  /home/edgar/repo/kernel-caninos/linux/include/uapi/asm-generic/termbits.h \
-  /home/edgar/repo/kernel-caninos/linux/arch/arm/include/uapi/asm/ioctls.h \
-  /home/edgar/repo/kernel-caninos/linux/include/uapi/asm-generic/ioctls.h \
-  /home/edgar/repo/kernel-caninos/linux/include/linux/tty_driver.h \
-    $(wildcard include/config/console/poll.h) \
-  /home/edgar/repo/kernel-caninos/linux/include/linux/cdev.h \
-  /home/edgar/repo/kernel-caninos/linux/include/linux/seq_file.h \
   /home/edgar/repo/kernel-caninos/linux/include/linux/cred.h \
     $(wildcard include/config/debug/credentials.h) \
     $(wildcard include/config/keys.h) \
@@ -737,6 +709,36 @@ deps_drivers/input/serio/serport.o := \
     $(wildcard include/config/posix/mqueue.h) \
     $(wildcard include/config/bpf/syscall.h) \
     $(wildcard include/config/net.h) \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/pinctrl/pinctrl-state.h \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/pm.h \
+    $(wildcard include/config/vt/console/sleep.h) \
+    $(wildcard include/config/pm/clk.h) \
+    $(wildcard include/config/pm/generic/domains.h) \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/ratelimit.h \
+  /home/edgar/repo/kernel-caninos/linux/arch/arm/include/asm/device.h \
+    $(wildcard include/config/dmabounce.h) \
+    $(wildcard include/config/iommu/api.h) \
+    $(wildcard include/config/arm/dma/use/iommu.h) \
+    $(wildcard include/config/xen.h) \
+    $(wildcard include/config/arch/omap.h) \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/pm_wakeup.h \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/mod_devicetable.h \
+  /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/serio.h \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/tty.h \
+    $(wildcard include/config/tty.h) \
+    $(wildcard include/config/audit.h) \
+  /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/major.h \
+  /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/termios.h \
+  arch/arm/include/generated/uapi/asm/termios.h \
+  /home/edgar/repo/kernel-caninos/linux/include/asm-generic/termios.h \
+  /home/edgar/repo/kernel-caninos/linux/include/uapi/asm-generic/termios.h \
+  arch/arm/include/generated/uapi/asm/termbits.h \
+  /home/edgar/repo/kernel-caninos/linux/include/uapi/asm-generic/termbits.h \
+  /home/edgar/repo/kernel-caninos/linux/arch/arm/include/uapi/asm/ioctls.h \
+  /home/edgar/repo/kernel-caninos/linux/include/uapi/asm-generic/ioctls.h \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/tty_driver.h \
+    $(wildcard include/config/console/poll.h) \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/cdev.h \
   /home/edgar/repo/kernel-caninos/linux/include/linux/tty_ldisc.h \
   /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/tty_flags.h \
   /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/tty.h \

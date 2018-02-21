@@ -214,60 +214,14 @@ rtc-lib.o: /home/edgar/repo/kernel-caninos/linux/drivers/rtc/rtc-lib.c \
  /home/edgar/repo/kernel-caninos/linux/include/linux/highuid.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/klist.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/pinctrl/devinfo.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/pm.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/ratelimit.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/sched.h \
- /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/sched.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/pid.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/rculist.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/sem.h \
- /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/sem.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/ipc.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/rhashtable.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/jhash.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/unaligned/packed_struct.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/list_nulls.h \
- /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/ipc.h \
- arch/arm/include/generated/uapi/asm/ipcbuf.h \
- /home/edgar/repo/kernel-caninos/linux/include/uapi/asm-generic/ipcbuf.h \
- arch/arm/include/generated/uapi/asm/sembuf.h \
- /home/edgar/repo/kernel-caninos/linux/include/uapi/asm-generic/sembuf.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/shm.h \
- /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/shm.h \
- /home/edgar/repo/kernel-caninos/linux/include/uapi/asm-generic/hugetlb_encode.h \
- arch/arm/include/generated/uapi/asm/shmbuf.h \
- /home/edgar/repo/kernel-caninos/linux/include/uapi/asm-generic/shmbuf.h \
- /home/edgar/repo/kernel-caninos/linux/arch/arm/include/asm/shmparam.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/kcov.h \
- /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/kcov.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/plist.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/seccomp.h \
- /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/seccomp.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/resource.h \
- /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/resource.h \
- arch/arm/include/generated/uapi/asm/resource.h \
- /home/edgar/repo/kernel-caninos/linux/include/asm-generic/resource.h \
- /home/edgar/repo/kernel-caninos/linux/include/uapi/asm-generic/resource.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/latencytop.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/sched/prio.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/signal_types.h \
- /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/signal.h \
- /home/edgar/repo/kernel-caninos/linux/arch/arm/include/asm/signal.h \
- /home/edgar/repo/kernel-caninos/linux/arch/arm/include/uapi/asm/signal.h \
- /home/edgar/repo/kernel-caninos/linux/include/uapi/asm-generic/signal-defs.h \
- /home/edgar/repo/kernel-caninos/linux/arch/arm/include/uapi/asm/sigcontext.h \
- arch/arm/include/generated/uapi/asm/siginfo.h \
- /home/edgar/repo/kernel-caninos/linux/include/uapi/asm-generic/siginfo.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/mm_types_task.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/task_io_accounting.h \
- /home/edgar/repo/kernel-caninos/linux/arch/arm/include/asm/device.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/pm_wakeup.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/pinctrl/consumer.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/seq_file.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/fs.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/wait_bit.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/kdev_t.h \
  /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/kdev_t.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/dcache.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/rculist.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/rculist_bl.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/list_bl.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/bit_spinlock.h \
@@ -277,7 +231,9 @@ rtc-lib.o: /home/edgar/repo/kernel-caninos/linux/drivers/rtc/rtc-lib.c \
  /home/edgar/repo/kernel-caninos/linux/include/linux/path.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/list_lru.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/shrinker.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/pid.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/mm_types.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/mm_types_task.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/auxvec.h \
  /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/auxvec.h \
  /home/edgar/repo/kernel-caninos/linux/arch/arm/include/asm/auxvec.h \
@@ -321,7 +277,53 @@ rtc-lib.o: /home/edgar/repo/kernel-caninos/linux/drivers/rtc/rtc-lib.c \
  /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/sysctl.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/assoc_array.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/selinux.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/sched.h \
+ /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/sched.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/sem.h \
+ /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/sem.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/ipc.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/rhashtable.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/jhash.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/unaligned/packed_struct.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/list_nulls.h \
+ /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/ipc.h \
+ arch/arm/include/generated/uapi/asm/ipcbuf.h \
+ /home/edgar/repo/kernel-caninos/linux/include/uapi/asm-generic/ipcbuf.h \
+ arch/arm/include/generated/uapi/asm/sembuf.h \
+ /home/edgar/repo/kernel-caninos/linux/include/uapi/asm-generic/sembuf.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/shm.h \
+ /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/shm.h \
+ /home/edgar/repo/kernel-caninos/linux/include/uapi/asm-generic/hugetlb_encode.h \
+ arch/arm/include/generated/uapi/asm/shmbuf.h \
+ /home/edgar/repo/kernel-caninos/linux/include/uapi/asm-generic/shmbuf.h \
+ /home/edgar/repo/kernel-caninos/linux/arch/arm/include/asm/shmparam.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/kcov.h \
+ /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/kcov.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/plist.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/seccomp.h \
+ /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/seccomp.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/resource.h \
+ /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/resource.h \
+ arch/arm/include/generated/uapi/asm/resource.h \
+ /home/edgar/repo/kernel-caninos/linux/include/asm-generic/resource.h \
+ /home/edgar/repo/kernel-caninos/linux/include/uapi/asm-generic/resource.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/latencytop.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/sched/prio.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/signal_types.h \
+ /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/signal.h \
+ /home/edgar/repo/kernel-caninos/linux/arch/arm/include/asm/signal.h \
+ /home/edgar/repo/kernel-caninos/linux/arch/arm/include/uapi/asm/signal.h \
+ /home/edgar/repo/kernel-caninos/linux/include/uapi/asm-generic/signal-defs.h \
+ /home/edgar/repo/kernel-caninos/linux/arch/arm/include/uapi/asm/sigcontext.h \
+ arch/arm/include/generated/uapi/asm/siginfo.h \
+ /home/edgar/repo/kernel-caninos/linux/include/uapi/asm-generic/siginfo.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/task_io_accounting.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/sched/user.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/pinctrl/pinctrl-state.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/pm.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/ratelimit.h \
+ /home/edgar/repo/kernel-caninos/linux/arch/arm/include/asm/device.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/pm_wakeup.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/cdev.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/poll.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/uaccess.h \

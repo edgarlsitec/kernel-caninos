@@ -412,6 +412,9 @@ cred.o: /home/edgar/repo/kernel-caninos/linux/kernel/cred.c \
  /home/edgar/repo/kernel-caninos/linux/include/linux/kobject_ns.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/klist.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/pinctrl/devinfo.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/pinctrl/consumer.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/seq_file.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/pinctrl/pinctrl-state.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/pm.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/ratelimit.h \
  /home/edgar/repo/kernel-caninos/linux/arch/arm/include/asm/device.h \
@@ -433,7 +436,6 @@ cred.o: /home/edgar/repo/kernel-caninos/linux/kernel/cred.c \
  /home/edgar/repo/kernel-caninos/linux/include/linux/pipe_fs_i.h \
  /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/if_packet.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/seq_file_net.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/seq_file.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/sched/rt.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/livepatch.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/module.h \
