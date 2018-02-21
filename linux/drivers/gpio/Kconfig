@@ -74,6 +74,13 @@ config GPIO_MAX730X
 menu "Memory mapped GPIO drivers"
 	depends on HAS_IOMEM
 
+config GPIO_OWL
+	tristate "Actions Owl GPIO/SGPIO support"
+	depends on ARCH_ACTIONS
+	help
+	  This option enables support for GPIOs found
+	  on Actions Semi s500.
+
 config GPIO_74XX_MMIO
 	tristate "GPIO driver for 74xx-ICs with MMIO access"
 	depends on OF_GPIO

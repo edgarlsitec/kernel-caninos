@@ -252,7 +252,33 @@ host.o: /home/edgar/repo/kernel-caninos/linux/drivers/mmc/core/host.c \
  /home/edgar/repo/kernel-caninos/linux/include/linux/fwnode.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/of_gpio.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/gpio.h \
+ /home/edgar/repo/kernel-caninos/linux/arch/arm/include/asm/gpio.h \
+ /home/edgar/repo/kernel-caninos/linux/include/asm-generic/gpio.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/gpio/driver.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/irq.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/irqhandler.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/irqreturn.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/irqnr.h \
+ /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/irqnr.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/io.h \
+ /home/edgar/repo/kernel-caninos/linux/arch/arm/include/asm/io.h \
+ /home/edgar/repo/kernel-caninos/linux/include/asm-generic/pci_iomap.h \
+ /home/edgar/repo/kernel-caninos/linux/include/xen/xen.h \
+ /home/edgar/repo/kernel-caninos/linux/include/asm-generic/io.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/vmalloc.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/slab.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/kmemleak.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/kasan.h \
+ /home/edgar/repo/kernel-caninos/linux/arch/arm/include/asm/irq.h \
+ arch/arm/include/generated/asm/irq_regs.h \
+ /home/edgar/repo/kernel-caninos/linux/include/asm-generic/irq_regs.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/irqdesc.h \
+ /home/edgar/repo/kernel-caninos/linux/arch/arm/include/asm/hw_irq.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/irqchip/chained_irq.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/irqdomain.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/pinctrl/pinctrl.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/pinctrl/pinconf-generic.h \
+ /home/edgar/repo/kernel-caninos/linux/include/linux/gpio/consumer.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/pagemap.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/mm.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/mm_types.h \
@@ -343,7 +369,6 @@ host.o: /home/edgar/repo/kernel-caninos/linux/drivers/mmc/core/host.c \
  /home/edgar/repo/kernel-caninos/linux/include/linux/vtime.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/context_tracking_state.h \
  /home/edgar/repo/kernel-caninos/linux/arch/arm/include/asm/hardirq.h \
- /home/edgar/repo/kernel-caninos/linux/arch/arm/include/asm/irq.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/irq_cpustat.h \
  /home/edgar/repo/kernel-caninos/linux/arch/arm/include/asm/cacheflush.h \
  /home/edgar/repo/kernel-caninos/linux/arch/arm/include/asm/glue-cache.h \
@@ -353,10 +378,6 @@ host.o: /home/edgar/repo/kernel-caninos/linux/drivers/mmc/core/host.c \
  /home/edgar/repo/kernel-caninos/linux/arch/arm/include/asm/highmem.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/hugetlb_inline.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/leds.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/slab.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/kmemleak.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/vmalloc.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/kasan.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/mmc/host.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/fault-inject.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/mmc/core.h \
@@ -364,7 +385,6 @@ host.o: /home/edgar/repo/kernel-caninos/linux/drivers/mmc/core/host.c \
  /home/edgar/repo/kernel-caninos/linux/include/linux/mmc/pm.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/dma-direction.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/mmc/slot-gpio.h \
- /home/edgar/repo/kernel-caninos/linux/include/linux/irqreturn.h \
  /home/edgar/repo/kernel-caninos/linux/drivers/mmc/core/core.h \
  /home/edgar/repo/kernel-caninos/linux/include/linux/delay.h \
  /home/edgar/repo/kernel-caninos/linux/arch/arm/include/asm/delay.h \

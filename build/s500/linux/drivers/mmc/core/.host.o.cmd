@@ -576,8 +576,94 @@ deps_drivers/mmc/core/host.o := \
   /home/edgar/repo/kernel-caninos/linux/include/linux/gpio.h \
     $(wildcard include/config/gpiolib.h) \
     $(wildcard include/config/arch/have/custom/gpio/h.h) \
+  /home/edgar/repo/kernel-caninos/linux/arch/arm/include/asm/gpio.h \
+    $(wildcard include/config/arch/nr/gpio.h) \
+  /home/edgar/repo/kernel-caninos/linux/include/asm-generic/gpio.h \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/gpio/driver.h \
+    $(wildcard include/config/gpiolib/irqchip.h) \
+    $(wildcard include/config/gpio/generic.h) \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/irq.h \
+    $(wildcard include/config/generic/irq/effective/aff/mask.h) \
+    $(wildcard include/config/generic/irq/ipi.h) \
+    $(wildcard include/config/irq/domain/hierarchy.h) \
+    $(wildcard include/config/generic/irq/migration.h) \
+    $(wildcard include/config/generic/pending/irq.h) \
+    $(wildcard include/config/hardirqs/sw/resend.h) \
+    $(wildcard include/config/generic/irq/legacy/alloc/hwirq.h) \
+    $(wildcard include/config/generic/irq/legacy.h) \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/irqhandler.h \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/irqreturn.h \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/irqnr.h \
+  /home/edgar/repo/kernel-caninos/linux/include/uapi/linux/irqnr.h \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/io.h \
+    $(wildcard include/config/have/arch/huge/vmap.h) \
+    $(wildcard include/config/has/ioport/map.h) \
+    $(wildcard include/config/pci.h) \
+  /home/edgar/repo/kernel-caninos/linux/arch/arm/include/asm/io.h \
+    $(wildcard include/config/need/mach/io/h.h) \
+    $(wildcard include/config/pcmcia/soc/common.h) \
+    $(wildcard include/config/isa.h) \
+    $(wildcard include/config/pccard.h) \
+  /home/edgar/repo/kernel-caninos/linux/include/asm-generic/pci_iomap.h \
+    $(wildcard include/config/no/generic/pci/ioport/map.h) \
+    $(wildcard include/config/generic/pci/iomap.h) \
+  /home/edgar/repo/kernel-caninos/linux/include/xen/xen.h \
+    $(wildcard include/config/xen/pvh.h) \
+    $(wildcard include/config/xen/dom0.h) \
+  /home/edgar/repo/kernel-caninos/linux/include/asm-generic/io.h \
+    $(wildcard include/config/generic/iomap.h) \
+    $(wildcard include/config/virt/to/bus.h) \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/vmalloc.h \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/slab.h \
+    $(wildcard include/config/debug/slab.h) \
+    $(wildcard include/config/failslab.h) \
+    $(wildcard include/config/have/hardened/usercopy/allocator.h) \
+    $(wildcard include/config/slab.h) \
+    $(wildcard include/config/slub.h) \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/kmemleak.h \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/kasan.h \
+  /home/edgar/repo/kernel-caninos/linux/arch/arm/include/asm/irq.h \
+    $(wildcard include/config/sparse/irq.h) \
+    $(wildcard include/config/multi/irq/handler.h) \
+  arch/arm/include/generated/asm/irq_regs.h \
+  /home/edgar/repo/kernel-caninos/linux/include/asm-generic/irq_regs.h \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/irqdesc.h \
+    $(wildcard include/config/irq/preflow/fasteoi.h) \
+    $(wildcard include/config/proc/fs.h) \
+    $(wildcard include/config/generic/irq/debugfs.h) \
+    $(wildcard include/config/handle/domain/irq.h) \
+  /home/edgar/repo/kernel-caninos/linux/arch/arm/include/asm/hw_irq.h \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/irqchip/chained_irq.h \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/irqdomain.h \
+    $(wildcard include/config/irq/domain.h) \
   /home/edgar/repo/kernel-caninos/linux/include/linux/pinctrl/pinctrl.h \
     $(wildcard include/config/generic/pinconf.h) \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/pinctrl/pinconf-generic.h \
+    $(wildcard include/config/bias/bus/hold.h) \
+    $(wildcard include/config/bias/disable.h) \
+    $(wildcard include/config/bias/high/impedance.h) \
+    $(wildcard include/config/bias/pull/down.h) \
+    $(wildcard include/config/bias/pull/pin/default.h) \
+    $(wildcard include/config/bias/pull/up.h) \
+    $(wildcard include/config/drive/open/drain.h) \
+    $(wildcard include/config/drive/open/source.h) \
+    $(wildcard include/config/drive/push/pull.h) \
+    $(wildcard include/config/drive/strength.h) \
+    $(wildcard include/config/input/debounce.h) \
+    $(wildcard include/config/input/enable.h) \
+    $(wildcard include/config/input/schmitt.h) \
+    $(wildcard include/config/input/schmitt/enable.h) \
+    $(wildcard include/config/low/power/mode.h) \
+    $(wildcard include/config/output/enable.h) \
+    $(wildcard include/config/output.h) \
+    $(wildcard include/config/power/source.h) \
+    $(wildcard include/config/sleep/hardware/state.h) \
+    $(wildcard include/config/slew/rate.h) \
+    $(wildcard include/config/skew/delay.h) \
+    $(wildcard include/config/end.h) \
+    $(wildcard include/config/max.h) \
+  /home/edgar/repo/kernel-caninos/linux/include/linux/gpio/consumer.h \
+    $(wildcard include/config/gpio/sysfs.h) \
   /home/edgar/repo/kernel-caninos/linux/include/linux/pagemap.h \
   /home/edgar/repo/kernel-caninos/linux/include/linux/mm.h \
     $(wildcard include/config/sysctl.h) \
@@ -688,7 +774,6 @@ deps_drivers/mmc/core/host.o := \
     $(wildcard include/config/have/arch/transparent/hugepage/pud.h) \
     $(wildcard include/config/have/arch/soft/dirty.h) \
     $(wildcard include/config/arch/enable/thp/migration.h) \
-    $(wildcard include/config/have/arch/huge/vmap.h) \
     $(wildcard include/config/x86/espfix64.h) \
   /home/edgar/repo/kernel-caninos/linux/include/linux/huge_mm.h \
   /home/edgar/repo/kernel-caninos/linux/include/linux/sched/coredump.h \
@@ -779,9 +864,6 @@ deps_drivers/mmc/core/host.o := \
   /home/edgar/repo/kernel-caninos/linux/include/linux/context_tracking_state.h \
     $(wildcard include/config/context/tracking.h) \
   /home/edgar/repo/kernel-caninos/linux/arch/arm/include/asm/hardirq.h \
-  /home/edgar/repo/kernel-caninos/linux/arch/arm/include/asm/irq.h \
-    $(wildcard include/config/sparse/irq.h) \
-    $(wildcard include/config/multi/irq/handler.h) \
   /home/edgar/repo/kernel-caninos/linux/include/linux/irq_cpustat.h \
   /home/edgar/repo/kernel-caninos/linux/arch/arm/include/asm/cacheflush.h \
     $(wildcard include/config/arm/errata/411920.h) \
@@ -806,15 +888,6 @@ deps_drivers/mmc/core/host.o := \
     $(wildcard include/config/leds/trigger/camera.h) \
     $(wildcard include/config/new/leds.h) \
     $(wildcard include/config/leds/trigger/cpu.h) \
-  /home/edgar/repo/kernel-caninos/linux/include/linux/slab.h \
-    $(wildcard include/config/debug/slab.h) \
-    $(wildcard include/config/failslab.h) \
-    $(wildcard include/config/have/hardened/usercopy/allocator.h) \
-    $(wildcard include/config/slab.h) \
-    $(wildcard include/config/slub.h) \
-  /home/edgar/repo/kernel-caninos/linux/include/linux/kmemleak.h \
-  /home/edgar/repo/kernel-caninos/linux/include/linux/vmalloc.h \
-  /home/edgar/repo/kernel-caninos/linux/include/linux/kasan.h \
   /home/edgar/repo/kernel-caninos/linux/include/linux/mmc/host.h \
     $(wildcard include/config/regulator.h) \
     $(wildcard include/config/fail/mmc/request.h) \
@@ -825,7 +898,6 @@ deps_drivers/mmc/core/host.o := \
   /home/edgar/repo/kernel-caninos/linux/include/linux/mmc/pm.h \
   /home/edgar/repo/kernel-caninos/linux/include/linux/dma-direction.h \
   /home/edgar/repo/kernel-caninos/linux/include/linux/mmc/slot-gpio.h \
-  /home/edgar/repo/kernel-caninos/linux/include/linux/irqreturn.h \
   /home/edgar/repo/kernel-caninos/linux/drivers/mmc/core/core.h \
   /home/edgar/repo/kernel-caninos/linux/include/linux/delay.h \
   /home/edgar/repo/kernel-caninos/linux/arch/arm/include/asm/delay.h \

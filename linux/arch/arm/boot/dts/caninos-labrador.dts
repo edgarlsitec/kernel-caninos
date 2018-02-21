@@ -35,6 +35,10 @@
 		card_type = "emmc";
 		status = "okay";
 	};
+
+	gpio@b01b0000 {
+		status = "okay";
+	};
 };
 
 &uart3 {

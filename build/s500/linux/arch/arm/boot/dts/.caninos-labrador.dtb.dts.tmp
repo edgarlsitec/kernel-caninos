@@ -207,6 +207,21 @@
    power-domains = <&sps 5>;
   };
 
+  gpio: gpio@b01b0000 {
+   compatible = "actions,owl-gpio";
+   reg = <0xb01b0000 0x40>;
+   interrupts = <
+    0 36 4
+    0 37 4
+    0 38 4
+    0 39 4
+    0 40 4 >;
+   #gpio-cells = <2>;
+   gpio-controller;
+   #interrupt-cells = <2>;
+   interrupt-controller;
+  };
+
   mmc0: mmc@b0230000 {
    #address-cells = <1>;
    #size-cells = <0>;
@@ -258,6 +273,10 @@
 
  mmc@b0238000 {
   card_type = "emmc";
+  status = "okay";
+ };
+
+ gpio@b01b0000 {
   status = "okay";
  };
 };
