@@ -1,2 +1,0 @@
-soc.c:133:6:reset_cpu	80	static
-soc.c:182:6:s_init	0	static

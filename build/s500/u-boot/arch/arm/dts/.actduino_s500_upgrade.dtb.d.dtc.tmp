@@ -1,1 +1,0 @@
-arch/arm/dts/actduino_s500_upgrade.dtb: arch/arm/dts/.actduino_s500_upgrade.dtb.dts.tmp /home/edgar/repo/kernel-caninos/uboot/arch/arm/dts/actduino.dtsi /home/edgar/repo/kernel-caninos/uboot/arch/arm/dts/skeleton.dtsi

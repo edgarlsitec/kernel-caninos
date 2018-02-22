@@ -1,4 +1,0 @@
-gauge_bq27441.c:23:5:bq27441_gasgauge_get_capacity	24	static
-gauge_bq27441.c:18:5:hw_gauge_get_capacity	0	static
-gauge_bq27441.c:43:5:bq27441_gasgauge_get_voltage	24	static
-gauge_bq27441.c:64:5:bq27441_gasgauge_get_curr	24	static

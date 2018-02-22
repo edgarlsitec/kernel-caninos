@@ -1,4 +1,0 @@
-owl_dss.c:36:5:platform_get_lcd_par	0	static
-owl_dss.c:50:5:platform_enable_lcd	8	static
-owl_dss.c:70:5:platform_get_dsi_par	0	static
-owl_dss.c:78:5:platform_enable_dsi	8	static

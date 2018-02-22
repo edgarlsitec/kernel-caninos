@@ -1,4 +1,0 @@
-owl_dsi_cmd.c:42:6:send_long_cmd	0	static
-owl_dsi_cmd.c:47:6:send_short_cmd	0	static
-owl_dsi_cmd.c:52:6:send_short_cmd_1	0	static
-owl_dsi_cmd.c:75:6:send_cmd	8	static

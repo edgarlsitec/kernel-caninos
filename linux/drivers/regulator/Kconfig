@@ -930,6 +930,10 @@ config REGULATOR_VEXPRESS
 	  This driver provides support for voltage regulators available
 	  on the ARM Ltd's Versatile Express platform.
 
+config REGULATOR_OWL
+	tristate "Actions s500 atc260x PMIC regulators"
+	depends on ARCH_ACTIONS
+
 config REGULATOR_WM831X
 	tristate "Wolfson Microelectronics WM831x PMIC regulators"
 	depends on MFD_WM831X

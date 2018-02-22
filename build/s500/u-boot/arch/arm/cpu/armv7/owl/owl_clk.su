@@ -1,7 +1,0 @@
-owl_clk.c:63:6:owl_clk_enable	0	static
-owl_clk.c:68:6:owl_clk_disable	0	static
-owl_clk.c:73:5:owl_get_displaypll_rate	0	static
-owl_clk.c:82:5:owl_get_devpll_rate	0	static
-owl_clk.c:91:5:owl_get_devclk_rate	0	static
-owl_clk.c:105:5:owl_get_nic_clk_rate	8	static
-owl_clk.c:119:5:owl_clk_init	48	static

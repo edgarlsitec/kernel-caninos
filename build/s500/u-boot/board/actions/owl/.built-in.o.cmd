@@ -1,1 +1,0 @@
-cmd_board/actions/owl/built-in.o :=  arm-linux-gnueabihf-ld.bfd     -r -o board/actions/owl/built-in.o board/actions/owl/owl.o board/actions/owl/owl_afi.o board/actions/owl/owl_boot_fdt.o board/actions/owl/recovery.o board/actions/owl/owl_dss.o board/actions/owl/gadget.o 

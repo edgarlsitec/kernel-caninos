@@ -1,1 +1,0 @@
-cmd_drivers/usb/gadget/built-in.o :=  arm-linux-gnueabihf-ld.bfd     -r -o drivers/usb/gadget/built-in.o drivers/usb/gadget/epautoconf.o drivers/usb/gadget/config.o drivers/usb/gadget/usbstring.o drivers/usb/gadget/./dwc3/owl_dwc3.o drivers/usb/gadget/g_dnl.o drivers/usb/gadget/f_mass_storage.o drivers/usb/gadget/f_fastboot.o 

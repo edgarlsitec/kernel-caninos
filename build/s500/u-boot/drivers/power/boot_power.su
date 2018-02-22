@@ -1,9 +1,0 @@
-boot_power.c:95:5:is_battery_exist	8	static
-boot_power.c:128:5:get_bat_voltage	8	static
-boot_power.c:145:6:get_bat_capacity	16	static
-boot_power.c:180:5:get_charge_plugin_status	16	static
-boot_power.c:210:5:get_adaptor_type	16	static
-boot_power.c:231:6:get_cfg_items	16	static
-boot_power.c:243:6:support_minicharger	8	static
-boot_power.c:252:7:atc260x_shutoff	8	static
-boot_power.c:262:6:check_power	32	static

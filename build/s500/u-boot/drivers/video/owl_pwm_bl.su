@@ -1,2 +1,0 @@
-owl_pwm_bl.c:54:5:owl_pwm_backlight_update_status	16	static
-owl_pwm_bl.c:112:5:owl_pwm_backlight_init	24	static

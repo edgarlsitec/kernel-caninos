@@ -20,7 +20,7 @@ core/pwrseq_emmc.o/
 core/block.o/
 core/queue.o/
 host/owl-mmc.o/
-/0              0           0     0     644     43664     `
+/0              0           0     0     644     47040     `
 /13             0           0     0     644     8192      `
 /25             0           0     0     644     13912     `
 /38             0           0     0     644     25024     `

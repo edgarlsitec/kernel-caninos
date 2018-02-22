@@ -1,3 +1,0 @@
-recovery.c:45:12:check_recovery_cmd_file	1064	static
-recovery.c:161:6:setup_recovery_env	8	static
-recovery.c:169:6:check_recovery_mode	16	static

@@ -1,0 +1,21 @@
+!<thin>
+//                                              134       `
+core.o/
+dummy.o/
+fixed-helper.o/
+helpers.o/
+devres.o/
+of_regulator.o/
+atc260x-regulator.o/
+atc260x-pwm-dcdc.o/
+atc260x-switch-ldo.o/
+
+/0              0           0     0     644     73576     `
+/8              0           0     0     644     3632      `
+/17             0           0     0     644     1796      `
+/33             0           0     0     644     15304     `
+/44             0           0     0     644     12888     `
+/54             0           0     0     644     8420      `
+/70             0           0     0     644     17912     `
+/91             0           0     0     644     6872      `
+/111            0           0     0     644     8584      `
