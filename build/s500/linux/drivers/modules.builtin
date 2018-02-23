@@ -2,6 +2,7 @@ kernel/drivers/base/firmware_class.ko
 kernel/drivers/char/hw_random/rng-core.ko
 kernel/drivers/dma/owl-dma.ko
 kernel/drivers/gpio/gpio-owl.ko
+kernel/drivers/gpio/gpio-atc260x.ko
 kernel/drivers/hid/hid.ko
 kernel/drivers/hid/hid-generic.ko
 kernel/drivers/hid/hid-a4tech.ko
@@ -17,6 +18,9 @@ kernel/drivers/hid/hid-logitech.ko
 kernel/drivers/hid/hid-microsoft.ko
 kernel/drivers/hid/hid-monterey.ko
 kernel/drivers/hwmon/hwmon.ko
+kernel/drivers/i2c/i2c-core.ko
+kernel/drivers/i2c/i2c-dev.ko
+kernel/drivers/i2c/busses/i2c-owl.ko
 kernel/drivers/input/input-core.ko
 kernel/drivers/input/keyboard/atkbd.ko
 kernel/drivers/input/mouse/psmouse.ko
@@ -30,5 +34,7 @@ kernel/drivers/mmc/core/mmc_block.ko
 kernel/drivers/mmc/host/owl-mmc.ko
 kernel/drivers/pinctrl/pinctrl-owl.ko
 kernel/drivers/regulator/atc260x-regulator.ko
+kernel/drivers/regulator/atc260x-pwm-dcdc.ko
+kernel/drivers/regulator/atc260x-switch-ldo.ko
 kernel/drivers/tty/serial/serial_core.ko
 kernel/drivers/tty/serial/owl-uart.ko

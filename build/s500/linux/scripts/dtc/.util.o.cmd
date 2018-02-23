@@ -1,6 +1,6 @@
-cmd_scripts/dtc/util.o := gcc -Wp,-MD,scripts/dtc/.util.o.d -Iscripts/dtc -Wall -Wmissing-prototypes -Wstrict-prototypes -O2 -fomit-frame-pointer -std=gnu89  -I/home/edgar/repo/kernel-caninos/linux/scripts/dtc  -I/home/edgar/repo/kernel-caninos/linux/scripts/dtc/libfdt -c -o scripts/dtc/util.o /home/edgar/repo/kernel-caninos/linux/scripts/dtc/util.c
+cmd_scripts/dtc/util.o := gcc -Wp,-MD,scripts/dtc/.util.o.d -Iscripts/dtc -Wall -Wmissing-prototypes -Wstrict-prototypes -O2 -fomit-frame-pointer -std=gnu89  -I/home/edgar/kernel-caninos/linux/scripts/dtc  -I/home/edgar/kernel-caninos/linux/scripts/dtc/libfdt -c -o scripts/dtc/util.o /home/edgar/kernel-caninos/linux/scripts/dtc/util.c
 
-source_scripts/dtc/util.o := /home/edgar/repo/kernel-caninos/linux/scripts/dtc/util.c
+source_scripts/dtc/util.o := /home/edgar/kernel-caninos/linux/scripts/dtc/util.c
 
 deps_scripts/dtc/util.o := \
   /usr/include/stdc-predef.h \
@@ -18,11 +18,11 @@ deps_scripts/dtc/util.o := \
   /usr/include/x86_64-linux-gnu/bits/byteswap-16.h \
   /usr/include/xlocale.h \
   /usr/include/stdio.h \
-  /usr/lib/gcc/x86_64-linux-gnu/4.9/include/stddef.h \
+  /usr/lib/gcc/x86_64-linux-gnu/6/include/stddef.h \
   /usr/include/libio.h \
   /usr/include/_G_config.h \
   /usr/include/wchar.h \
-  /usr/lib/gcc/x86_64-linux-gnu/4.9/include/stdarg.h \
+  /usr/lib/gcc/x86_64-linux-gnu/6/include/stdarg.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
   /usr/include/x86_64-linux-gnu/bits/stdio.h \
@@ -59,15 +59,15 @@ deps_scripts/dtc/util.o := \
   /usr/include/x86_64-linux-gnu/bits/environments.h \
   /usr/include/x86_64-linux-gnu/bits/confname.h \
   /usr/include/getopt.h \
-  /home/edgar/repo/kernel-caninos/linux/scripts/dtc/libfdt/libfdt.h \
-  /home/edgar/repo/kernel-caninos/linux/scripts/dtc/libfdt/libfdt_env.h \
-  /usr/lib/gcc/x86_64-linux-gnu/4.9/include/stdint.h \
+  /home/edgar/kernel-caninos/linux/scripts/dtc/libfdt/libfdt.h \
+  /home/edgar/kernel-caninos/linux/scripts/dtc/libfdt/libfdt_env.h \
+  /usr/lib/gcc/x86_64-linux-gnu/6/include/stdint.h \
   /usr/include/stdint.h \
   /usr/include/x86_64-linux-gnu/bits/wchar.h \
-  /home/edgar/repo/kernel-caninos/linux/scripts/dtc/libfdt/fdt.h \
-  /home/edgar/repo/kernel-caninos/linux/scripts/dtc/util.h \
-  /usr/lib/gcc/x86_64-linux-gnu/4.9/include/stdbool.h \
-  /home/edgar/repo/kernel-caninos/linux/scripts/dtc/version_gen.h \
+  /home/edgar/kernel-caninos/linux/scripts/dtc/libfdt/fdt.h \
+  /home/edgar/kernel-caninos/linux/scripts/dtc/util.h \
+  /usr/lib/gcc/x86_64-linux-gnu/6/include/stdbool.h \
+  /home/edgar/kernel-caninos/linux/scripts/dtc/version_gen.h \
 
 scripts/dtc/util.o: $(deps_scripts/dtc/util.o)
 

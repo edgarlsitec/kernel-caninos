@@ -1,0 +1,2 @@
+actduino_s500_upgrade.o: \
+ /home/edgar/kernel-caninos/uboot/arch/arm/dts/actduino_s500_upgrade.dts

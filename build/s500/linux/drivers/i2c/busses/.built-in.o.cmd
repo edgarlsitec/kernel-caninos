@@ -1,1 +1,1 @@
-cmd_drivers/i2c/busses/built-in.o :=  rm -f drivers/i2c/busses/built-in.o; arm-linux-gnueabihf-ar rcSTPD drivers/i2c/busses/built-in.o
+cmd_drivers/i2c/busses/built-in.o :=  rm -f drivers/i2c/busses/built-in.o; arm-linux-gnueabihf-ar rcSTPD drivers/i2c/busses/built-in.o drivers/i2c/busses/i2c-owl.o ; scripts/mod/modpost drivers/i2c/busses/built-in.o

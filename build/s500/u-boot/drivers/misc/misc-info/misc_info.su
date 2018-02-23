@@ -1,0 +1,14 @@
+misc_info.h:97:23:get_checksum	0	static
+misc_info.c:212:12:blk_write.constprop	16	static
+misc_info.h:113:13:dump_mem.constprop	32	static
+misc_info.c:190:12:blk_read.constprop	16	static
+misc_info.c:241:5:read_storage	48	static
+misc_info.c:314:5:write_storage	48	static
+misc_info.c:400:5:read_mi_head	32	static
+misc_info.c:455:5:read_mi_item	56	static
+misc_info.c:602:6:print_mi_items	24	static
+misc_info.c:620:5:get_item_size	24	static
+misc_info.c:646:5:read_misc_info	64	static
+misc_info.c:761:5:write_misc_info	72	static
+misc_info.c:553:5:write_mi_item	40	static
+misc_info.c:919:5:format_misc_info	8	static

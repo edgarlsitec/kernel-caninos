@@ -1,6 +1,6 @@
 caninos-labrador.o: \
- /home/edgar/repo/kernel-caninos/linux/arch/arm/boot/dts/caninos-labrador.dts \
- /home/edgar/repo/kernel-caninos/linux/arch/arm/boot/dts/owl-s500.dtsi \
- /home/edgar/repo/kernel-caninos/linux/scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/arm-gic.h \
- /home/edgar/repo/kernel-caninos/linux/scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/irq.h \
- /home/edgar/repo/kernel-caninos/linux/scripts/dtc/include-prefixes/dt-bindings/power/owl-s500-powergate.h
+ /home/edgar/kernel-caninos/linux/arch/arm/boot/dts/caninos-labrador.dts \
+ /home/edgar/kernel-caninos/linux/arch/arm/boot/dts/owl-s500.dtsi \
+ /home/edgar/kernel-caninos/linux/scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/arm-gic.h \
+ /home/edgar/kernel-caninos/linux/scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/irq.h \
+ /home/edgar/kernel-caninos/linux/scripts/dtc/include-prefixes/dt-bindings/power/owl-s500-powergate.h

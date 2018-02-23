@@ -1,0 +1,10 @@
+owl_hdmi_edid.c:157:12:get_edid_data	32	static
+owl_hdmi_edid.c:194:5:edid_checksum	8	static
+owl_hdmi_edid.c:213:5:edid_header_check	8	static
+owl_hdmi_edid.c:230:5:edid_version_check	8	static
+owl_hdmi_edid.c:241:5:parse_dtd_block	24	static
+owl_hdmi_edid.c:334:5:parse_videodata_block	4	static
+owl_hdmi_edid.c:371:5:parse_audiodata_block	0	static
+owl_hdmi_edid.c:388:5:parse_hdmi_vsdb	0	static
+owl_hdmi_edid.c:439:5:parse_edid	48	static
+owl_hdmi_edid.c:595:5:check_hdmi_mode	16	static

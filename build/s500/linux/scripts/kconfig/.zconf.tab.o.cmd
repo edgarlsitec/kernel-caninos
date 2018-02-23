@@ -1,4 +1,4 @@
-cmd_scripts/kconfig/zconf.tab.o := gcc -Wp,-MD,scripts/kconfig/.zconf.tab.o.d -Iscripts/kconfig -Wall -Wmissing-prototypes -Wstrict-prototypes -O2 -fomit-frame-pointer -std=gnu89 -DCURSES_LOC="<ncurses.h>" -DLOCALE  -I/home/edgar/repo/kernel-caninos/linux/scripts/kconfig -c -o scripts/kconfig/zconf.tab.o scripts/kconfig/zconf.tab.c
+cmd_scripts/kconfig/zconf.tab.o := gcc -Wp,-MD,scripts/kconfig/.zconf.tab.o.d -Iscripts/kconfig -Wall -Wmissing-prototypes -Wstrict-prototypes -O2 -fomit-frame-pointer -std=gnu89 -D_GNU_SOURCE -D_DEFAULT_SOURCE -DCURSES_LOC="<ncurses.h>" -DLOCALE  -I/home/edgar/kernel-caninos/linux/scripts/kconfig -c -o scripts/kconfig/zconf.tab.o scripts/kconfig/zconf.tab.c
 
 source_scripts/kconfig/zconf.tab.o := scripts/kconfig/zconf.tab.c
 
@@ -17,9 +17,9 @@ deps_scripts/kconfig/zconf.tab.o := \
   /usr/include/x86_64-linux-gnu/bits/byteswap.h \
   /usr/include/x86_64-linux-gnu/bits/byteswap-16.h \
   /usr/include/xlocale.h \
-  /usr/lib/gcc/x86_64-linux-gnu/4.9/include/stdarg.h \
+  /usr/lib/gcc/x86_64-linux-gnu/6/include/stdarg.h \
   /usr/include/stdio.h \
-  /usr/lib/gcc/x86_64-linux-gnu/4.9/include/stddef.h \
+  /usr/lib/gcc/x86_64-linux-gnu/6/include/stddef.h \
   /usr/include/libio.h \
   /usr/include/_G_config.h \
   /usr/include/wchar.h \
@@ -43,20 +43,20 @@ deps_scripts/kconfig/zconf.tab.o := \
   /usr/include/string.h \
   /usr/include/x86_64-linux-gnu/bits/string.h \
   /usr/include/x86_64-linux-gnu/bits/string2.h \
-  /usr/lib/gcc/x86_64-linux-gnu/4.9/include/stdbool.h \
-  /home/edgar/repo/kernel-caninos/linux/scripts/kconfig/lkc.h \
+  /usr/lib/gcc/x86_64-linux-gnu/6/include/stdbool.h \
+  /home/edgar/kernel-caninos/linux/scripts/kconfig/lkc.h \
     $(wildcard include/config/prefix.h) \
     $(wildcard include/config/list.h) \
     $(wildcard include/config/y.h) \
-  /home/edgar/repo/kernel-caninos/linux/scripts/kconfig/expr.h \
+  /home/edgar/kernel-caninos/linux/scripts/kconfig/expr.h \
     $(wildcard include/config/config.h) \
   /usr/include/assert.h \
-  /home/edgar/repo/kernel-caninos/linux/scripts/kconfig/list.h \
+  /home/edgar/kernel-caninos/linux/scripts/kconfig/list.h \
   /usr/include/libintl.h \
   /usr/include/locale.h \
   /usr/include/x86_64-linux-gnu/bits/locale.h \
-  /home/edgar/repo/kernel-caninos/linux/scripts/kconfig/lkc_proto.h \
-  /home/edgar/repo/kernel-caninos/linux/scripts/kconfig/kconf_id.c \
+  /home/edgar/kernel-caninos/linux/scripts/kconfig/lkc_proto.h \
+  /home/edgar/kernel-caninos/linux/scripts/kconfig/kconf_id.c \
   scripts/kconfig/zconf.lex.c \
   /usr/include/errno.h \
   /usr/include/x86_64-linux-gnu/bits/errno.h \
@@ -64,21 +64,22 @@ deps_scripts/kconfig/zconf.tab.o := \
   /usr/include/x86_64-linux-gnu/asm/errno.h \
   /usr/include/asm-generic/errno.h \
   /usr/include/asm-generic/errno-base.h \
-  /usr/lib/gcc/x86_64-linux-gnu/4.9/include-fixed/limits.h \
-  /usr/lib/gcc/x86_64-linux-gnu/4.9/include-fixed/syslimits.h \
+  /usr/lib/gcc/x86_64-linux-gnu/6/include-fixed/limits.h \
+  /usr/lib/gcc/x86_64-linux-gnu/6/include-fixed/syslimits.h \
   /usr/include/limits.h \
   /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
   /usr/include/x86_64-linux-gnu/bits/local_lim.h \
   /usr/include/linux/limits.h \
   /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
   /usr/include/unistd.h \
   /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
   /usr/include/x86_64-linux-gnu/bits/environments.h \
   /usr/include/x86_64-linux-gnu/bits/confname.h \
   /usr/include/getopt.h \
-  /home/edgar/repo/kernel-caninos/linux/scripts/kconfig/util.c \
-  /home/edgar/repo/kernel-caninos/linux/scripts/kconfig/lkc.h \
-  /home/edgar/repo/kernel-caninos/linux/scripts/kconfig/confdata.c \
+  /home/edgar/kernel-caninos/linux/scripts/kconfig/util.c \
+  /home/edgar/kernel-caninos/linux/scripts/kconfig/lkc.h \
+  /home/edgar/kernel-caninos/linux/scripts/kconfig/confdata.c \
     $(wildcard include/config/autoconfig.h) \
     $(wildcard include/config/overwriteconfig.h) \
     $(wildcard include/config/autoheader.h) \
@@ -89,12 +90,14 @@ deps_scripts/kconfig/zconf.tab.o := \
   /usr/include/fcntl.h \
   /usr/include/x86_64-linux-gnu/bits/fcntl.h \
   /usr/include/x86_64-linux-gnu/bits/fcntl-linux.h \
-  /home/edgar/repo/kernel-caninos/linux/scripts/kconfig/expr.c \
-  /home/edgar/repo/kernel-caninos/linux/scripts/kconfig/symbol.c \
+  /usr/include/x86_64-linux-gnu/bits/uio.h \
+  /usr/include/x86_64-linux-gnu/bits/timex.h \
+  /home/edgar/kernel-caninos/linux/scripts/kconfig/expr.c \
+  /home/edgar/kernel-caninos/linux/scripts/kconfig/symbol.c \
   /usr/include/regex.h \
   /usr/include/x86_64-linux-gnu/sys/utsname.h \
   /usr/include/x86_64-linux-gnu/bits/utsname.h \
-  /home/edgar/repo/kernel-caninos/linux/scripts/kconfig/menu.c \
+  /home/edgar/kernel-caninos/linux/scripts/kconfig/menu.c \
 
 scripts/kconfig/zconf.tab.o: $(deps_scripts/kconfig/zconf.tab.o)
 

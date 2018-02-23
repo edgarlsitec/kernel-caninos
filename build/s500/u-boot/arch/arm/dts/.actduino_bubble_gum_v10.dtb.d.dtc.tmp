@@ -1,0 +1,1 @@
+arch/arm/dts/actduino_bubble_gum_v10.dtb: arch/arm/dts/.actduino_bubble_gum_v10.dtb.dts.tmp /home/edgar/kernel-caninos/uboot/arch/arm/dts/actduino.dtsi /home/edgar/kernel-caninos/uboot/arch/arm/dts/skeleton.dtsi

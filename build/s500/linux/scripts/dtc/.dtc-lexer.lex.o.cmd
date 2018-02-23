@@ -1,4 +1,4 @@
-cmd_scripts/dtc/dtc-lexer.lex.o := gcc -Wp,-MD,scripts/dtc/.dtc-lexer.lex.o.d -Iscripts/dtc -Wall -Wmissing-prototypes -Wstrict-prototypes -O2 -fomit-frame-pointer -std=gnu89  -I/home/edgar/repo/kernel-caninos/linux/scripts/dtc  -I/home/edgar/repo/kernel-caninos/linux/scripts/dtc/libfdt -c -o scripts/dtc/dtc-lexer.lex.o scripts/dtc/dtc-lexer.lex.c
+cmd_scripts/dtc/dtc-lexer.lex.o := gcc -Wp,-MD,scripts/dtc/.dtc-lexer.lex.o.d -Iscripts/dtc -Wall -Wmissing-prototypes -Wstrict-prototypes -O2 -fomit-frame-pointer -std=gnu89  -I/home/edgar/kernel-caninos/linux/scripts/dtc  -I/home/edgar/kernel-caninos/linux/scripts/dtc/libfdt -c -o scripts/dtc/dtc-lexer.lex.o scripts/dtc/dtc-lexer.lex.c
 
 source_scripts/dtc/dtc-lexer.lex.o := scripts/dtc/dtc-lexer.lex.c
 
@@ -10,13 +10,13 @@ deps_scripts/dtc/dtc-lexer.lex.o := \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
-  /usr/lib/gcc/x86_64-linux-gnu/4.9/include/stddef.h \
+  /usr/lib/gcc/x86_64-linux-gnu/6/include/stddef.h \
   /usr/include/x86_64-linux-gnu/bits/types.h \
   /usr/include/x86_64-linux-gnu/bits/typesizes.h \
   /usr/include/libio.h \
   /usr/include/_G_config.h \
   /usr/include/wchar.h \
-  /usr/lib/gcc/x86_64-linux-gnu/4.9/include/stdarg.h \
+  /usr/lib/gcc/x86_64-linux-gnu/6/include/stdarg.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
   /usr/include/x86_64-linux-gnu/bits/stdio.h \
@@ -24,10 +24,6 @@ deps_scripts/dtc/dtc-lexer.lex.o := \
   /usr/include/xlocale.h \
   /usr/include/x86_64-linux-gnu/bits/string.h \
   /usr/include/x86_64-linux-gnu/bits/string2.h \
-  /usr/include/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
-  /usr/include/x86_64-linux-gnu/bits/byteswap-16.h \
   /usr/include/stdlib.h \
   /usr/include/errno.h \
   /usr/include/x86_64-linux-gnu/bits/errno.h \
@@ -39,6 +35,10 @@ deps_scripts/dtc/dtc-lexer.lex.o := \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/sys/types.h \
   /usr/include/time.h \
+  /usr/include/endian.h \
+  /usr/include/x86_64-linux-gnu/bits/endian.h \
+  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
+  /usr/include/x86_64-linux-gnu/bits/byteswap-16.h \
   /usr/include/x86_64-linux-gnu/sys/select.h \
   /usr/include/x86_64-linux-gnu/bits/select.h \
   /usr/include/x86_64-linux-gnu/bits/sigset.h \
@@ -48,11 +48,11 @@ deps_scripts/dtc/dtc-lexer.lex.o := \
   /usr/include/alloca.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /home/edgar/repo/kernel-caninos/linux/scripts/dtc/dtc.h \
-  /usr/lib/gcc/x86_64-linux-gnu/4.9/include/stdint.h \
+  /home/edgar/kernel-caninos/linux/scripts/dtc/dtc.h \
+  /usr/lib/gcc/x86_64-linux-gnu/6/include/stdint.h \
   /usr/include/stdint.h \
   /usr/include/x86_64-linux-gnu/bits/wchar.h \
-  /usr/lib/gcc/x86_64-linux-gnu/4.9/include/stdbool.h \
+  /usr/lib/gcc/x86_64-linux-gnu/6/include/stdbool.h \
   /usr/include/assert.h \
   /usr/include/ctype.h \
   /usr/include/unistd.h \
@@ -61,10 +61,10 @@ deps_scripts/dtc/dtc-lexer.lex.o := \
   /usr/include/x86_64-linux-gnu/bits/confname.h \
   /usr/include/getopt.h \
   /usr/include/inttypes.h \
-  /home/edgar/repo/kernel-caninos/linux/scripts/dtc/libfdt/libfdt_env.h \
-  /home/edgar/repo/kernel-caninos/linux/scripts/dtc/libfdt/fdt.h \
-  /home/edgar/repo/kernel-caninos/linux/scripts/dtc/util.h \
-  /home/edgar/repo/kernel-caninos/linux/scripts/dtc/srcpos.h \
+  /home/edgar/kernel-caninos/linux/scripts/dtc/libfdt/libfdt_env.h \
+  /home/edgar/kernel-caninos/linux/scripts/dtc/libfdt/fdt.h \
+  /home/edgar/kernel-caninos/linux/scripts/dtc/util.h \
+  /home/edgar/kernel-caninos/linux/scripts/dtc/srcpos.h \
   scripts/dtc/dtc-parser.tab.h \
 
 scripts/dtc/dtc-lexer.lex.o: $(deps_scripts/dtc/dtc-lexer.lex.o)

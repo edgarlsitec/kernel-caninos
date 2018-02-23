@@ -1,1 +1,2 @@
 kernel/drivers/gpio/gpio-owl.ko
+kernel/drivers/gpio/gpio-atc260x.ko

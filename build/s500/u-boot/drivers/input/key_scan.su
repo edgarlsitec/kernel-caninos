@@ -1,0 +1,3 @@
+key_scan.c:172:5:count_onoff_short_press	16	static
+key_scan.c:217:6:reset_to_adfu	8	static
+key_scan.c:224:5:check_key	192	static

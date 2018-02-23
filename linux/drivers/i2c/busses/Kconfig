@@ -890,6 +890,10 @@ config I2C_SH7760
 
 	  This driver can also be built as a module.  If so, the module
 	  will be called i2c-sh7760.
+	  
+config I2C_OWL
+	tristate "Actions s500 I2C Controller"
+	depends on ARCH_ACTIONS
 
 config I2C_SH_MOBILE
 	tristate "SuperH Mobile I2C Controller"

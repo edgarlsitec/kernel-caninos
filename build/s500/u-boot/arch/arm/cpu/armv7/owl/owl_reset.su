@@ -1,0 +1,4 @@
+owl_reset.c:20:6:owl_reset_assert	0	static
+owl_reset.c:25:6:owl_reset_deassert	0	static
+owl_reset.c:30:6:owl_reset	8	static
+owl_reset.c:37:6:owl_reset_and_enable_clk	16	static

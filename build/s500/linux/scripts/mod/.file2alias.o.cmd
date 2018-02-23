@@ -1,35 +1,35 @@
-cmd_scripts/mod/file2alias.o := gcc -Wp,-MD,scripts/mod/.file2alias.o.d -Iscripts/mod -Wall -Wmissing-prototypes -Wstrict-prototypes -O2 -fomit-frame-pointer -std=gnu89 -c -o scripts/mod/file2alias.o /home/edgar/repo/kernel-caninos/linux/scripts/mod/file2alias.c
+cmd_scripts/mod/file2alias.o := gcc -Wp,-MD,scripts/mod/.file2alias.o.d -Iscripts/mod -Wall -Wmissing-prototypes -Wstrict-prototypes -O2 -fomit-frame-pointer -std=gnu89 -c -o scripts/mod/file2alias.o /home/edgar/kernel-caninos/linux/scripts/mod/file2alias.c
 
-source_scripts/mod/file2alias.o := /home/edgar/repo/kernel-caninos/linux/scripts/mod/file2alias.c
+source_scripts/mod/file2alias.o := /home/edgar/kernel-caninos/linux/scripts/mod/file2alias.c
 
 deps_scripts/mod/file2alias.o := \
   /usr/include/stdc-predef.h \
-  /home/edgar/repo/kernel-caninos/linux/scripts/mod/modpost.h \
+  /home/edgar/kernel-caninos/linux/scripts/mod/modpost.h \
   /usr/include/stdio.h \
   /usr/include/features.h \
   /usr/include/x86_64-linux-gnu/sys/cdefs.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
-  /usr/lib/gcc/x86_64-linux-gnu/4.9/include/stddef.h \
+  /usr/lib/gcc/x86_64-linux-gnu/6/include/stddef.h \
   /usr/include/x86_64-linux-gnu/bits/types.h \
   /usr/include/x86_64-linux-gnu/bits/typesizes.h \
   /usr/include/libio.h \
   /usr/include/_G_config.h \
   /usr/include/wchar.h \
-  /usr/lib/gcc/x86_64-linux-gnu/4.9/include/stdarg.h \
+  /usr/lib/gcc/x86_64-linux-gnu/6/include/stdarg.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
   /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+  /usr/include/x86_64-linux-gnu/sys/types.h \
+  /usr/include/time.h \
   /usr/include/endian.h \
   /usr/include/x86_64-linux-gnu/bits/endian.h \
   /usr/include/x86_64-linux-gnu/bits/byteswap.h \
   /usr/include/x86_64-linux-gnu/bits/byteswap-16.h \
-  /usr/include/x86_64-linux-gnu/sys/types.h \
-  /usr/include/time.h \
   /usr/include/x86_64-linux-gnu/sys/select.h \
   /usr/include/x86_64-linux-gnu/bits/select.h \
   /usr/include/x86_64-linux-gnu/bits/sigset.h \
@@ -57,15 +57,15 @@ deps_scripts/mod/file2alias.o := \
   /usr/include/x86_64-linux-gnu/bits/confname.h \
   /usr/include/getopt.h \
   /usr/include/elf.h \
-  /usr/lib/gcc/x86_64-linux-gnu/4.9/include/stdint.h \
+  /usr/lib/gcc/x86_64-linux-gnu/6/include/stdint.h \
   /usr/include/stdint.h \
   /usr/include/x86_64-linux-gnu/bits/wchar.h \
   /usr/include/x86_64-linux-gnu/bits/auxv.h \
   scripts/mod/elfconfig.h \
   scripts/mod/devicetable-offsets.h \
   /usr/include/ctype.h \
-  /usr/lib/gcc/x86_64-linux-gnu/4.9/include/stdbool.h \
-  /home/edgar/repo/kernel-caninos/linux/scripts/mod/../../include/linux/mod_devicetable.h \
+  /usr/lib/gcc/x86_64-linux-gnu/6/include/stdbool.h \
+  /home/edgar/kernel-caninos/linux/scripts/mod/../../include/linux/mod_devicetable.h \
 
 scripts/mod/file2alias.o: $(deps_scripts/mod/file2alias.o)
 

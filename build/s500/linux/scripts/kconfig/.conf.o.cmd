@@ -1,6 +1,6 @@
-cmd_scripts/kconfig/conf.o := gcc -Wp,-MD,scripts/kconfig/.conf.o.d -Iscripts/kconfig -Wall -Wmissing-prototypes -Wstrict-prototypes -O2 -fomit-frame-pointer -std=gnu89 -DCURSES_LOC="<ncurses.h>" -DLOCALE -c -o scripts/kconfig/conf.o /home/edgar/repo/kernel-caninos/linux/scripts/kconfig/conf.c
+cmd_scripts/kconfig/conf.o := gcc -Wp,-MD,scripts/kconfig/.conf.o.d -Iscripts/kconfig -Wall -Wmissing-prototypes -Wstrict-prototypes -O2 -fomit-frame-pointer -std=gnu89 -D_GNU_SOURCE -D_DEFAULT_SOURCE -DCURSES_LOC="<ncurses.h>" -DLOCALE -c -o scripts/kconfig/conf.o /home/edgar/kernel-caninos/linux/scripts/kconfig/conf.c
 
-source_scripts/kconfig/conf.o := /home/edgar/repo/kernel-caninos/linux/scripts/kconfig/conf.c
+source_scripts/kconfig/conf.o := /home/edgar/kernel-caninos/linux/scripts/kconfig/conf.c
 
 deps_scripts/kconfig/conf.o := \
     $(wildcard include/config/seed.h) \
@@ -13,7 +13,7 @@ deps_scripts/kconfig/conf.o := \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
-  /usr/lib/gcc/x86_64-linux-gnu/4.9/include/stddef.h \
+  /usr/lib/gcc/x86_64-linux-gnu/6/include/stddef.h \
   /usr/include/x86_64-linux-gnu/bits/locale.h \
   /usr/include/xlocale.h \
   /usr/include/ctype.h \
@@ -23,19 +23,20 @@ deps_scripts/kconfig/conf.o := \
   /usr/include/x86_64-linux-gnu/bits/endian.h \
   /usr/include/x86_64-linux-gnu/bits/byteswap.h \
   /usr/include/x86_64-linux-gnu/bits/byteswap-16.h \
-  /usr/lib/gcc/x86_64-linux-gnu/4.9/include-fixed/limits.h \
-  /usr/lib/gcc/x86_64-linux-gnu/4.9/include-fixed/syslimits.h \
+  /usr/lib/gcc/x86_64-linux-gnu/6/include-fixed/limits.h \
+  /usr/lib/gcc/x86_64-linux-gnu/6/include-fixed/syslimits.h \
   /usr/include/limits.h \
   /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
   /usr/include/x86_64-linux-gnu/bits/local_lim.h \
   /usr/include/linux/limits.h \
   /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/stdio.h \
   /usr/include/libio.h \
   /usr/include/_G_config.h \
   /usr/include/wchar.h \
-  /usr/lib/gcc/x86_64-linux-gnu/4.9/include/stdarg.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+  /usr/lib/gcc/x86_64-linux-gnu/6/include/stdarg.h \
   /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
   /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
@@ -55,6 +56,7 @@ deps_scripts/kconfig/conf.o := \
   /usr/include/string.h \
   /usr/include/x86_64-linux-gnu/bits/string.h \
   /usr/include/x86_64-linux-gnu/bits/string2.h \
+  /usr/include/x86_64-linux-gnu/bits/timex.h \
   /usr/include/unistd.h \
   /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
   /usr/include/x86_64-linux-gnu/bits/environments.h \
@@ -69,17 +71,17 @@ deps_scripts/kconfig/conf.o := \
   /usr/include/x86_64-linux-gnu/asm/errno.h \
   /usr/include/asm-generic/errno.h \
   /usr/include/asm-generic/errno-base.h \
-  /home/edgar/repo/kernel-caninos/linux/scripts/kconfig/lkc.h \
+  /home/edgar/kernel-caninos/linux/scripts/kconfig/lkc.h \
     $(wildcard include/config/prefix.h) \
     $(wildcard include/config/list.h) \
     $(wildcard include/config/y.h) \
-  /home/edgar/repo/kernel-caninos/linux/scripts/kconfig/expr.h \
+  /home/edgar/kernel-caninos/linux/scripts/kconfig/expr.h \
     $(wildcard include/config/config.h) \
   /usr/include/assert.h \
-  /home/edgar/repo/kernel-caninos/linux/scripts/kconfig/list.h \
-  /usr/lib/gcc/x86_64-linux-gnu/4.9/include/stdbool.h \
+  /home/edgar/kernel-caninos/linux/scripts/kconfig/list.h \
+  /usr/lib/gcc/x86_64-linux-gnu/6/include/stdbool.h \
   /usr/include/libintl.h \
-  /home/edgar/repo/kernel-caninos/linux/scripts/kconfig/lkc_proto.h \
+  /home/edgar/kernel-caninos/linux/scripts/kconfig/lkc_proto.h \
 
 scripts/kconfig/conf.o: $(deps_scripts/kconfig/conf.o)
 

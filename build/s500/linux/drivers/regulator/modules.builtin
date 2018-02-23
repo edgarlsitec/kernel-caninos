@@ -1,1 +1,3 @@
 kernel/drivers/regulator/atc260x-regulator.ko
+kernel/drivers/regulator/atc260x-pwm-dcdc.ko
+kernel/drivers/regulator/atc260x-switch-ldo.ko

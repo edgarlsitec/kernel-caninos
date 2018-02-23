@@ -211,13 +211,21 @@
 			#interrupt-cells = <2>;
 			interrupt-controller;
 		};
-
-		mmc2: mmc@b0238000 {
+		
+		mmc0: mmc@b0230000 {
 			#address-cells = <1>;
 			#size-cells = <0>;
 			compatible = "actions,owl-mmc";
-			reg = <0xb0238000 0x38>;
-			interrupts = <GIC_SPI 44 IRQ_TYPE_LEVEL_HIGH>;
+			reg = <0xb0230000 0x38>;
+			interrupts = < 0 42 0x4 >;
+		};
+
+		mmc1: mmc@b0234000 {
+			#address-cells = <1>;
+			#size-cells = <0>;
+			compatible = "actions,owl-mmc";
+			reg = <0xb0234000 0x38>;
+			interrupts = < 0 43 0x4 >;
 		};
 
 		pinctrl@b01b0040 {
