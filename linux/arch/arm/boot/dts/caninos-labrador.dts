@@ -20,132 +20,21 @@
 		stdout-path = "serial3:115200n8";
 	};
 
-	pinctrl@b01b0040 {
-		pinctrl-names = "default";
-		pinctrl-0 = <&state_default>;
-
-		state_default: pinctrl_default {
-		};
-
-		serial3_state_default: serial3_default{
-			serial_3{
-				actions,groups = "mfp2_21","mfp2_20","uart3_dummy";
-				actions,function = "uart3";
-			};
-		};
-
-		serial5_state_default: serial5_default{
-			serial_5{
-				actions,groups = "mfp2_19_17","mfp2_16_14";
-				actions,function = "uart5";
-			};
-		};
-
-		mmc_share_uart_state: mmc_share_uart {
-			sd0_mfp_cmd_clk {
-				actions,groups = "mfp2_8_7", "mfp2_6_5";
-				actions,function = "sd0";
-			};
-
-			sd0_pull_d0_d3_cmd {
-				actions,pins = "P_SD0_CMD";
-				actions,pull = <2>;
-			};
-
-			sd0_pull_clk {
-				actions,pins = "P_SD0_CLK";
-				actions,pull = <0>;
-			};
-
-			sd0_d0_d3_cmd_clk_paddrv  {
-				actions,groups  = "paddrv1_19_18","paddrv1_17_16";
-				actions,paddrv  = <1>;
-			};
-
-			serial_5 {
-				actions,groups = "mfp2_19_17","mfp2_16_14";
-				actions,function = "uart5";
-			};
-		};
-
-		mmc0_state_default: mmc0_default {
-			sd0_mfp_d0_d3_cmd_clk {
-				actions,groups = "mfp2_19_17", "mfp2_16_14", "mfp2_13_11", "mfp2_8_7", "mfp2_6_5";
-				actions,function = "sd0";
-			};
-
-			sd0_pull_d0_d3_cmd {
-				actions,pins = "P_SD0_D0", "P_SD0_D1", "P_SD0_D2", "P_SD0_D3", "P_SD0_CMD";
-				actions,pull = <2>;
-			};
-
-			sd0_pull_clk {
-				actions,pins = "P_SD0_CLK";
-				actions,pull = <0>;
-			};
-
-			sd0_d0_d3_cmd_clk_paddrv  {
-				actions,groups  = "paddrv1_23_22","paddrv1_19_18","paddrv1_17_16";
-				actions,paddrv  = <1>;
-			};
-		};
-
-		mmc1_state_default: mmc1_default {
-			sd1_mfp_d0_d3_cmd_clk {
-				actions,groups = "mfp2_10_9", "mfp2_4_3", "sd1_dummy";
-				actions,function = "sd1";
-			};
-
-			sd1_pull_d0_d3_cmd {
-				actions,pins = "P_SD1_D0", "P_SD1_D1", "P_SD1_D2", "P_SD1_D3", "P_SD1_CMD";
-				actions,pull = <2>;
-			};
-			sd1_d0_d3_cmd_clk_paddrv  {
-				actions,groups  = "paddrv1_21_20","paddrv1_15_14","paddrv1_13_12";
-				actions,paddrv  = <1>;
-			};
-		};
-	};
-
 	uart3_clk: uart3-clk {
 		compatible = "fixed-clock";
 		clock-frequency = <921600>;
 		#clock-cells = <0>;
 	};
 	
-
 	memory@0 {
 		device_type = "memory";
 		reg = <0x0 0x40000000>;
-	};
-
-	mmc@b0230000 {
-		pinctrl-names = "default";
-		pinctrl-0 = <&mmc0_state_default>;
-		card_type = "memory";
-		card_detect_mode = "gpio";
-		card_detect_gpios = <&gpio 66 1>;
-		status = "okay";
-		sd_vcc = "switch1";
-	};
-
-	mmc@b0234000 {
-		pinctrl-names = "default";
-		pinctrl-0 = <&mmc1_state_default>;
-		card_type = "wifi";
-		status = "okay";
-	};
-
-	gpio@b01b0000 {
-		status = "okay";
 	};
 };
 
 &uart3 {
 	status = "okay";
 	clocks = <&uart3_clk>;
-	pinctrl-names = "default";
-	pinctrl-0 = <&serial3_state_default>;
 };
 
 &timer {

@@ -1,5 +1,5 @@
-cmd_net.c:207:12:netboot_common	72	static
+cmd_net.c:207:12:netboot_common	64	static
 cmd_net.c:19:12:do_bootp	0	static
 cmd_net.c:30:5:do_tftpb	16	static
 cmd_net.c:46:6:do_usbnet	8	static
-cmd_net.c:289:12:do_ping	16	static
+cmd_net.c:289:12:do_ping	8	static

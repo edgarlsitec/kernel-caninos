@@ -1,4 +1,4 @@
-bootp.c:329:1:BootpHandler	48	static
+bootp.c:329:1:BootpHandler	40	static
 bootp.c:646:6:BootpReset	8	static
-bootp.c:655:1:BootpRequest	72	static
+bootp.c:655:1:BootpRequest	64	static
 bootp.c:369:1:BootpTimeout	8	static

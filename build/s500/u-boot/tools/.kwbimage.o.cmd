@@ -1,15 +1,15 @@
-cmd_tools/kwbimage.o := cc -Wp,-MD,tools/.kwbimage.o.d -Itools -Wall -Wstrict-prototypes -O2 -fomit-frame-pointer -include /home/edgar/kernel-caninos/uboot/include/libfdt_env.h -idirafterinclude -idirafter/home/edgar/kernel-caninos/uboot/include -idirafter/home/edgar/kernel-caninos/uboot/arch/arm/include   -I/home/edgar/kernel-caninos/uboot/lib/libfdt   -I/home/edgar/kernel-caninos/uboot/tools -DCONFIG_SYS_TEXT_BASE=0x08000040 -DUSE_HOSTCC -D__KERNEL_STRICT_NAMES -D_GNU_SOURCE -c -o tools/kwbimage.o /home/edgar/kernel-caninos/uboot/tools/kwbimage.c
+cmd_tools/kwbimage.o := cc -Wp,-MD,tools/.kwbimage.o.d -Itools -Wall -Wstrict-prototypes -O2 -fomit-frame-pointer -include /home/edgar/repo/kernel-caninos/uboot/include/libfdt_env.h -idirafterinclude -idirafter/home/edgar/repo/kernel-caninos/uboot/include -idirafter/home/edgar/repo/kernel-caninos/uboot/arch/arm/include   -I/home/edgar/repo/kernel-caninos/uboot/lib/libfdt   -I/home/edgar/repo/kernel-caninos/uboot/tools -DCONFIG_SYS_TEXT_BASE=0x08000040 -DUSE_HOSTCC -D__KERNEL_STRICT_NAMES -D_GNU_SOURCE -c -o tools/kwbimage.o /home/edgar/repo/kernel-caninos/uboot/tools/kwbimage.c
 
-source_tools/kwbimage.o := /home/edgar/kernel-caninos/uboot/tools/kwbimage.c
+source_tools/kwbimage.o := /home/edgar/repo/kernel-caninos/uboot/tools/kwbimage.c
 
 deps_tools/kwbimage.o := \
     $(wildcard include/config/sys/spi/u/boot/offs.h) \
   /usr/include/stdc-predef.h \
-  /home/edgar/kernel-caninos/uboot/include/libfdt_env.h \
-  /home/edgar/kernel-caninos/uboot/include/compiler.h \
+  /home/edgar/repo/kernel-caninos/uboot/include/libfdt_env.h \
+  /home/edgar/repo/kernel-caninos/uboot/include/compiler.h \
     $(wildcard include/config/use/stdint.h) \
-  /usr/lib/gcc/x86_64-linux-gnu/6/include/stddef.h \
-  /usr/lib/gcc/x86_64-linux-gnu/6/include/stdint.h \
+  /usr/lib/gcc/x86_64-linux-gnu/4.9/include/stddef.h \
+  /usr/lib/gcc/x86_64-linux-gnu/4.9/include/stdint.h \
   /usr/include/stdint.h \
   /usr/include/features.h \
   /usr/include/x86_64-linux-gnu/sys/cdefs.h \
@@ -26,15 +26,15 @@ deps_tools/kwbimage.o := \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
-  /usr/include/xlocale.h \
-  /usr/include/x86_64-linux-gnu/sys/types.h \
-  /usr/include/x86_64-linux-gnu/bits/types.h \
-  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
-  /usr/include/time.h \
   /usr/include/endian.h \
   /usr/include/x86_64-linux-gnu/bits/endian.h \
   /usr/include/x86_64-linux-gnu/bits/byteswap.h \
+  /usr/include/x86_64-linux-gnu/bits/types.h \
+  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
   /usr/include/x86_64-linux-gnu/bits/byteswap-16.h \
+  /usr/include/xlocale.h \
+  /usr/include/x86_64-linux-gnu/sys/types.h \
+  /usr/include/time.h \
   /usr/include/x86_64-linux-gnu/sys/select.h \
   /usr/include/x86_64-linux-gnu/bits/select.h \
   /usr/include/x86_64-linux-gnu/bits/sigset.h \
@@ -48,7 +48,7 @@ deps_tools/kwbimage.o := \
   /usr/include/libio.h \
   /usr/include/_G_config.h \
   /usr/include/wchar.h \
-  /usr/lib/gcc/x86_64-linux-gnu/6/include/stdarg.h \
+  /usr/lib/gcc/x86_64-linux-gnu/4.9/include/stdarg.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
   /usr/include/x86_64-linux-gnu/bits/stdio.h \
@@ -65,7 +65,7 @@ deps_tools/kwbimage.o := \
   /usr/include/x86_64-linux-gnu/bits/stat.h \
   /usr/include/byteswap.h \
   /usr/include/x86_64-linux-gnu/bits/timex.h \
-  /home/edgar/kernel-caninos/uboot/include/linux/types.h \
+  /home/edgar/repo/kernel-caninos/uboot/include/linux/types.h \
     $(wildcard include/config/uid16.h) \
   /usr/include/linux/posix_types.h \
   /usr/include/linux/stddef.h \
@@ -78,22 +78,22 @@ deps_tools/kwbimage.o := \
   /usr/include/x86_64-linux-gnu/asm/types.h \
   /usr/include/asm-generic/types.h \
   /usr/include/asm-generic/int-ll64.h \
-  /usr/lib/gcc/x86_64-linux-gnu/6/include/stdbool.h \
-  /home/edgar/kernel-caninos/uboot/tools/imagetool.h \
-  /home/edgar/kernel-caninos/uboot/tools/os_support.h \
-  /home/edgar/kernel-caninos/uboot/include/compiler.h \
+  /usr/lib/gcc/x86_64-linux-gnu/4.9/include/stdbool.h \
+  /home/edgar/repo/kernel-caninos/uboot/tools/imagetool.h \
+  /home/edgar/repo/kernel-caninos/uboot/tools/os_support.h \
+  /home/edgar/repo/kernel-caninos/uboot/include/compiler.h \
   /usr/include/x86_64-linux-gnu/sys/stat.h \
   /usr/include/unistd.h \
   /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
   /usr/include/x86_64-linux-gnu/bits/environments.h \
   /usr/include/x86_64-linux-gnu/bits/confname.h \
   /usr/include/getopt.h \
-  /home/edgar/kernel-caninos/uboot/include/u-boot/sha1.h \
-  /home/edgar/kernel-caninos/uboot/tools/fdt_host.h \
-  /home/edgar/kernel-caninos/uboot/tools/../include/libfdt.h \
-  /home/edgar/kernel-caninos/uboot/include/libfdt_env.h \
-  /home/edgar/kernel-caninos/uboot/include/fdt.h \
-  /home/edgar/kernel-caninos/uboot/tools/../include/fdt_support.h \
+  /home/edgar/repo/kernel-caninos/uboot/include/u-boot/sha1.h \
+  /home/edgar/repo/kernel-caninos/uboot/tools/fdt_host.h \
+  /home/edgar/repo/kernel-caninos/uboot/tools/../include/libfdt.h \
+  /home/edgar/repo/kernel-caninos/uboot/include/libfdt_env.h \
+  /home/edgar/repo/kernel-caninos/uboot/include/fdt.h \
+  /home/edgar/repo/kernel-caninos/uboot/tools/../include/fdt_support.h \
     $(wildcard include/config/of/libfdt.h) \
     $(wildcard include/config/has/fsl/dr/usb.h) \
     $(wildcard include/config/has/fsl/mph/usb.h) \
@@ -102,15 +102,15 @@ deps_tools/kwbimage.o := \
     $(wildcard include/config/sys/fdt/pad.h) \
     $(wildcard include/config/of/board/setup.h) \
     $(wildcard include/config/of/system/setup.h) \
-  /usr/lib/gcc/x86_64-linux-gnu/6/include-fixed/limits.h \
-  /usr/lib/gcc/x86_64-linux-gnu/6/include-fixed/syslimits.h \
+  /usr/lib/gcc/x86_64-linux-gnu/4.9/include-fixed/limits.h \
+  /usr/lib/gcc/x86_64-linux-gnu/4.9/include-fixed/syslimits.h \
   /usr/include/limits.h \
   /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
   /usr/include/x86_64-linux-gnu/bits/local_lim.h \
   /usr/include/linux/limits.h \
   /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
   /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
-  /home/edgar/kernel-caninos/uboot/include/image.h \
+  /home/edgar/repo/kernel-caninos/uboot/include/image.h \
     $(wildcard include/config/fit.h) \
     $(wildcard include/config/fit/verbose.h) \
     $(wildcard include/config/spl/build.h) \
@@ -138,13 +138,13 @@ deps_tools/kwbimage.o := \
   /usr/include/linux/types.h \
   /usr/include/linux/swab.h \
   /usr/include/x86_64-linux-gnu/asm/swab.h \
-  /home/edgar/kernel-caninos/uboot/include/hash.h \
+  /home/edgar/repo/kernel-caninos/uboot/include/hash.h \
     $(wildcard include/config/sha1sum/verify.h) \
     $(wildcard include/config/crc32/verify.h) \
     $(wildcard include/config/hash/verify.h) \
-  /home/edgar/kernel-caninos/uboot/include/libfdt.h \
-  /home/edgar/kernel-caninos/uboot/include/fdt_support.h \
-  /home/edgar/kernel-caninos/uboot/tools/kwbimage.h \
+  /home/edgar/repo/kernel-caninos/uboot/include/libfdt.h \
+  /home/edgar/repo/kernel-caninos/uboot/include/fdt_support.h \
+  /home/edgar/repo/kernel-caninos/uboot/tools/kwbimage.h \
 
 tools/kwbimage.o: $(deps_tools/kwbimage.o)
 

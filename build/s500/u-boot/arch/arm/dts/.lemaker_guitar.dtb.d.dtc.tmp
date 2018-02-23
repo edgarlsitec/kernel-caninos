@@ -1,1 +1,1 @@
-arch/arm/dts/lemaker_guitar.dtb: arch/arm/dts/.lemaker_guitar.dtb.dts.tmp /home/edgar/kernel-caninos/uboot/arch/arm/dts/actduino.dtsi /home/edgar/kernel-caninos/uboot/arch/arm/dts/skeleton.dtsi
+arch/arm/dts/lemaker_guitar.dtb: arch/arm/dts/.lemaker_guitar.dtb.dts.tmp /home/edgar/repo/kernel-caninos/uboot/arch/arm/dts/actduino.dtsi /home/edgar/repo/kernel-caninos/uboot/arch/arm/dts/skeleton.dtsi

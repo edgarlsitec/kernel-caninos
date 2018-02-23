@@ -5,4 +5,4 @@ owl_cvbs.c:74:6:print_cvbsreg	8	static
 owl_cvbs.c:200:7:cvbs_show_colorbar	8	static
 owl_cvbs.c:265:5:get_cvbs_state	16	static
 owl_cvbs.c:298:5:cvbs_read_usr_cfg_file	56	static
-owl_cvbs.c:388:6:cvbs_init	296	static
+owl_cvbs.c:388:6:cvbs_init	288	static

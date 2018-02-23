@@ -1,6 +1,6 @@
-cmd_arch/arm/lib/vectors.o := arm-linux-gnueabihf-gcc -Wp,-MD,arch/arm/lib/.vectors.o.d  -nostdinc -isystem /usr/lib/gcc-cross/arm-linux-gnueabihf/6/include -Iinclude  -I/home/edgar/kernel-caninos/uboot/include -I/home/edgar/kernel-caninos/uboot/arch/arm/include -include /home/edgar/kernel-caninos/uboot/include/linux/kconfig.h -D__KERNEL__ -D__UBOOT__ -DCONFIG_SYS_TEXT_BASE=0x08000040 -D__ASSEMBLY__ -g -D__ARM__ -marm -mno-thumb-interwork -mabi=aapcs-linux -mword-relocations -mno-unaligned-access -ffunction-sections -fdata-sections -fno-common -ffixed-r9 -msoft-float -pipe -march=armv7-a   -c -o arch/arm/lib/vectors.o /home/edgar/kernel-caninos/uboot/arch/arm/lib/vectors.S
+cmd_arch/arm/lib/vectors.o := arm-linux-gnueabihf-gcc -Wp,-MD,arch/arm/lib/.vectors.o.d  -nostdinc -isystem /usr/lib/gcc/arm-linux-gnueabihf/4.9/include -Iinclude  -I/home/edgar/repo/kernel-caninos/uboot/include -I/home/edgar/repo/kernel-caninos/uboot/arch/arm/include -include /home/edgar/repo/kernel-caninos/uboot/include/linux/kconfig.h -D__KERNEL__ -D__UBOOT__ -DCONFIG_SYS_TEXT_BASE=0x08000040 -D__ASSEMBLY__ -g -D__ARM__ -marm -mno-thumb-interwork -mabi=aapcs-linux -mword-relocations -mno-unaligned-access -ffunction-sections -fdata-sections -fno-common -ffixed-r9 -msoft-float -pipe -march=armv7-a   -c -o arch/arm/lib/vectors.o /home/edgar/repo/kernel-caninos/uboot/arch/arm/lib/vectors.S
 
-source_arch/arm/lib/vectors.o := /home/edgar/kernel-caninos/uboot/arch/arm/lib/vectors.S
+source_arch/arm/lib/vectors.o := /home/edgar/repo/kernel-caninos/uboot/arch/arm/lib/vectors.S
 
 deps_arch/arm/lib/vectors.o := \
     $(wildcard include/config/sys/dv/nor/boot/cfg.h) \
@@ -8,7 +8,7 @@ deps_arch/arm/lib/vectors.o := \
     $(wildcard include/config/use/irq.h) \
   include/config.h \
     $(wildcard include/config/boarddir.h) \
-  /home/edgar/kernel-caninos/uboot/include/config_defaults.h \
+  /home/edgar/repo/kernel-caninos/uboot/include/config_defaults.h \
     $(wildcard include/config/defaults/h/.h) \
     $(wildcard include/config/bootm/linux.h) \
     $(wildcard include/config/bootm/netbsd.h) \
@@ -18,7 +18,7 @@ deps_arch/arm/lib/vectors.o := \
     $(wildcard include/config/gzip.h) \
     $(wildcard include/config/zlib.h) \
     $(wildcard include/config/partitions.h) \
-  /home/edgar/kernel-caninos/uboot/include/config_uncmd_spl.h \
+  /home/edgar/repo/kernel-caninos/uboot/include/config_uncmd_spl.h \
     $(wildcard include/config/uncmd/spl/h//.h) \
     $(wildcard include/config/cmd/cdp.h) \
     $(wildcard include/config/cmd/dhcp.h) \
@@ -39,7 +39,7 @@ deps_arch/arm/lib/vectors.o := \
     $(wildcard include/config/dm/warn.h) \
     $(wildcard include/config/dm/device/remove.h) \
     $(wildcard include/config/dm/stdio.h) \
-  /home/edgar/kernel-caninos/uboot/include/configs/s500.h \
+  /home/edgar/repo/kernel-caninos/uboot/include/configs/s500.h \
     $(wildcard include/config/s500/h.h) \
     $(wildcard include/config/bootcommand.h) \
     $(wildcard include/config/extra/env/settings.h) \
@@ -185,7 +185,7 @@ deps_arch/arm/lib/vectors.o := \
     $(wildcard include/config/boot/power.h) \
     $(wildcard include/config/gauge/bq27441.h) \
     $(wildcard include/config/check/key.h) \
-  /home/edgar/kernel-caninos/uboot/arch/arm/include/asm/config.h \
+  /home/edgar/repo/kernel-caninos/uboot/arch/arm/include/asm/config.h \
     $(wildcard include/config/h/.h) \
     $(wildcard include/config/lmb.h) \
     $(wildcard include/config/sys/boot/ramdisk/high.h) \
@@ -194,7 +194,7 @@ deps_arch/arm/lib/vectors.o := \
     $(wildcard include/config/static/rela.h) \
     $(wildcard include/config/fsl/lsch3.h) \
     $(wildcard include/config/ls102xa.h) \
-  /home/edgar/kernel-caninos/uboot/include/config_fallbacks.h \
+  /home/edgar/repo/kernel-caninos/uboot/include/config_fallbacks.h \
     $(wildcard include/config/fallbacks/h.h) \
     $(wildcard include/config/spl.h) \
     $(wildcard include/config/spl/pad/to.h) \

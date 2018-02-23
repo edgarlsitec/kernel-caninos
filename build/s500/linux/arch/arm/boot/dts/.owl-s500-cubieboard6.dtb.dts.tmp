@@ -1,19 +1,19 @@
-# 1 "/home/edgar/kernel-caninos/linux/arch/arm/boot/dts/owl-s500-cubieboard6.dts"
+# 1 "/home/edgar/repo/kernel-caninos/linux/arch/arm/boot/dts/owl-s500-cubieboard6.dts"
 # 1 "<built-in>"
 # 1 "<command-line>"
-# 1 "/home/edgar/kernel-caninos/linux/arch/arm/boot/dts/owl-s500-cubieboard6.dts"
-# 9 "/home/edgar/kernel-caninos/linux/arch/arm/boot/dts/owl-s500-cubieboard6.dts"
+# 1 "/home/edgar/repo/kernel-caninos/linux/arch/arm/boot/dts/owl-s500-cubieboard6.dts"
+# 9 "/home/edgar/repo/kernel-caninos/linux/arch/arm/boot/dts/owl-s500-cubieboard6.dts"
 /dts-v1/;
 
-# 1 "/home/edgar/kernel-caninos/linux/arch/arm/boot/dts/owl-s500.dtsi" 1
-# 10 "/home/edgar/kernel-caninos/linux/arch/arm/boot/dts/owl-s500.dtsi"
-# 1 "/home/edgar/kernel-caninos/linux/scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/arm-gic.h" 1
-# 9 "/home/edgar/kernel-caninos/linux/scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/arm-gic.h"
-# 1 "/home/edgar/kernel-caninos/linux/scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/irq.h" 1
-# 10 "/home/edgar/kernel-caninos/linux/scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/arm-gic.h" 2
-# 11 "/home/edgar/kernel-caninos/linux/arch/arm/boot/dts/owl-s500.dtsi" 2
-# 1 "/home/edgar/kernel-caninos/linux/scripts/dtc/include-prefixes/dt-bindings/power/owl-s500-powergate.h" 1
-# 12 "/home/edgar/kernel-caninos/linux/arch/arm/boot/dts/owl-s500.dtsi" 2
+# 1 "/home/edgar/repo/kernel-caninos/linux/arch/arm/boot/dts/owl-s500.dtsi" 1
+# 10 "/home/edgar/repo/kernel-caninos/linux/arch/arm/boot/dts/owl-s500.dtsi"
+# 1 "/home/edgar/repo/kernel-caninos/linux/scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/arm-gic.h" 1
+# 9 "/home/edgar/repo/kernel-caninos/linux/scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/arm-gic.h"
+# 1 "/home/edgar/repo/kernel-caninos/linux/scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/irq.h" 1
+# 10 "/home/edgar/repo/kernel-caninos/linux/scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/arm-gic.h" 2
+# 11 "/home/edgar/repo/kernel-caninos/linux/arch/arm/boot/dts/owl-s500.dtsi" 2
+# 1 "/home/edgar/repo/kernel-caninos/linux/scripts/dtc/include-prefixes/dt-bindings/power/owl-s500-powergate.h" 1
+# 12 "/home/edgar/repo/kernel-caninos/linux/arch/arm/boot/dts/owl-s500.dtsi" 2
 
 / {
  compatible = "actions,s500";
@@ -233,12 +233,52 @@
    interrupts = < 0 43 0x4 >;
   };
 
+  mmc2: mmc@b0238000 {
+   #address-cells = <1>;
+   #size-cells = <0>;
+   compatible = "actions,owl-mmc";
+   reg = <0xb0238000 0x38>;
+   interrupts = < 0 44 0x4 >;
+  };
+
   pinctrl@b01b0040 {
    compatible = "actions,owl-pinctrl";
   };
+
+  i2c0: i2c@b0170000 {
+   #address-cells = <1>;
+   #size-cells = <0>;
+   compatible = "actions,owl-i2c";
+   reg = <0xb0170000 0x4000>;
+   interrupts = < 0 25 0x4 >;
+  };
+
+  i2c1: i2c@b0174000 {
+   #address-cells = <1>;
+   #size-cells = <0>;
+   compatible = "actions,owl-i2c";
+   reg = <0xb0174000 0x4000>;
+   interrupts = < 0 26 0x4 >;
+  };
+
+  i2c2: i2c@b0178000 {
+   #address-cells = <1>;
+   #size-cells = <0>;
+   compatible = "actions,owl-i2c";
+   reg = <0xb0178000 0x4000>;
+   interrupts = < 0 27 0x4 >;
+  };
+
+  i2c3: i2c@b017c000 {
+   #address-cells = <1>;
+   #size-cells = <0>;
+   compatible = "actions,owl-i2c";
+   reg = <0xb017c000 0x4000>;
+   interrupts = < 0 28 0x4 >;
+  };
  };
 };
-# 12 "/home/edgar/kernel-caninos/linux/arch/arm/boot/dts/owl-s500-cubieboard6.dts" 2
+# 12 "/home/edgar/repo/kernel-caninos/linux/arch/arm/boot/dts/owl-s500-cubieboard6.dts" 2
 
 / {
  compatible = "cubietech,cubieboard6", "actions,s500";

@@ -21,9 +21,13 @@
 static int info_switch;
 static int err_switch;
 
-#define OWL_SDRAM_BASE UL(0x00000000)
-#define OWL_IO_DEVICE_BASE UL(0xB0000000)
 #define OWL_IO_ADDR_BASE 0xF8000000
+
+#define CMU_BASE 0xB0160000
+#define CMU_DEVCLKEN0 (CMU_BASE+0x00A0)
+#define CMU_DEVCLKEN1 (CMU_BASE+0x00A4)
+#define CMU_DEVRST0   (CMU_BASE+0x00A8)
+#define CMU_DEVRST1   (CMU_BASE+0x00AC)
 
 #ifdef CONFIG_MMU
 #define IO_ADDRESS(x) (OWL_IO_ADDR_BASE + ((x) & 0x03ffffff))
@@ -33,7 +37,7 @@ static int err_switch;
 
 #define __io_address(n)	__io(IO_ADDRESS(n))
 
-#define owl_dump_mem(a, b, c, d)           do {} while (0);
+#define owl_dump_mem(a, b, c, d) do {} while (0);
 
 #ifdef I2C_DEBUG_INFO
 #define i2c_dbg(fmt, args...)   \
@@ -148,8 +152,9 @@ static int err_switch;
             I2C_CTL_PUEN | \
             I2C_CTL_RB \
         )
-        
-#define I2C_MODULE_CLK		(100*1000*1000)
+
+#define MEG (1000000)
+#define I2C_MODULE_CLK		(100*MEG)
 #define I2C_CLK_HDMI                    (87*1000)
 #define I2C_TRANS_TIMEOUT               (5*HZ)
 #define I2C_STATE_DEFAULT "default"
@@ -179,27 +184,33 @@ struct owl_i2c_dev {
     unsigned int        msg_num;
     unsigned int        msg_idx;
     unsigned int        msg_ptr;
-	int i2c_addr_type;	/*1: HDMI,0 else */
-
+	int                 i2c_addr_type; // 1: HDMI,0 else
     spinlock_t          lock;
-    enum i2c_state           state;
-    void __iomem        *base;      /* virtual */
+    enum i2c_state      state;
+    void __iomem        *base; // virtual
     unsigned long       phys;
-    u32                 speed;      /* Speed of bus in Khz */
+    u32                 speed; // Speed of bus in Khz
     u32                 i2c_freq;
     u32                 i2c_freq_cfg;
-    struct clk          *clk;
-	struct clk *i2c_clk;
+	u32                 dev_id;
     int                 irq;
     u8                  rev;
     uint                in_suspend_state;
     struct pin_state    i2c_pin_state;
 };
 
-static inline void owl_i2c_writel(struct owl_i2c_dev *i2c_dev, u32 val, int reg)
+static inline void act_writel(u32 val, u32 reg)
 {
-    i2c_dbg("-->>write 0x%x to 0x%x\n",val, (u32)(i2c_dev->base +reg));
-    
+	*(volatile u32 *)(IO_ADDRESS(reg)) = val;
+}
+
+static inline u32 act_readl(u32 reg)
+{
+	return *(volatile u32 *)IO_ADDRESS(reg);
+}
+
+static inline void owl_i2c_writel(struct owl_i2c_dev *i2c_dev, u32 val, int reg)
+{    
     __raw_writel(val, i2c_dev->base + reg);
 }
 
@@ -737,105 +748,92 @@ static void owl_i2c_put_pin_mux(struct pin_state *i2c_pin_state)
 	}
 }
 
-static int owl_i2c_set_clk_tree(struct platform_device *pdev)
+static int owl_i2c_clk_enable(u32 dev_id)
 {
-	int ret = 0;
-	u32 freq = 0;
-	
-	struct owl_i2c_dev *dev = platform_get_drvdata(pdev);
+	// I2C (TWI) module clock originates from Ethernet_PLL, fixed at 100MHz
 
-	switch (pdev->id)
+	// CMU_DEVCLKEN1 - Device Clk Control Register Offset=0xA4
+	// Bit31 -> TWI3 interface clock enable 
+	// Bit30 -> TWI2 interface clock enable
+	// Bit15 -> TWI1 interface clock enable
+	// Bit14 -> TWI0 interface clock enable
+
+	// CMU_DEVRST1 - Device Reset Control Register Offset=0xAC
+	// Bit19 -> TWI3 control block reset (write 0 to reset)
+	// Bit18 -> TWI2 control block reset (write 0 to reset)
+	// Bit13 -> TWI1 control block reset (write 0 to reset)
+	// Bit12 -> TWI0 control block reset (write 0 to reset)
+
+	int ret = 0;
+
+	switch (dev_id)
 	{
 	case 0:
-		//dev->i2c_clk = clk_get(NULL, CLKNAME_I2C0_CLK);
-		
-		freq = clk_round_rate(dev->i2c_clk, I2C_MODULE_CLK);
-		
-		if(freq == I2C_MODULE_CLK) {
-			ret = clk_set_rate(dev->i2c_clk, freq);
-		}
-		else {
-			goto round_rate_failed;
-		}
-		
-		clk_prepare(dev->i2c_clk);
-		clk_enable(dev->i2c_clk);
-		clk_put(dev->i2c_clk);
-		
-		//module_clk_enable(MOD_ID_I2C0);
+		act_writel(act_readl(CMU_DEVCLKEN1) | (1u << 14), CMU_DEVCLKEN1);
 		break;
 
 	case 1:
-		//dev->i2c_clk = clk_get(NULL, CLKNAME_I2C1_CLK);
-		
-		freq = clk_round_rate(dev->i2c_clk, I2C_MODULE_CLK);
-		
-		if(freq == I2C_MODULE_CLK) {
-			ret = clk_set_rate(dev->i2c_clk, freq);
-		}
-		else {
-			goto round_rate_failed;
-		}
-		
-		clk_prepare(dev->i2c_clk);
-		clk_enable(dev->i2c_clk);
-		clk_put(dev->i2c_clk);
-		
-		//module_clk_enable(MOD_ID_I2C1);
+		act_writel(act_readl(CMU_DEVCLKEN1) | (1u << 15), CMU_DEVCLKEN1);
 		break;
 
 	case 2:
-		//dev->i2c_clk = clk_get(NULL, CLKNAME_I2C2_CLK);
-		
-		freq = clk_round_rate(dev->i2c_clk, I2C_MODULE_CLK);
-		
-		if(freq == I2C_MODULE_CLK) {
-			ret = clk_set_rate(dev->i2c_clk, freq);
-		}
-		else {
-			goto round_rate_failed;
-		}
-		
-		clk_prepare(dev->i2c_clk);
-		clk_enable(dev->i2c_clk);
-		clk_put(dev->i2c_clk);
-		
-		//module_clk_enable(MOD_ID_I2C2);
+		act_writel(act_readl(CMU_DEVCLKEN1) | (1u << 30), CMU_DEVCLKEN1);
 		break;
 
 	case 3:
-		//dev->i2c_clk = clk_get(NULL, CLKNAME_I2C3_CLK);
-		
-		freq = clk_round_rate(dev->i2c_clk, I2C_MODULE_CLK);
-		
-		if(freq == I2C_MODULE_CLK) {
-			ret = clk_set_rate(dev->i2c_clk, freq);
-		}
-		else {
-			goto round_rate_failed;
-		}
-		
-		clk_prepare(dev->i2c_clk);
-		clk_enable(dev->i2c_clk);
-		clk_put(dev->i2c_clk);
-		
-		//module_clk_enable(MOD_ID_I2C3);
+		act_writel(act_readl(CMU_DEVCLKEN1) | (1u << 31), CMU_DEVCLKEN1);
 		break;
 
 	default:
-		goto clk_get_failed;
+		ret = -1;
 		break;
 	}
 
-	return 0;
+	return ret;
+}
 
-round_rate_failed:
-	i2c_err("Round i2c module rate failed\n");
-	return -2;
+static int owl_i2c_clk_disable(u32 dev_id)
+{
+	int ret = 0;
 
-clk_get_failed:
-	i2c_err("Get i2c_clk failed\n");
-	return -1;
+	switch (dev_id)
+	{
+	case 0:
+		act_writel(act_readl(CMU_DEVCLKEN1) & ~(1u << 14), CMU_DEVCLKEN1);
+		break;
+
+	case 1:
+		act_writel(act_readl(CMU_DEVCLKEN1) & ~(1u << 15), CMU_DEVCLKEN1);
+		break;
+
+	case 2:
+		act_writel(act_readl(CMU_DEVCLKEN1) & ~(1u << 30), CMU_DEVCLKEN1);
+		break;
+
+	case 3:
+		act_writel(act_readl(CMU_DEVCLKEN1) & ~(1u << 31), CMU_DEVCLKEN1);
+		break;
+
+	default:
+		ret = -1;
+		break;
+	}
+
+	return ret;
+}
+
+static int owl_i2c_set_clk_tree(struct platform_device *pdev)
+{
+	int ret = 0;
+
+	ret = owl_i2c_clk_enable(pdev->id);
+
+	if(ret < 0)
+	{
+		i2c_err("Unknown i2c module id.\n");
+	}
+
+	return ret;
 }
 
 static int owl_i2c_module_init(struct platform_device *pdev)
@@ -877,12 +875,12 @@ static void owl_i2c_disable(struct owl_i2c_dev *dev)
 {
     owl_i2c_writel(dev, owl_i2c_readl(dev, I2C_CTL) & ~I2C_CTL_EN, I2C_CTL);
 
-    clk_disable(dev->clk);
+	owl_i2c_clk_disable(dev->dev_id);
 }
 
 static void owl_i2c_enable(struct owl_i2c_dev *dev)
 {
-	clk_enable(dev->i2c_clk);
+	owl_i2c_clk_enable(dev->dev_id);
 
 	owl_i2cdev_reinit(dev);
 }
@@ -1044,6 +1042,8 @@ static int owl_i2c_probe(struct platform_device *pdev)
 		ret = ENOMEM;
 		goto err_free_irq;
 	}
+
+	dev->dev_id = pdev->id;
 
 	ret = owl_i2c_set_speed(dev);
 	

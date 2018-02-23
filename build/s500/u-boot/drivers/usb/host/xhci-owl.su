@@ -1,4 +1,4 @@
 xhci-owl.c:116:6:disable_bias	0	static
 xhci-owl.c:128:6:enable_bias	0	static
-xhci-owl.c:218:5:xhci_hcd_init	24	static
+xhci-owl.c:218:5:xhci_hcd_init	32	static
 xhci-owl.c:253:6:xhci_hcd_stop	8	static

@@ -1,25 +1,25 @@
-cmd_lib/linux_string.o := arm-linux-gnueabihf-gcc -Wp,-MD,lib/.linux_string.o.d  -nostdinc -isystem /usr/lib/gcc-cross/arm-linux-gnueabihf/6/include -Iinclude  -I/home/edgar/kernel-caninos/uboot/include -I/home/edgar/kernel-caninos/uboot/arch/arm/include -include /home/edgar/kernel-caninos/uboot/include/linux/kconfig.h  -I/home/edgar/kernel-caninos/uboot/lib -Ilib -D__KERNEL__ -D__UBOOT__ -DCONFIG_SYS_TEXT_BASE=0x08000040 -Wall -Wstrict-prototypes -Wno-format-security -fno-builtin -ffreestanding -Os -fno-stack-protector -g -fstack-usage -Wno-format-nonliteral -D__ARM__ -marm -mno-thumb-interwork -mabi=aapcs-linux -mword-relocations -mno-unaligned-access -ffunction-sections -fdata-sections -fno-common -ffixed-r9 -msoft-float -pipe -march=armv7-a    -D"KBUILD_STR(s)=\#s" -D"KBUILD_BASENAME=KBUILD_STR(linux_string)"  -D"KBUILD_MODNAME=KBUILD_STR(linux_string)" -c -o lib/linux_string.o /home/edgar/kernel-caninos/uboot/lib/linux_string.c
+cmd_lib/linux_string.o := arm-linux-gnueabihf-gcc -Wp,-MD,lib/.linux_string.o.d  -nostdinc -isystem /usr/lib/gcc/arm-linux-gnueabihf/4.9/include -Iinclude  -I/home/edgar/repo/kernel-caninos/uboot/include -I/home/edgar/repo/kernel-caninos/uboot/arch/arm/include -include /home/edgar/repo/kernel-caninos/uboot/include/linux/kconfig.h  -I/home/edgar/repo/kernel-caninos/uboot/lib -Ilib -D__KERNEL__ -D__UBOOT__ -DCONFIG_SYS_TEXT_BASE=0x08000040 -Wall -Wstrict-prototypes -Wno-format-security -fno-builtin -ffreestanding -Os -fno-stack-protector -g -fstack-usage -Wno-format-nonliteral -D__ARM__ -marm -mno-thumb-interwork -mabi=aapcs-linux -mword-relocations -mno-unaligned-access -ffunction-sections -fdata-sections -fno-common -ffixed-r9 -msoft-float -pipe -march=armv7-a    -D"KBUILD_STR(s)=\#s" -D"KBUILD_BASENAME=KBUILD_STR(linux_string)"  -D"KBUILD_MODNAME=KBUILD_STR(linux_string)" -c -o lib/linux_string.o /home/edgar/repo/kernel-caninos/uboot/lib/linux_string.c
 
-source_lib/linux_string.o := /home/edgar/kernel-caninos/uboot/lib/linux_string.c
+source_lib/linux_string.o := /home/edgar/repo/kernel-caninos/uboot/lib/linux_string.c
 
 deps_lib/linux_string.o := \
-  /home/edgar/kernel-caninos/uboot/include/linux/ctype.h \
-  /home/edgar/kernel-caninos/uboot/include/linux/string.h \
-  /home/edgar/kernel-caninos/uboot/include/linux/types.h \
+  /home/edgar/repo/kernel-caninos/uboot/include/linux/ctype.h \
+  /home/edgar/repo/kernel-caninos/uboot/include/linux/string.h \
+  /home/edgar/repo/kernel-caninos/uboot/include/linux/types.h \
     $(wildcard include/config/uid16.h) \
     $(wildcard include/config/use/stdint.h) \
-  /home/edgar/kernel-caninos/uboot/include/linux/posix_types.h \
-  /home/edgar/kernel-caninos/uboot/include/linux/stddef.h \
-  /home/edgar/kernel-caninos/uboot/arch/arm/include/asm/posix_types.h \
-  /home/edgar/kernel-caninos/uboot/arch/arm/include/asm/types.h \
+  /home/edgar/repo/kernel-caninos/uboot/include/linux/posix_types.h \
+  /home/edgar/repo/kernel-caninos/uboot/include/linux/stddef.h \
+  /home/edgar/repo/kernel-caninos/uboot/arch/arm/include/asm/posix_types.h \
+  /home/edgar/repo/kernel-caninos/uboot/arch/arm/include/asm/types.h \
     $(wildcard include/config/arm64.h) \
-  /usr/lib/gcc-cross/arm-linux-gnueabihf/6/include/stdbool.h \
-  /home/edgar/kernel-caninos/uboot/arch/arm/include/asm/string.h \
+  /usr/lib/gcc/arm-linux-gnueabihf/4.9/include/stdbool.h \
+  /home/edgar/repo/kernel-caninos/uboot/arch/arm/include/asm/string.h \
     $(wildcard include/config/use/arch/memcpy.h) \
     $(wildcard include/config/use/arch/memset.h) \
   include/config.h \
     $(wildcard include/config/boarddir.h) \
-  /home/edgar/kernel-caninos/uboot/include/config_defaults.h \
+  /home/edgar/repo/kernel-caninos/uboot/include/config_defaults.h \
     $(wildcard include/config/defaults/h/.h) \
     $(wildcard include/config/bootm/linux.h) \
     $(wildcard include/config/bootm/netbsd.h) \
@@ -29,7 +29,7 @@ deps_lib/linux_string.o := \
     $(wildcard include/config/gzip.h) \
     $(wildcard include/config/zlib.h) \
     $(wildcard include/config/partitions.h) \
-  /home/edgar/kernel-caninos/uboot/include/config_uncmd_spl.h \
+  /home/edgar/repo/kernel-caninos/uboot/include/config_uncmd_spl.h \
     $(wildcard include/config/uncmd/spl/h//.h) \
     $(wildcard include/config/spl/build.h) \
     $(wildcard include/config/cmd/cdp.h) \
@@ -51,7 +51,7 @@ deps_lib/linux_string.o := \
     $(wildcard include/config/dm/warn.h) \
     $(wildcard include/config/dm/device/remove.h) \
     $(wildcard include/config/dm/stdio.h) \
-  /home/edgar/kernel-caninos/uboot/include/configs/s500.h \
+  /home/edgar/repo/kernel-caninos/uboot/include/configs/s500.h \
     $(wildcard include/config/s500/h.h) \
     $(wildcard include/config/bootcommand.h) \
     $(wildcard include/config/extra/env/settings.h) \
@@ -198,7 +198,7 @@ deps_lib/linux_string.o := \
     $(wildcard include/config/boot/power.h) \
     $(wildcard include/config/gauge/bq27441.h) \
     $(wildcard include/config/check/key.h) \
-  /home/edgar/kernel-caninos/uboot/arch/arm/include/asm/config.h \
+  /home/edgar/repo/kernel-caninos/uboot/arch/arm/include/asm/config.h \
     $(wildcard include/config/h/.h) \
     $(wildcard include/config/lmb.h) \
     $(wildcard include/config/sys/boot/ramdisk/high.h) \
@@ -206,7 +206,7 @@ deps_lib/linux_string.o := \
     $(wildcard include/config/static/rela.h) \
     $(wildcard include/config/fsl/lsch3.h) \
     $(wildcard include/config/ls102xa.h) \
-  /home/edgar/kernel-caninos/uboot/include/config_fallbacks.h \
+  /home/edgar/repo/kernel-caninos/uboot/include/config_fallbacks.h \
     $(wildcard include/config/fallbacks/h.h) \
     $(wildcard include/config/spl.h) \
     $(wildcard include/config/spl/pad/to.h) \
@@ -235,7 +235,7 @@ deps_lib/linux_string.o := \
     $(wildcard include/config/image/format/legacy.h) \
     $(wildcard include/config/disable/image/legacy.h) \
     $(wildcard include/config/sys/i2c.h) \
-  /home/edgar/kernel-caninos/uboot/include/linux/linux_string.h \
+  /home/edgar/repo/kernel-caninos/uboot/include/linux/linux_string.h \
 
 lib/linux_string.o: $(deps_lib/linux_string.o)
 

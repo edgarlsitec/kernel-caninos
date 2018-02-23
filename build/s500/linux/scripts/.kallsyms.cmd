@@ -1,6 +1,6 @@
-cmd_scripts/kallsyms := gcc -Wp,-MD,scripts/.kallsyms.d -Iscripts -Wall -Wmissing-prototypes -Wstrict-prototypes -O2 -fomit-frame-pointer -std=gnu89  -I/home/edgar/kernel-caninos/linux/tools/include -o scripts/kallsyms /home/edgar/kernel-caninos/linux/scripts/kallsyms.c  
+cmd_scripts/kallsyms := gcc -Wp,-MD,scripts/.kallsyms.d -Iscripts -Wall -Wmissing-prototypes -Wstrict-prototypes -O2 -fomit-frame-pointer -std=gnu89  -I/home/edgar/repo/kernel-caninos/linux/tools/include -o scripts/kallsyms /home/edgar/repo/kernel-caninos/linux/scripts/kallsyms.c  
 
-source_scripts/kallsyms := /home/edgar/kernel-caninos/linux/scripts/kallsyms.c
+source_scripts/kallsyms := /home/edgar/repo/kernel-caninos/linux/scripts/kallsyms.c
 
 deps_scripts/kallsyms := \
   /usr/include/stdc-predef.h \
@@ -10,25 +10,25 @@ deps_scripts/kallsyms := \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
-  /usr/lib/gcc/x86_64-linux-gnu/6/include/stddef.h \
+  /usr/lib/gcc/x86_64-linux-gnu/4.9/include/stddef.h \
   /usr/include/x86_64-linux-gnu/bits/types.h \
   /usr/include/x86_64-linux-gnu/bits/typesizes.h \
   /usr/include/libio.h \
   /usr/include/_G_config.h \
   /usr/include/wchar.h \
-  /usr/lib/gcc/x86_64-linux-gnu/6/include/stdarg.h \
+  /usr/lib/gcc/x86_64-linux-gnu/4.9/include/stdarg.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
   /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
-  /usr/include/x86_64-linux-gnu/sys/types.h \
-  /usr/include/time.h \
   /usr/include/endian.h \
   /usr/include/x86_64-linux-gnu/bits/endian.h \
   /usr/include/x86_64-linux-gnu/bits/byteswap.h \
   /usr/include/x86_64-linux-gnu/bits/byteswap-16.h \
+  /usr/include/x86_64-linux-gnu/sys/types.h \
+  /usr/include/time.h \
   /usr/include/x86_64-linux-gnu/sys/select.h \
   /usr/include/x86_64-linux-gnu/bits/select.h \
   /usr/include/x86_64-linux-gnu/bits/sigset.h \
@@ -43,8 +43,8 @@ deps_scripts/kallsyms := \
   /usr/include/x86_64-linux-gnu/bits/string.h \
   /usr/include/x86_64-linux-gnu/bits/string2.h \
   /usr/include/ctype.h \
-  /usr/lib/gcc/x86_64-linux-gnu/6/include-fixed/limits.h \
-  /usr/lib/gcc/x86_64-linux-gnu/6/include-fixed/syslimits.h \
+  /usr/lib/gcc/x86_64-linux-gnu/4.9/include-fixed/limits.h \
+  /usr/lib/gcc/x86_64-linux-gnu/4.9/include-fixed/syslimits.h \
   /usr/include/limits.h \
   /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
   /usr/include/x86_64-linux-gnu/bits/local_lim.h \

@@ -6,7 +6,7 @@ owl_dsi.c:458:5:dsi_disable	16	static
 owl_dsi.c:52:5:get_dsi_data_width	0	static
 owl_dsi.c:88:5:__platform_enable_dsi	0	static
 owl_dsi.c:104:5:enable_dsi	0	static
-owl_dsi.c:155:6:power_enable	8	static
+owl_dsi.c:155:6:power_enable	16	static
 owl_dsi.c:432:5:dsi_enable	16	static
 owl_dsi.c:331:6:dsihw_send_short_packet	16	static
 owl_dsi.c:384:6:dsihw_send_long_packet	24	static

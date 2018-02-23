@@ -1,8 +1,8 @@
 serial_owl.c:256:12:owl_uboot_serial_getc	0	static
-serial_owl.c:217:13:owl_uboot_serial_setbrg	32	static
+serial_owl.c:217:13:owl_uboot_serial_setbrg	24	static
 serial_owl.c:227:12:owl_uboot_serial_init	8	static
 serial_owl.c:179:12:owl_serial_putc.isra.1	0	static
-serial_owl.c:236:13:owl_uboot_serial_putc	8	static
+serial_owl.c:236:13:owl_uboot_serial_putc	16	static
 serial_owl.c:248:12:owl_uboot_serial_tstc	0	static
 serial_owl.c:203:5:owl_serial_getc_wait	0	static
 serial_owl.c:274:6:owl_serial_initialize	0	static

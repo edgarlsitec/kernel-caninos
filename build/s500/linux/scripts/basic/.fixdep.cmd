@@ -1,6 +1,6 @@
-cmd_scripts/basic/fixdep := gcc -Wp,-MD,scripts/basic/.fixdep.d -Iscripts/basic -Wall -Wmissing-prototypes -Wstrict-prototypes -O2 -fomit-frame-pointer -std=gnu89 -o scripts/basic/fixdep /home/edgar/kernel-caninos/linux/scripts/basic/fixdep.c  
+cmd_scripts/basic/fixdep := gcc -Wp,-MD,scripts/basic/.fixdep.d -Iscripts/basic -Wall -Wmissing-prototypes -Wstrict-prototypes -O2 -fomit-frame-pointer -std=gnu89 -o scripts/basic/fixdep /home/edgar/repo/kernel-caninos/linux/scripts/basic/fixdep.c  
 
-source_scripts/basic/fixdep := /home/edgar/kernel-caninos/linux/scripts/basic/fixdep.c
+source_scripts/basic/fixdep := /home/edgar/repo/kernel-caninos/linux/scripts/basic/fixdep.c
 
 deps_scripts/basic/fixdep := \
     $(wildcard include/config/his/driver.h) \
@@ -17,7 +17,7 @@ deps_scripts/basic/fixdep := \
   /usr/include/x86_64-linux-gnu/bits/types.h \
   /usr/include/x86_64-linux-gnu/bits/typesizes.h \
   /usr/include/time.h \
-  /usr/lib/gcc/x86_64-linux-gnu/6/include/stddef.h \
+  /usr/lib/gcc/x86_64-linux-gnu/4.9/include/stddef.h \
   /usr/include/endian.h \
   /usr/include/x86_64-linux-gnu/bits/endian.h \
   /usr/include/x86_64-linux-gnu/bits/byteswap.h \
@@ -55,12 +55,12 @@ deps_scripts/basic/fixdep := \
   /usr/include/libio.h \
   /usr/include/_G_config.h \
   /usr/include/wchar.h \
-  /usr/lib/gcc/x86_64-linux-gnu/6/include/stdarg.h \
+  /usr/lib/gcc/x86_64-linux-gnu/4.9/include/stdarg.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
   /usr/include/x86_64-linux-gnu/bits/stdio.h \
-  /usr/lib/gcc/x86_64-linux-gnu/6/include-fixed/limits.h \
-  /usr/lib/gcc/x86_64-linux-gnu/6/include-fixed/syslimits.h \
+  /usr/lib/gcc/x86_64-linux-gnu/4.9/include-fixed/limits.h \
+  /usr/lib/gcc/x86_64-linux-gnu/4.9/include-fixed/syslimits.h \
   /usr/include/limits.h \
   /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
   /usr/include/x86_64-linux-gnu/bits/local_lim.h \
@@ -69,7 +69,7 @@ deps_scripts/basic/fixdep := \
   /usr/include/ctype.h \
   /usr/include/arpa/inet.h \
   /usr/include/netinet/in.h \
-  /usr/lib/gcc/x86_64-linux-gnu/6/include/stdint.h \
+  /usr/lib/gcc/x86_64-linux-gnu/4.9/include/stdint.h \
   /usr/include/stdint.h \
   /usr/include/x86_64-linux-gnu/bits/wchar.h \
   /usr/include/x86_64-linux-gnu/sys/socket.h \

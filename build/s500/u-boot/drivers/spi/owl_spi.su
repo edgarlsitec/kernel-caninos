@@ -6,7 +6,7 @@ owl_spi.c:75:6:spi_cs_deactivate	0	static
 owl_spi.c:84:5:owl_spi_wait_till_ready	0	static
 owl_spi.c:98:5:owl_spi_write_read_8bit	24	static
 owl_spi.c:129:5:owl_spi_write_read_32bit	24	static
-owl_spi.c:161:6:spi_xfer	24	static
+owl_spi.c:161:6:spi_xfer	32	static
 owl_spi.c:191:19:spi_setup_slave	8	static
 owl_spi.c:198:5:spi_claim_bus	0	static
 owl_spi.c:203:6:spi_release_bus	0	static
