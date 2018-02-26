@@ -1,5 +1,5 @@
 !<thin>
-//                                              204       `
+//                                              216       `
 clk-devres.o/
 clk-bulk.o/
 clkdev.o/
@@ -14,6 +14,8 @@ clk-composite.o/
 clk-fractional-divider.o/
 clk-gpio.o/
 clk-conf.o/
+clk-owl.o/
+
 /0              0           0     0     644     4700      `
 /14             0           0     0     644     5428      `
 /26             0           0     0     644     12344     `
@@ -28,3 +30,4 @@ clk-conf.o/
 /154            0           0     0     644     5076      `
 /180            0           0     0     644     9204      `
 /192            0           0     0     644     3996      `
+/204            0           0     0     644     3104      `

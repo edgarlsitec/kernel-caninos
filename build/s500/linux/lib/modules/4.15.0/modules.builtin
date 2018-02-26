@@ -40,6 +40,7 @@ kernel/block/mq-deadline.ko
 kernel/block/kyber-iosched.ko
 kernel/drivers/base/firmware_class.ko
 kernel/drivers/char/hw_random/rng-core.ko
+kernel/drivers/clk/clk-owl.ko
 kernel/drivers/dma/owl-dma.ko
 kernel/drivers/gpio/gpio-owl.ko
 kernel/drivers/gpio/gpio-atc260x.ko

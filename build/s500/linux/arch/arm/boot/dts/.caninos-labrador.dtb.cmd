@@ -7,6 +7,7 @@ deps_arch/arm/boot/dts/caninos-labrador.dtb := \
   /home/edgar/repo/kernel-caninos/linux/scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/arm-gic.h \
   /home/edgar/repo/kernel-caninos/linux/scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/irq.h \
   /home/edgar/repo/kernel-caninos/linux/scripts/dtc/include-prefixes/dt-bindings/power/owl-s500-powergate.h \
+  /home/edgar/repo/kernel-caninos/linux/scripts/dtc/include-prefixes/dt-bindings/clock/owl-s500-clk.h \
 
 arch/arm/boot/dts/caninos-labrador.dtb: $(deps_arch/arm/boot/dts/caninos-labrador.dtb)
 

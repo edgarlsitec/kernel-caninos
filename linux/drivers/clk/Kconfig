@@ -29,6 +29,10 @@ config COMMON_CLK_WM831X
           Supports the clocking subsystem of the WM831x/2x series of
 	  PMICs from Wolfson Microelectronics.
 
+config COMMON_CLK_OWL
+	tristate "Clock driver for Actions s500"
+	depends on ARCH_ACTIONS
+
 source "drivers/clk/versatile/Kconfig"
 
 config CLK_HSDK

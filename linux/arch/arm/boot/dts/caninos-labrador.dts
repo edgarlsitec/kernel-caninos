@@ -38,6 +38,6 @@
 };
 
 &timer {
-	clocks = <&hosc>;
+	clocks = <OWL_CLK_HOSC>;
 };
 

@@ -19,6 +19,8 @@
 # 11 "/home/edgar/repo/kernel-caninos/linux/arch/arm/boot/dts/owl-s500.dtsi" 2
 # 1 "/home/edgar/repo/kernel-caninos/linux/scripts/dtc/include-prefixes/dt-bindings/power/owl-s500-powergate.h" 1
 # 12 "/home/edgar/repo/kernel-caninos/linux/arch/arm/boot/dts/owl-s500.dtsi" 2
+# 1 "/home/edgar/repo/kernel-caninos/linux/scripts/dtc/include-prefixes/dt-bindings/clock/owl-s500-clk.h" 1
+# 13 "/home/edgar/repo/kernel-caninos/linux/arch/arm/boot/dts/owl-s500.dtsi" 2
 
 / {
  compatible = "actions,s500";
@@ -74,12 +76,6 @@
                <0 6 4>,
                <0 7 4>;
   interrupt-affinity = <&cpu0>, <&cpu1>, <&cpu2>, <&cpu3>;
- };
-
- hosc: hosc {
-  compatible = "fixed-clock";
-  clock-frequency = <24000000>;
-  #clock-cells = <0>;
  };
 
  soc {
@@ -315,5 +311,5 @@
 };
 
 &timer {
- clocks = <&hosc>;
+ clocks = <0>;
 };

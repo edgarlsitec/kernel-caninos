@@ -71,12 +71,6 @@
   interrupt-affinity = <&cpu0>, <&cpu1>, <&cpu2>, <&cpu3>;
  };
 
- hosc: hosc {
-  compatible = "fixed-clock";
-  clock-frequency = <24000000>;
-  #clock-cells = <0>;
- };
-
  soc {
   compatible = "simple-bus";
   #address-cells = <1>;
