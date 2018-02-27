@@ -12,6 +12,7 @@
 #include <linux/regmap.h>
 #include <linux/spinlock.h>
 #include <linux/reset-controller.h>
+#include <linux/delay.h>
 #include <dt-bindings/clock/owl-s500-clk.h>
 
 static struct clk_hw_onecell_data *clk_data;
@@ -20,10 +21,51 @@ static struct clk_hw_onecell_data *clk_data;
 #define KILO (1000)
 
 #define CMU_BASE 0xB0160000
+#define CMU_DEVPLL    (CMU_BASE+0x0004)
 #define CMU_DEVCLKEN0 (CMU_BASE+0x00A0)
 #define CMU_DEVCLKEN1 (CMU_BASE+0x00A4)
 #define CMU_DEVRST0   (CMU_BASE+0x00A8)
 #define CMU_DEVRST1   (CMU_BASE+0x00AC)
+
+#define DEVPLL_LOCK_DELAY (22)
+
+static void setup_clock_sources(void __iomem *base)
+{
+	u32 aux;
+
+	// Setup hardware PLL modules.
+
+	// Disable DEV_PLL clock output
+
+	aux = readl(base + CMU_DEVPLL);
+	aux = aux & 0xffffefff;
+	writel(aux, base + CMU_DEVPLL);
+
+	// Make sure DEV_PLL is enabled
+
+	aux = readl(base + CMU_DEVPLL);
+	aux = aux | 0x100;
+	writel(aux, base + CMU_DEVPLL);
+
+	// Set DEV_PLL frequency to 48MHz
+	
+	aux = readl(base + CMU_DEVPLL);
+	aux = aux & 0xffffff80;
+	aux = aux | 0x8;
+	writel(aux, base + CMU_DEVPLL);
+
+	// Wait DEV_PLL frequency to lock
+
+	udelay(DEVPLL_LOCK_DELAY);
+
+	// TODO: Use DEBUG register to check if it is locked.
+
+	// Enable  DEV_PLL clock output
+	
+	aux = readl(base + CMU_DEVPLL);
+	aux = aux | 0x1000;
+	writel(aux, base + CMU_DEVPLL);
+}
 
 static void __init owl_cc_init(struct device_node *np)
 {
@@ -50,6 +92,8 @@ static void __init owl_cc_init(struct device_node *np)
 		return;
 	}
 
+	setup_clock_sources(base);
+
 	hws[OWL_CLK_HOSC] = clk_hw_register_fixed_rate(NULL, "HOSC", NULL, 0, 24 * MEGA);
 	hws[OWL_CLK_LOSC] = clk_hw_register_fixed_rate(NULL, "LOSC", NULL, 0, 32 * KILO);
 
@@ -60,7 +104,7 @@ static void __init owl_cc_init(struct device_node *np)
 	hws[OWL_CLK_I2C2] = clk_hw_register_gate(NULL, "I2C2", "ETH_PLL", 0, base + CMU_DEVCLKEN1, 30, 0, NULL);
 	hws[OWL_CLK_I2C3] = clk_hw_register_gate(NULL, "I2C3", "ETH_PLL", 0, base + CMU_DEVCLKEN1, 31, 0, NULL);
 
-	hws[OWL_CLK_DEV_PLL] = 
+	hws[OWL_CLK_DEV_PLL] = clk_hw_register_fixed_rate(NULL, "DEV_PLL", "HOSC", 0, 48 * MEGA);
 
 	of_clk_add_hw_provider(np, of_clk_hw_onecell_get, clk_data);
 }
