@@ -55,10 +55,10 @@ static void __init owl_cc_init(struct device_node *np)
 
 	hws[OWL_CLK_ETH_PLL] = clk_hw_register_fixed_rate(NULL, "ETH_PLL", "HOSC", 0, 100 * MEGA);
 
-	hws[OWL_CLK_I2C0] = clk_hw_register_gate(NULL, "I2C0", "ETHERNET_PLL", 0, base + CMU_DEVCLKEN1, 14, 0, NULL);
-	hws[OWL_CLK_I2C1] = clk_hw_register_gate(NULL, "I2C1", "ETHERNET_PLL", 0, base + CMU_DEVCLKEN1, 15, 0, NULL);
-	hws[OWL_CLK_I2C2] = clk_hw_register_gate(NULL, "I2C2", "ETHERNET_PLL", 0, base + CMU_DEVCLKEN1, 30, 0, NULL);
-	hws[OWL_CLK_I2C3] = clk_hw_register_gate(NULL, "I2C3", "ETHERNET_PLL", 0, base + CMU_DEVCLKEN1, 31, 0, NULL);
+	hws[OWL_CLK_I2C0] = clk_hw_register_gate(NULL, "I2C0", "ETH_PLL", 0, base + CMU_DEVCLKEN1, 14, 0, NULL);
+	hws[OWL_CLK_I2C1] = clk_hw_register_gate(NULL, "I2C1", "ETH_PLL", 0, base + CMU_DEVCLKEN1, 15, 0, NULL);
+	hws[OWL_CLK_I2C2] = clk_hw_register_gate(NULL, "I2C2", "ETH_PLL", 0, base + CMU_DEVCLKEN1, 30, 0, NULL);
+	hws[OWL_CLK_I2C3] = clk_hw_register_gate(NULL, "I2C3", "ETH_PLL", 0, base + CMU_DEVCLKEN1, 31, 0, NULL);
 
 	hws[OWL_CLK_DEV_PLL] = 
 
